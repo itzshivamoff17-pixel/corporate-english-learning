@@ -112,9 +112,32 @@
             <h1>Handling the Q&A Session</h1>
 
             <p style="font-size: 1.15rem; line-height: 1.8;">The presentation isn't the test; the Q&A is. This is where
-                your authority is challenged. Engineers often get defensive. Master the art of the "Bridge".</p>
+                your authority is challenged, your assumptions questioned, and your credibility established. Engineers
+                often get defensive when challenged. Instead, master the art of the "Bridge" and turn hostile questions
+                into opportunities.</p>
 
-            <h2>The "Bridge" Technique (Media Training)</h2>
+            <h2>Why Q&A Matters More Than the Deck</h2>
+            <p>Research from MIT Sloan shows that <strong>70% of decision-makers</strong> form their final opinion
+                during the Q&A, not the presentation. Your slides might be perfect, but if you fumble a question from
+                the CTO, the project is dead.</p>
+
+            <div
+                style="background: var(--bg-card); padding: 32px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                <h3 style="margin-bottom: 20px; color: var(--primary);">The Psychology of Questions</h3>
+                <p>Not all questions are requests for information. According to <em>Crucial Conversations</em> by
+                    Patterson et al., questions often serve hidden purposes:</p>
+                <ul style="margin-left: 24px; line-height: 2;">
+                    <li><strong>The Test:</strong> "Have you considered [X]?" (Translation: "I don't think you thought
+                        this through.")</li>
+                    <li><strong>The Flex:</strong> "In my experience at Google..." (Translation: "I know more than
+                        you.")</li>
+                    <li><strong>The Genuine:</strong> "Can you clarify the rollback plan?" (Actual curiosity).</li>
+                </ul>
+                <p style="margin-top: 16px; font-size: 0.95rem; color: var(--text-muted);"><em>Reference: Patterson, K.,
+                        et al. (2011). Crucial Conversations. McGraw-Hill.</em></p>
+            </div>
+
+            <h2>The "Bridge" Technique (Media Training 101)</h2>
             <p>Used by CEOs and politicians, bridging allows you to acknowledge a difficult question but steer the
                 answer back to your key message (your "Safe Island").</p>
 
@@ -134,6 +157,7 @@
                         <li>"The heart of the matter is..."</li>
                         <li>"I think it would be more accurate to look at..."</li>
                         <li>"Let's put that in perspective..."</li>
+                        <li>"What's really important here is..."</li>
                     </ul>
                 </div>
             </div>
@@ -145,10 +169,47 @@
                 <p><strong>The Script:</strong> "That is a great question. I don't have the specific benchmark data on
                     hand right now, and I want to be precise. Let me double-check the logs after this call and I will
                     ping you on Slack by 2 PM."</p>
+                <p style="margin-top: 16px;"><strong>Why it works:</strong> You demonstrate <em>honesty</em>
+                    (trustworthy), <em>precision</em> (competent), and <em>follow-through</em> (reliable).</p>
+            </div>
+
+            <h2>The Hostile Question: Defusing Aggression</h2>
+            <p>Sometimes a stakeholder will challenge you aggressively: <em>"Why didn't you just use Kubernetes from day
+                    one?"</em></p>
+
+            <div
+                style="background: var(--bg-card); padding: 32px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                <h3 style="margin-bottom: 20px; color: var(--primary);">The "Reframe" Technique</h3>
+                <p>Don't answer the hostile version. Reframe it into a reasonable question.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 20px;">
+                    <div
+                        style="background: rgba(239, 68, 68, 0.05); border: 1px solid var(--error); padding: 20px; border-radius: 12px;">
+                        <h4 style="color: var(--error); margin-bottom: 12px;">❌ Defensive Response</h4>
+                        <p style="font-size: 0.9rem;">"We didn't have the budget for K8s at the time, and frankly, it
+                            would have been overkill."</p>
+                    </div>
+                    <div
+                        style="background: rgba(16, 185, 129, 0.05); border: 1px solid var(--success); padding: 20px; border-radius: 12px;">
+                        <h4 style="color: var(--success); margin-bottom: 12px;">✅ Reframed Response</h4>
+                        <p style="font-size: 0.9rem;">"Great question. We evaluated K8s, but given our team size and the
+                            fact that we were serving 10k users, Docker Compose gave us 80% of the value with 20% of the
+                            operational overhead. Now that we are at 100k users, K8s is absolutely on the roadmap for
+                            Q3."</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>The "Parking Lot" Strategy</h2>
+            <p>Some questions derail the meeting. Use the Parking Lot to defer without dismissing.</p>
+            <div class="example-box"
+                style="background: var(--bg-dark); border-left: 4px solid var(--accent); padding: 24px; margin: 32px 0;">
+                <p><strong>The Script:</strong> "That's an important topic, but it's outside the scope of today's
+                    architecture review. Let's park that for the post-mortem discussion next week. I'll add it to the
+                    agenda."</p>
             </div>
 
             <h2>Aristotle's Rhetoric: Ethos, Pathos, Logos</h2>
-            <p>To persuade stakeholders during Q&A, you need all three:</p>
+            <p>To persuade stakeholders during Q&A, you need all three modes of persuasion:</p>
             <div
                 style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 24px;">
                 <div
@@ -171,6 +232,14 @@
                 </div>
             </div>
 
+            <h2>The "Columbo" Technique: Asking Back</h2>
+            <p>Sometimes the best answer is a clarifying question. This buys you time and shows you are thoughtful.</p>
+            <ul style="margin-left: 24px; line-height: 2; margin-top: 20px;">
+                <li><strong>"Can you clarify what you mean by 'scalable'?"</strong> (Forces them to be specific).</li>
+                <li><strong>"Are you asking about horizontal or vertical scaling?"</strong> (Narrows the scope).</li>
+                <li><strong>"Is your concern about cost, latency, or both?"</strong> (Identifies the real issue).</li>
+            </ul>
+
             <h2>References & Further Reading</h2>
             <div
                 style="background: var(--bg-card); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
@@ -178,6 +247,7 @@
                     <li>Aristotle. <em>Rhetoric</em>. (Classic text on persuasion).</li>
                     <li>Weissman, J. (2009). <em>Presenting to Win: The Art of Telling Your Story</em>. FT Press.
                         (Originator of the IPO framework).</li>
+                    <li>Patterson, K., et al. (2011). <em>Crucial Conversations</em>. McGraw-Hill.</li>
                     <li>Carnegie, D. (1915). <em>The Art of Public Speaking</em>.</li>
                 </ol>
             </div>
