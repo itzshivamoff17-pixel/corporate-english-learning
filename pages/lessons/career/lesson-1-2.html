@@ -100,37 +100,139 @@
         </aside>
 
         <main class="lesson-content">
-            <span class="section-badge">Module 1.2</span>
+            <!-- Module Breadcrumb -->
+            <div
+                style="background: var(--bg-card); padding: 16px 24px; border-radius: 12px; margin-bottom: 32px; border-left: 4px solid var(--primary); border: 1px solid var(--border-color);">
+                <div
+                    style="display: flex; align-items: center; gap: 12px; color: var(--text-muted); font-size: 0.9rem;">
+                    <i class="fas fa-briefcase" style="color: var(--primary);"></i>
+                    <span>Interview & Career Growth</span>
+                    <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                    <span style="color: var(--primary-light); font-weight: 600;">Module 1.2: The STAR Method for
+                        Tech</span>
+                </div>
+            </div>
+
+            <span class="section-badge">Behavioral Interviews - Lesson 2</span>
             <h1>The STAR Method for Technical Scenarios</h1>
 
-            <p>Behavioral interviews at companies like Amazon, Google, and Meta center around "Situation-based
-                questions." The STAR method is your architectural blueprint for answering these.</p>
+            <p style="font-size: 1.15rem; line-height: 1.8;">Behavioral interviews at companies like Amazon, Google, and
+                Meta center around "Situation-based questions." The STAR method is your architectural blueprint for
+                answering these.</p>
 
-            <div class="star-box">
-                <h4><strong>S</strong>ituation</h4>
-                <p>Set the scene. "During the migration of our legacy auth service..."</p>
-            </div>
-            <div class="star-box">
-                <h4><strong>T</strong>ask</h4>
-                <p>What needed to be done? "I was tasked with ensuring zero downtime while shifting 10M users."</p>
-            </div>
-            <div class="star-box">
-                <h4><strong>A</strong>ction</h4>
-                <p>What did YOU do? (Use 'I', not 'We'). "I implemented a dual-write bridge and monitored the
-                    consistency logs."</p>
-            </div>
-            <div class="star-box">
-                <h4><strong>R</strong>esult</h4>
-                <p>The quantifiable impact. "The migration finished 2 days early with zero data loss."</p>
+            <h2>The FAANG Standard</h2>
+            <p>Amazon's interview loop is famous (or infamous) for its obsession with the 16 Leadership Principles.
+                Harvard Career Services and Google Hiring Guides both recommend the STAR method as the <em>only</em>
+                structured way to prove your competency without rambling.</p>
+
+            <div
+                style="background: var(--bg-card); padding: 32px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                <h3 style="margin-bottom: 24px; color: var(--primary);">The Architecture of a STAR Answer</h3>
+
+                <div class="star-box">
+                    <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;">
+                        <h4 style="color: var(--accent); font-size: 1.2rem;">Situation (10%)</h4>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Set the context. Be brief.</span>
+                    </div>
+                    <p>"At my previous role at [Company], we were facing a 20% drop in checkout conversion due to high
+                        latency in the payment service."</p>
+                </div>
+
+                <div class="star-box">
+                    <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;">
+                        <h4 style="color: var(--accent); font-size: 1.2rem;">Task (10%)</h4>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">What was the goal?</span>
+                    </div>
+                    <p>"My goal was to reduce p99 latency to under 200ms without rewriting the entire legacy codebase."
+                    </p>
+                </div>
+
+                <div class="star-box">
+                    <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;">
+                        <h4 style="color: var(--accent); font-size: 1.2rem;">Action (60%)</h4>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">The meat of the answer. Use "I", not
+                            "We".</span>
+                    </div>
+                    <p>"<strong>I identified</strong> that the database queries were unoptimized. <strong>I
+                            implemented</strong> a Redis caching layer using a write-through strategy. <strong>I also
+                            negotiated</strong> with the Product team to relax the consistency requirement for
+                        non-critical data."</p>
+                </div>
+
+                <div class="star-box" style="margin-bottom: 0;">
+                    <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;">
+                        <h4 style="color: var(--accent); font-size: 1.2rem;">Result (20%)</h4>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Quantifiable outcomes.</span>
+                    </div>
+                    <p>"As a result, latency dropped by 40%, and conversion recovered to baseline levels, generating
+                        estimated $50k/month in rescued revenue."</p>
+                </div>
             </div>
 
-            <h2>Pro Tip: Don't Forget the 'Learning'</h2>
-            <p>At senior levels, recruiters often ask about failures. The "R" in STAR should then focus on the
-                **Reflective Learning**.</p>
+            <h2>The "I" vs. "We" Trap</h2>
+            <p>Laszlo Bock, former SVP of People Operations at Google, states in his book <em>Work Rules!</em> that a
+                common failure mode for candidates is using "We" too much. Reviewers can't hire your team; they can only
+                hire <em>you</em>.</p>
+
+            <div
+                style="background: rgba(239, 68, 68, 0.05); border: 1px solid var(--error); padding: 24px; border-radius: 12px; margin-bottom: 24px;">
+                <h4 style="color: var(--error); margin-bottom: 12px;">❌ Weak Phrasing</h4>
+                <p>"We decided to migrate to microservices. We worked on the docker containers and we deployed it using
+                    K8s."</p>
+            </div>
+
+            <div
+                style="background: rgba(16, 185, 129, 0.05); border: 1px solid var(--success); padding: 24px; border-radius: 12px; margin-bottom: 32px;">
+                <h4 style="color: var(--success); margin-bottom: 12px;">✅ Strong Phrasing</h4>
+                <p>"The team decided to migrate. <strong>My specific contribution was</strong> designing the Docker
+                    container spec and writing the Helm charts for the K8s deployment."</p>
+            </div>
+
+            <h2>Handling Failure Questions (The STAR-L)</h2>
+            <p>At senior levels, you will be asked: "Tell me about a time you failed." Do not use a "fake failure"
+                (e.g., "I work too hard"). Use the STAR-L method: <strong>Situation, Task, Action, Result,
+                    LEARNING</strong>.</p>
+
             <div class="example-box"
-                style="background: var(--bg-dark); border-left: 4px solid var(--primary); padding: 24px; margin: 32px 0;">
-                <p>"The result was a delayed release, but the learning was that we needed more robust integration tests,
-                    which I then spearheaded for the next project."</p>
+                style="background: var(--bg-dark); border-left: 4px solid var(--primary); padding: 24px;">
+                <p>"The result was a delayed release, which was disappointing. <br><br><strong>Learning:</strong>
+                    However, I learned that relying on third-party APIs without a circuit breaker is risky. I have since
+                    made it a standard practice to implement resiliency patterns in all my subsequent projects."</p>
+            </div>
+
+            <h2>Amazon Leadership Principles Mapping</h2>
+            <p>If interviewing at Amazon (or similar), map your STAR stories to their principles:</p>
+            <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px;">
+                <li
+                    style="background: var(--bg-card); padding: 16px; border: 1px solid var(--border-color); border-radius: 8px;">
+                    <strong>Customer Obsession:</strong> Tell a story where you fixed a user's pain point.
+                </li>
+                <li
+                    style="background: var(--bg-card); padding: 16px; border: 1px solid var(--border-color); border-radius: 8px;">
+                    <strong>Bias for Action:</strong> A time you fixed something without waiting for permission.
+                </li>
+                <li
+                    style="background: var(--bg-card); padding: 16px; border: 1px solid var(--border-color); border-radius: 8px;">
+                    <strong>Dive Deep:</strong> A complex debugging story.
+                </li>
+                <li
+                    style="background: var(--bg-card); padding: 16px; border: 1px solid var(--border-color); border-radius: 8px;">
+                    <strong>Disagree and Commit:</strong> A time you argued for an idea but supported the team's final
+                    decision.
+                </li>
+            </ul>
+
+            <h2>References & Further Reading</h2>
+            <div
+                style="background: var(--bg-card); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                <ol style="margin-left: 24px; line-height: 2; font-size: 0.95rem;">
+                    <li>Bock, L. (2015). <em>Work Rules!: Insights from Inside Google That Will Transform How You Live
+                            and Lead</em>. Twelve.</li>
+                    <li>Amazon. (n.d.). "Leadership Principles." <em>Amazon.jobs</em>.</li>
+                    <li>Harvard University Faculty of Arts and Sciences. (2022). "Resumes and Cover Letters."
+                        <em>Harvard Office of Career Services</em>.</li>
+                    <li>McDowell, G. L. (2015). <em>Cracking the PM Interview</em>. CareerCup.</li>
+                </ol>
             </div>
 
             <div class="lesson-footer"
