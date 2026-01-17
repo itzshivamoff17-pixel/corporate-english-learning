@@ -45,26 +45,150 @@
 
             <main class="lesson-content"
                 style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 60px;">
-                <span class="section-badge">Module 1.4</span>
-                <h1>Reporting Progress</h1>
-                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px;">Structuring weekly
-                    updates and project status reports for management.</p>
+                <!-- Module Breadcrumb -->
+                <div
+                    style="background: var(--bg-card); padding: 16px 24px; border-radius: 12px; margin-bottom: 32px; border-left: 4px solid var(--primary); border: 1px solid var(--border-color);">
+                    <div
+                        style="display: flex; align-items: center; gap: 12px; color: var(--text-muted); font-size: 0.9rem;">
+                        <i class="fas fa-users" style="color: var(--primary);"></i>
+                        <span>Meetings & Facilitation</span>
+                        <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                        <span style="color: var(--primary-light); font-weight: 600;">Module 1.4: Reporting Progress to
+                            Leadership</span>
+                    </div>
+                </div>
 
-                <h2 style="margin-bottom: 20px;">The Executive Summary Approach</h2>
-                <p>Managers and stakeholders care about outcomes, not just activities. Use a "Highlight - Insight -
-                    Action" structure for your reports.</p>
+                <span class="section-badge">Executive Communication - Lesson 4</span>
+                <h1>Reporting Progress to Leadership</h1>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px;">Moving from
+                    "activities" to "outcomes" using military-grade communication standards.</p>
+
+                <h2>The BLUF Standard (US Military)</h2>
+                <p>The US Army manuals teach a communication standard called <strong>BLUF: Bottom Line Up
+                        Front</strong>. In a high-stakes environment, leaders don't have time to hunt for the point. The
+                    same applies to CTOs and VPs.</p>
 
                 <div
-                    style="background: var(--bg-dark); padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid var(--primary-light);">
-                    <h3 style="margin-bottom: 16px;">The H-I-A Structure</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 20px;"><strong>Highlight:</strong> What happened? "We successfully
-                            migrated the production database."</li>
-                        <li style="margin-bottom: 20px;"><strong>Insight:</strong> Why does it matter? "This reduces our
-                            latency by 15% and saves $2k/month."</li>
-                        <li style="margin-bottom: 20px;"><strong>Action:</strong> What's next? "Next week, we are
-                            starting the cache optimization phase."</li>
+                    style="background: var(--bg-card); padding: 32px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                    <h3 style="margin-bottom: 20px; color: var(--primary);">Anatomy of a BLUF Update</h3>
+                    <p>Start with the conclusion. Then provide supporting details.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px;">
+                        <div
+                            style="background: rgba(239, 68, 68, 0.05); border: 1px solid var(--error); padding: 20px; border-radius: 12px;">
+                            <h4 style="color: var(--error); margin-bottom: 12px;">❌ The "Mystery Novel" (Bad)</h4>
+                            <p style="font-style: italic;">"So, we started looking at the logs on Monday, and we noticed
+                                some latency spikes. We then checked the database CPU usage, which was high. After
+                                investigating the slow query log, we found a missing index..."</p>
+                            <p style="margin-top: 12px; font-size: 0.9rem;">(The leader is thinking: "Just tell me if
+                                it's fixed!")</p>
+                        </div>
+                        <div
+                            style="background: rgba(16, 185, 129, 0.05); border: 1px solid var(--success); padding: 20px; border-radius: 12px;">
+                            <h4 style="color: var(--success); margin-bottom: 12px;">✅ The BLUF (Good)</h4>
+                            <p style="font-style: italic;">"<strong>BLUF:</strong> The latency issue is resolved. API
+                                response times are back to 50ms."</p>
+                            <p style="margin-top: 12px; font-size: 0.9rem;">"<strong>Details:</strong> The root cause
+                                was a missing database index. We added it and are now monitoring..."</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: 20px; font-size: 0.95rem; color: var(--text-muted);"><em>Reference: U.S. Army.
+                            (2015). Army Regulation 25-50: Preparing and Managing Correspondence.</em></p>
+                </div>
+
+                <h2>The MECE Principle (McKinsey)</h2>
+                <p>Consultants at McKinsey are trained to structure problems using the <strong>MECE principle: Mutually
+                        Exclusive, Collectively Exhaustive</strong>. When reporting progress, your updates should cover
+                    everything important without overlap.</p>
+
+                <div
+                    style="background: var(--bg-card); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                    <h3 style="margin-bottom: 16px;">Applying MECE to Weekly Reports</h3>
+                    <p>Don't just list random tasks. Group them into exhaustive categories:</p>
+                    <ul style="list-style: none; padding: 0; margin-top: 16px;">
+                        <li style="margin-bottom: 16px; padding-left: 20px; border-left: 3px solid var(--primary);">
+                            <strong>1. Delivered Value (The Past):</strong> What is now live for users?
+                        </li>
+                        <li style="margin-bottom: 16px; padding-left: 20px; border-left: 3px solid var(--primary);">
+                            <strong>2. Work in Progress (The Present):</strong> What are we building right now?
+                        </li>
+                        <li style="padding-left: 20px; border-left: 3px solid var(--primary);">
+                            <strong>3. Risks & Blockers (The Future):</strong> What might stop us?
+                        </li>
                     </ul>
+                    <p style="margin-top: 16px;">This structure ensures you haven't missed anything (exhaustiveness) and
+                        you aren't repeating yourself (exclusivity).</p>
+                    <p style="margin-top: 12px; font-size: 0.95rem; color: var(--text-muted);"><em>Reference: Rasiel, E.
+                            M. (1999). The McKinsey Way. McGraw-Hill.</em></p>
+                </div>
+
+                <h2>Amazon's "Narrative" Culture</h2>
+                <p>Amazon famously banned PowerPoint in executive meetings. Instead, they write <strong>6-page
+                        memos</strong> (narratives). Why? Because "bullet points kill nuance."</p>
+                <div
+                    style="background: var(--bg-dark); padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid var(--accent);">
+                    <h3 style="margin-bottom: 16px;">Writing a Mini-Narrative Update</h3>
+                    <p>Instead of a bullet list of tasks, write a short paragraph connecting the dots.</p>
+
+                    <p style="margin-top: 20px;"><strong>Version A (Bullets):</strong></p>
+                    <ul>
+                        <li>Fixed bug #123</li>
+                        <li>Updated React version</li>
+                        <li>Met with design team</li>
+                    </ul>
+
+                    <p style="margin-top: 20px;"><strong>Version B (Narrative):</strong></p>
+                    <p>"This week, we focused on <strong>reducing technical debt</strong> to prepare for the Q4 traffic
+                        surge. By upgrading React and fixing the critical memory leak (bug #123), we've improved
+                        frontend stability by 20%. We also aligned with the design team to freeze UI assets by Friday."
+                    </p>
+
+                    <p style="margin-top: 20px; font-size: 0.95rem; color: var(--text-muted);"><em>Reference: Bryar, C.,
+                            & Carr, B. (2021). Working Backwards: Insights, Stories, and Secrets from Inside Amazon. St.
+                            Martin's Press.</em></p>
+                </div>
+
+                <h2>The "5-15" Report Format</h2>
+                <p>Originally from Yvon Chouinard (Patagonia), this format is designed to be written in 15 minutes and
+                    read in 5 minutes.</p>
+                <div
+                    style="background: var(--bg-card); padding: 24px; border-radius: 12px; border: 1px solid var(--border-color);">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>1.
+                                    Accomplishments</strong></td>
+                            <td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Key wins from the
+                                week. Max 3 items.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>2.
+                                    Priorities</strong></td>
+                            <td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Top 3 goals for
+                                next week.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>3.
+                                    Challenges</strong></td>
+                            <td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Where do you need
+                                help/support?</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px;"><strong>4. Lesson Learned</strong></td>
+                            <td style="padding: 12px;">One insight to share with the team.</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <h2>References & Further Reading</h2>
+                <div
+                    style="background: var(--bg-card); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                    <ol style="margin-left: 24px; line-height: 2; font-size: 0.95rem;">
+                        <li>U.S. Army. (2015). <em>Army Regulation 25-50: Preparing and Managing Correspondence</em>.
+                        </li>
+                        <li>Rasiel, E. M. (1999). <em>The McKinsey Way</em>. McGraw-Hill.</li>
+                        <li>Bryar, C., & Carr, B. (2021). <em>Working Backwards: Insights, Stories, and Secrets from
+                                Inside Amazon</em>. St. Martin's Press.</li>
+                        <li>Chouinard, Y. (2005). <em>Let My People Go Surfing</em>. Penguin.</li>
+                    </ol>
                 </div>
 
                 <div class="lesson-footer"

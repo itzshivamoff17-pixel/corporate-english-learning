@@ -45,27 +45,168 @@
 
             <main class="lesson-content"
                 style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 60px;">
-                <span class="section-badge">Module 1.3</span>
-                <h1>Client Calls</h1>
-                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px;">Handling pressure,
-                    difficult questions, and managing expectations.</p>
+                <!-- Module Breadcrumb -->
+                <div
+                    style="background: var(--bg-card); padding: 16px 24px; border-radius: 12px; margin-bottom: 32px; border-left: 4px solid var(--primary); border: 1px solid var(--border-color);">
+                    <div
+                        style="display: flex; align-items: center; gap: 12px; color: var(--text-muted); font-size: 0.9rem;">
+                        <i class="fas fa-users" style="color: var(--primary);"></i>
+                        <span>Meetings & Facilitation</span>
+                        <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                        <span style="color: var(--primary-light); font-weight: 600;">Module 1.3: Client Calls</span>
+                    </div>
+                </div>
 
-                <h2 style="margin-bottom: 20px;">The 'Soft' Pivot</h2>
-                <p>When a client asks a difficult question you don't have the answer to, never say "I don't know." Use a
-                    soft pivot to maintain authority while buying time.</p>
+                <span class="section-badge">Client Relationship Management - Lesson 3</span>
+                <h1>Client Calls & Stakeholder Management</h1>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px;">Mastering the art of
+                    managing expectations, handling pressure, and building trust with external stakeholders.</p>
+
+                <h2>The Science of Trust (The Trust Equation)</h2>
+                <p>David Maister, Charles Green, and Robert Galford developed the "Trust Equation" in their seminal book
+                    <em>The Trusted Advisor</em>. It is the gold standard for measuring professional trustworthiness,
+                    particularly in client services like IT consulting.</p>
+
+                <div
+                    style="background: var(--bg-card); padding: 32px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                    <h3 style="margin-bottom: 20px; color: var(--primary);">The Trust Equation Formula</h3>
+                    <p
+                        style="font-size: 1.2rem; font-weight: 600; text-align: center; margin: 24px 0; font-family: 'JetBrains Mono', monospace;">
+                        Trust = (Credibility + Reliability + Intimacy) / Self-Orientation</p>
+
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 24px;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--border-color);">
+                                <th style="padding: 12px; text-align: left;">Component</th>
+                                <th style="padding: 12px; text-align: left;">Meaning</th>
+                                <th style="padding: 12px; text-align: left;">How Engineers Demonstrate It</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid var(--border-color);">
+                                <td style="padding: 12px;"><strong>Credibility</strong> (Words)</td>
+                                <td style="padding: 12px;">"I know my stuff."</td>
+                                <td style="padding: 12px;">Using accurate technical terminology; admitting when you
+                                    don't know something.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border-color);">
+                                <td style="padding: 12px;"><strong>Reliability</strong> (Actions)</td>
+                                <td style="padding: 12px;">"I do what I say."</td>
+                                <td style="padding: 12px;">Delivering features on time; sending meeting minutes
+                                    promptly.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border-color);">
+                                <td style="padding: 12px;"><strong>Intimacy</strong> (Emotions)</td>
+                                <td style="padding: 12px;">"I feel safe with you."</td>
+                                <td style="padding: 12px;">Understanding the client's business anxiety; keeping secrets.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px;"><strong>Self-Orientation</strong> (The Denominator)</td>
+                                <td style="padding: 12px;">"I care about myself."</td>
+                                <td style="padding: 12px;">Focusing on <em>your</em> tech stack vs. <em>their</em>
+                                    business problem. (<strong>Lower is better!</strong>)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="margin-top: 20px; font-size: 0.95rem; color: var(--text-muted);"><em>Reference: Maister,
+                            D. H., Green, C. H., & Galford, R. M. (2000). The Trusted Advisor. Free Press.</em></p>
+                </div>
+
+                <h2>Managing Expectations: The "Under-Promise, Over-Deliver" Myth</h2>
+                <p>Research from the University of California, San Diego suggests that "under-promising and
+                    over-delivering" doesn't actually increase satisfaction as much as simply <strong>delivering exactly
+                        what was promised</strong>. Consistency beats occasional heroism.</p>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0;">
+                    <div
+                        style="background: rgba(16, 185, 129, 0.05); border: 1px solid var(--success); padding: 24px; border-radius: 12px;">
+                        <h4 style="color: var(--success); margin-bottom: 12px;">✅ The "Buffer" Strategy</h4>
+                        <p>Always add a "confidence buffer" to your estimates. If a task takes 3 days, quote 4-5 days.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic;">"Based on the complexity, we are targeting
+                            delivery by Friday EOD."</p>
+                    </div>
+                    <div
+                        style="background: rgba(239, 68, 68, 0.05); border: 1px solid var(--error); padding: 24px; border-radius: 12px;">
+                        <h4 style="color: var(--error); margin-bottom: 12px;">❌ The "Optimist's Cure"</h4>
+                        <p>Assuming everything goes perfectly. It never does.</p>
+                        <p style="margin-top: 12px; font-style: italic;">"I'll have it done by tomorrow morning, no
+                            problem!"</p>
+                    </div>
+                </div>
+
+                <h2>Handling Difficult Questions (The "Bridge" Technique)</h2>
+                <p>When a client asks a question you can't answer (or don't want to answer directly), use the "Bridge"
+                    technique common in media training. Acknowledge the question, then bridge to your key message.</p>
+
+                <div
+                    style="background: var(--bg-card); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                    <h3 style="margin-bottom: 16px;">The A-B-C Bridge Formula</h3>
+                    <ol style="margin-left: 24px; line-height: 2;">
+                        <li><strong>Acknowledge:</strong> "That's a valid concern..." or "I understand why that's a
+                            priority..."</li>
+                        <li><strong>Bridge:</strong> "...however, what's crucial right now is..." or "...the data we are
+                            seeing suggests..."</li>
+                        <li><strong>Control:</strong> "...focusing on the stability of the release."</li>
+                    </ol>
+                </div>
 
                 <div
                     style="background: var(--bg-dark); padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #f59e0b;">
-                    <h3 style="margin-bottom: 16px;">Phrases for Difficult Situations</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 12px;"><i class="fas fa-phone-alt"
-                                style="color: #f59e0b; margin-right: 12px;"></i> "That’s an excellent question. I want
-                            to ensure I give you an accurate technical breakdown—let me double-check with the team and
-                            get back to you by EOD."</li>
-                        <li style="margin-bottom: 12px;"><i class="fas fa-phone-alt"
-                                style="color: #f59e0b; margin-right: 12px;"></i> "I understand your concern about the
-                            timeline. We are currently [X], and our priority is ensuring the [Benefit]."</li>
+                    <h3 style="margin-bottom: 16px;">Scripts for High-Pressure Scenarios</h3>
+                    <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                        <li style="margin-bottom: 20px;">
+                            <strong>Scenario 1: Client asks for a feature not in scope ("Scope Creep").</strong><br>
+                            "That’s a great idea. However, it's outside our current sprint scope. If we add this now, it
+                            will push the release date by [X] days. Would you like to swap it with [Feature Y], or put
+                            it in the backlog for Phase 2?"
+                        </li>
+                        <li style="margin-bottom: 20px;">
+                            <strong>Scenario 2: Client asks a technical question you don't know the answer
+                                to.</strong><br>
+                            "That’s an excellent nuance. I want to give you a 100% accurate answer, so let me
+                            double-check the specific logs/documentation with the team and I'll drop you an email by
+                            EOD." (<strong>Never guess!</strong>)
+                        </li>
+                        <li>
+                            <strong>Scenario 3: Client is angry about a bug.</strong><br>
+                            "I completely understand your frustration—this downtime impacts your users. Our team is
+                            currently investigating the root cause. We have implemented a hotfix to mitigate impact and
+                            will share a full post-mortem report once resolved."
+                        </li>
                     </ul>
+                </div>
+
+                <h2>Accenture's "Value vs. volume" Principle</h2>
+                <p>Top consulting firms like Accenture teach that clients don't want <em>more</em> communication; they
+                    want <em>more valuable</em> communication. Limit status updates to "Red/Amber/Green" (RAG) status to
+                    respect executive time.</p>
+                <div
+                    style="background: var(--bg-card); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);">
+                    <p><strong>The RAG Status Framework:</strong></p>
+                    <ul style="margin-left: 24px; margin-top: 12px; line-height: 1.8;">
+                        <li><span style="color: #10b981;">● Green:</span> On track. No help needed. (Short & sweet)</li>
+                        <li><span style="color: #f59e0b;">● Amber:</span> At risk. Mitigation plan in place. (Needs
+                            awareness)</li>
+                        <li><span style="color: #ef4444;">● Red:</span> Blocked. Missed deadline imminent. (Needs
+                            immediate decision/action)</li>
+                    </ul>
+                </div>
+
+
+                <h2>References & Further Reading</h2>
+                <div
+                    style="background: var(--bg-card); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                    <ol style="margin-left: 24px; line-height: 2; font-size: 0.95rem;">
+                        <li>Maister, D. H., Green, C. H., & Galford, R. M. (2000). <em>The Trusted Advisor</em>. Free
+                            Press.</li>
+                        <li>Gneezy, A., & Epley, N. (2014). "Worth Keeping but Not Exceeding: Asymmetric Consequences of
+                            Breaking Versus Exceeding Promises." <em>Social Psychological and Personality Science</em>.
+                        </li>
+                        <li>Accenture. (2023). "Technology Consulting Best Practices." Accenture Academy.</li>
+                        <li>Harvard Business Review. (2011). "The Truth About Trust."</li>
+                    </ol>
                 </div>
 
                 <div class="lesson-footer"

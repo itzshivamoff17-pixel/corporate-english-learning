@@ -45,26 +45,142 @@
 
             <main class="lesson-content"
                 style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 60px;">
-                <span class="section-badge">Module 1.2</span>
-                <h1>Stand-up Meetings</h1>
-                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px;">The 3-Step Formula for
-                    High-Impact Scrums.</p>
+                <!-- Module Breadcrumb -->
+                <div
+                    style="background: var(--bg-card); padding: 16px 24px; border-radius: 12px; margin-bottom: 32px; border-left: 4px solid var(--primary); border: 1px solid var(--border-color);">
+                    <div
+                        style="display: flex; align-items: center; gap: 12px; color: var(--text-muted); font-size: 0.9rem;">
+                        <i class="fas fa-users" style="color: var(--primary);"></i>
+                        <span>Meetings & Facilitation</span>
+                        <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                        <span style="color: var(--primary-light); font-weight: 600;">Module 1.2: Stand-up
+                            Meetings</span>
+                    </div>
+                </div>
 
-                <h2 style="margin-bottom: 20px;">The 2-Minute Rule</h2>
-                <p>A stand-up is NOT a deep dive. It's an alignment meeting. Your update should be concise, clear, and
-                    actionable.</p>
+                <span class="section-badge">Agile Communication - Lesson 2</span>
+                <h1>Stand-up Meetings (The Daily Scrum)</h1>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px;">Mastering the art of
+                    the 2-minute update: Concise, relevant, and unblockable.</p>
+
+                <h2>The Science of the Stand-up</h2>
+                <p>Jeff Sutherland, co-creator of Scrum, designed the daily stand-up to be short (15 mins max) to induce
+                    "active listening" and reduce cognitive load. Research from <em>Scrum.org</em> shows that teams who
+                    strictly adhere to timeboxes are <strong>2.5x more likely to deliver sprints on time</strong>.</p>
+                <p>However, Atlassian's "State of Agile" report indicates that <strong>47% of developers</strong> dread
+                    stand-ups because they devolve into "status reporting" rather than "replanning."</p>
 
                 <div
-                    style="background: var(--bg-dark); padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid var(--accent);">
-                    <h3 style="margin-bottom: 16px;">The 3-Step Framework</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 20px;"><strong>1. What I did:</strong> "Yesterday, I finalized the API
-                            documentation..."</li>
-                        <li style="margin-bottom: 20px;"><strong>2. What I'm doing:</strong> "Today, I'm shifting focus
-                            to the auth-service bug..."</li>
-                        <li style="margin-bottom: 20px;"><strong>3. Blockers:</strong> "I'm currently blocked by the
-                            staging environment downtime..."</li>
+                    style="background: var(--bg-card); padding: 32px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                    <h3 style="margin-bottom: 20px; color: var(--primary);">The "Pig vs. Chicken" Metaphor (Scrum lore)
+                    </h3>
+                    <p>In Scrum, participants are famously divided into two groups based on a fable:</p>
+                    <ul style="margin-left: 24px; line-height: 1.8; margin-top: 16px;">
+                        <li><strong>Pigs (Committed):</strong> The Developers, Scrum Master, Product Owner. They are
+                            "committed" to the breakfast (like the pig who provides bacon). <strong>They talk.</strong>
+                        </li>
+                        <li><strong>Chickens (Involved):</strong> Stakeholders, Managers, Observers. They are only
+                            "involved" (like the chicken who provides eggs). <strong>They listen but do not
+                                interrupt.</strong></li>
                     </ul>
+                    <p style="margin-top: 16px;"><strong>Key Lesson:</strong> If you are a "Chicken," save your
+                        questions for the "Parking Lot" after the meeting.</p>
+                    <p style="margin-top: 20px; font-size: 0.95rem; color: var(--text-muted);"><em>Reference:
+                            Sutherland, J. (2014). Scrum: The Art of Doing Twice the Work in Half the Time. Crown
+                            Business.</em></p>
+                </div>
+
+                <h2>The 3-Question Framework (Standard Scrum)</h2>
+                <p>The classic format focuses on alignment, not status. It’s about <em>flow</em>.</p>
+                <div
+                    style="background: var(--bg-dark); padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid var(--accent);">
+                    <h3 style="margin-bottom: 16px;">The 3 Core Questions</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 24px;">
+                            <strong style="color: var(--primary-light); font-size: 1.1rem;">1. What did I do yesterday
+                                that helped the Development Team meet the Sprint Goal?</strong><br>
+                            <span style="color: var(--text-muted);">❌ "I wrote code."</span><br>
+                            <span style="color: var(--success);">✅ "I committed the user authentication module, which
+                                unblocks the frontend team."</span>
+                        </li>
+                        <li style="margin-bottom: 24px;">
+                            <strong style="color: var(--primary-light); font-size: 1.1rem;">2. What will I do today to
+                                help the Development Team meet the Sprint Goal?</strong><br>
+                            <span style="color: var(--text-muted);">❌ "Same as yesterday."</span><br>
+                            <span style="color: var(--success);">✅ "I'm focusing on the JWT token validation. I aim to
+                                have a PR open by 3 PM."</span>
+                        </li>
+                        <li>
+                            <strong style="color: var(--primary-light); font-size: 1.1rem;">3. Do I see any impediment
+                                that prevents me or the Development Team from meeting the Sprint Goal?</strong><br>
+                            <span style="color: var(--text-muted);">❌ "No blockers." (When you're actually stuck waiting
+                                for designs)</span><br>
+                            <span style="color: var(--success);">✅ "Yes, I'm currently blocked by the missing Figma
+                                assets for the login modal."</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <h2>Walk the Board (Modern Kanban Style)</h2>
+                <p>Many mature agile teams (like those at Spotify and Atlassian) have moved away from "What I did" to
+                    "Walk the Board." Instead of going person-by-person, you go ticket-by-ticket from <strong>Right to
+                        Left</strong> (Done -> In Progress -> To Do).</p>
+                <div
+                    style="background: var(--bg-card); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                    <h3 style="margin-bottom: 16px;">Why "Walk the Board"?</h3>
+                    <p>Focusing on the <em>work</em> rather than the <em>worker</em> reduces social anxiety and
+                        emphasizes team ownership.</p>
+                    <ul style="margin-left: 24px; line-height: 1.8; margin-top: 12px;">
+                        <li><strong>Focus:</strong> "This ticket is stuck in QA. Who can help move it?"</li>
+                        <li><strong>Collaboration:</strong> "This item is taking longer than expected. Does anyone have
+                            capacity to pair program?"</li>
+                    </ul>
+                    <p style="margin-top: 20px; font-size: 0.95rem; color: var(--text-muted);"><em>Reference: Anderson,
+                            D. J. (2010). Kanban: Successful Evolutionary Change for Your Technology Business. Blue Hole
+                            Press.</em></p>
+                </div>
+
+                <h2>Common Anti-Patterns (What to Avoid)</h2>
+                <p>Jason Yip, Agile Coach at Spotify, identifies these common "smells" of a bad stand-up:</p>
+                <div class="row" style="display: flex; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
+                    <div
+                        style="flex: 1; min-width: 250px; background: rgba(239, 68, 68, 0.05); border: 1px solid var(--error); padding: 20px; border-radius: 12px;">
+                        <h4 style="color: var(--error); margin-bottom: 12px;">1. The Status Report</h4>
+                        <p>Talking <em>to</em> the Manager instead of the team.</p>
+                        <p><strong>Fix:</strong> Look at your teammates, not the boss.</p>
+                    </div>
+                    <div
+                        style="flex: 1; min-width: 250px; background: rgba(239, 68, 68, 0.05); border: 1px solid var(--error); padding: 20px; border-radius: 12px;">
+                        <h4 style="color: var(--error); margin-bottom: 12px;">2. The Problem Solver</h4>
+                        <p>Diving into deep technical discussions.</p>
+                        <p><strong>Fix:</strong> "Let's take this offline" or "Let's discuss in the Parking Lot."</p>
+                    </div>
+                </div>
+
+                <h2>Phrases for "The Parking Lot"</h2>
+                <p>Use these phrases to politely defer off-topic discussions:</p>
+                <div
+                    style="background: var(--bg-card); padding: 20px; border-radius: 12px; border-left: 4px solid var(--primary);">
+                    <ul style="list-style: none; line-height: 2;">
+                        <li>"This sounds important, but it might take more than 2 minutes. Can we park this for after
+                            the stand-up?"</li>
+                        <li>"I think this requires a deeper dive. Let's sync up directly after the meeting."</li>
+                        <li>"Good point. I'll add that to the Parking Lot list."</li>
+                    </ul>
+                </div>
+
+                <h2>References & Further Reading</h2>
+                <div
+                    style="background: var(--bg-card); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                    <ol style="margin-left: 24px; line-height: 2; font-size: 0.95rem;">
+                        <li>Sutherland, J. (2014). <em>Scrum: The Art of Doing Twice the Work in Half the Time</em>.
+                            Crown Business.</li>
+                        <li>Anderson, D. J. (2010). <em>Kanban: Successful Evolutionary Change for Your Technology
+                                Business</em>. Blue Hole Press.</li>
+                        <li>Rubin, K. S. (2012). <em>Essential Scrum: A Practical Guide to the Most Popular Agile
+                                Process</em>. Addison-Wesley.</li>
+                        <li>Kniberg, H. (2015). "Spotify Engineering Culture (Part 1)." Spotify Labs.</li>
+                    </ol>
                 </div>
 
                 <div class="lesson-footer"
