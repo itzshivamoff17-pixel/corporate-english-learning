@@ -100,37 +100,114 @@
         </aside>
 
         <main class="lesson-content">
-            <span class="section-badge">Module 1.2</span>
-            <h1>The 'Hook' Meta & Live Demos</h1>
-
-            <p>A "Hook" isn't a joke or a fancy slide. In a technical context, a hook is a <strong>Shared Pain
-                    Point</strong>. It creates a reason for the audience to pay attention.</p>
-
-            <h2>Creating the Technical Hook</h2>
-            <div class="tip-card">
-                <h4>Method 1: The 'Cost' Hook</h4>
-                <p>"By the end of this demo, I’ll show you how we can save $5,000/month by optimizing our cloud
-                    instances."</p>
-            </div>
-            <div class="tip-card">
-                <h4>Method 2: The 'Error' Hook</h4>
-                <p>"We’ve all seen the [X] error in our logs. Today, I'm presenting the permanent fix."</p>
+            <!-- Module Breadcrumb -->
+            <div
+                style="background: var(--bg-card); padding: 16px 24px; border-radius: 12px; margin-bottom: 32px; border-left: 4px solid var(--primary); border: 1px solid var(--border-color);">
+                <div
+                    style="display: flex; align-items: center; gap: 12px; color: var(--text-muted); font-size: 0.9rem;">
+                    <i class="fas fa-chalkboard-teacher" style="color: var(--primary);"></i>
+                    <span>Public Speaking & Presentations</span>
+                    <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                    <span style="color: var(--primary-light); font-weight: 600;">Module 1.2: Visual Design for
+                        Engineers</span>
+                </div>
             </div>
 
-            <h2>The Golden Rules of Live Demos</h2>
+            <span class="section-badge">Visual Communication - Lesson 2</span>
+            <h1>Visual Design for Engineers</h1>
+
+            <p style="font-size: 1.15rem; line-height: 1.8;">Technical presentations often fail because the slides are
+                "Walls of Text." Your slides should not be your teleprompter. This lesson covers data visualization
+                principles from Edward Tufte and Nancy Duarte.</p>
+
+            <h2>The "Data-Ink Ratio" (Edward Tufte)</h2>
+            <p>Yale Professor Edward Tufte, the pioneer of data visualization, coined the term <strong>Data-Ink
+                    Ratio</strong>. It means: "Remove any ink that does not convey information."</p>
+
+            <div
+                style="background: var(--bg-card); padding: 32px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                <h3 style="margin-bottom: 20px; color: var(--primary);">Chart Junk Removal</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                    <div
+                        style="background: rgba(239, 68, 68, 0.05); border: 1px solid var(--error); padding: 20px; border-radius: 12px;">
+                        <h4 style="color: var(--error); margin-bottom: 12px;">❌ Low Ratio (Bad)</h4>
+                        <ul style="padding-left: 20px; font-size: 0.9rem;">
+                            <li>3D pie charts (Distorts data)</li>
+                            <li>Heavy grid lines</li>
+                            <li>Decorative backgrounds</li>
+                            <li>"Cool" animations</li>
+                        </ul>
+                    </div>
+                    <div
+                        style="background: rgba(16, 185, 129, 0.05); border: 1px solid var(--success); padding: 20px; border-radius: 12px;">
+                        <h4 style="color: var(--success); margin-bottom: 12px;">✅ High Ratio (Good)</h4>
+                        <ul style="padding-left: 20px; font-size: 0.9rem;">
+                            <li>Simple bar charts</li>
+                            <li>Direct labeling (No legends)</li>
+                            <li>White background</li>
+                            <li>Highlights only on key insights</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="margin-top: 20px; font-size: 0.95rem; color: var(--text-muted);"><em>Reference: Tufte, E. R.
+                        (2001). The Visual Display of Quantitative Information. Graphics Press.</em></p>
+            </div>
+
+            <h2>The "3-Second Rule" (Nancy Duarte)</h2>
+            <p>Nancy Duarte, who designed Al Gore's <em>An Inconvenient Truth</em>, states that an audience member
+                should understand the point of a slide within 3 seconds. If they have to read, they stop listening to
+                you.</p>
+
+            <div class="tip-card">
+                <h4 style="display: flex; align-items: center; gap: 10px;"><i class="fas fa-eye"></i> The Glance Test
+                </h4>
+                <p>Stand 5 feet back from your monitor. Can you read the headline? Does the graphic speak for itself?
+                </p>
+                <p style="margin-top: 12px;"><strong>Structure:</strong>
+                    <br>1. <strong>Headline:</strong> The main takeaway (e.g., "Latency dropped by 40%")
+                    <br>2. <strong>Body:</strong> The evidence (The chart)
+                    <br>3. <strong>Footer:</strong> Source/Caveats
+                </p>
+            </div>
+
+            <h2>Slidedocs: The detailed Hybrid</h2>
+            <p>Sometimes you need to convey dense technical details. Don't put it on the screen. Create a
+                <strong>Slidedoc</strong>—a visual document intended to be read, not presented.</p>
+            <div
+                style="background: var(--bg-dark); border-left: 4px solid var(--primary); padding: 24px; margin: 32px 0;">
+                <p><strong>Strategy:</strong> "I have sent ahead a detailed Slidedoc with the architecture diagrams. For
+                    this meeting, I will only present the high-level decision flow."</p>
+            </div>
+
+            <h2>Live Demo Etiquette</h2>
             <p>Demos are the ultimate proof of work. But they are also high-risk. Follow these linguistic rules to keep
                 the audience engaged even when things go slow.</p>
 
             <ul style="list-style: none; padding: 0;">
                 <li style="margin-bottom: 16px;"><i class="fas fa-check" style="color: var(--success);"></i>
-                    <strong>Narrate the Action:</strong> "As you can see, I am now initializing the script..."</li>
+                    <strong>Narrate the Action:</strong> "As you can see, I am now initializing the script..."
+                </li>
                 <li style="margin-bottom: 16px;"><i class="fas fa-check" style="color: var(--success);"></i>
                     <strong>Fill the 'Wait':</strong> "While this build completes (it usually takes 30s), I want to
-                    highlight the [X] configuration."</li>
+                    highlight the [X] configuration."
+                </li>
                 <li style="margin-bottom: 16px;"><i class="fas fa-check" style="color: var(--success);"></i>
                     <strong>Handle the 'Fail':</strong> "It seems we have a connection timeout. No worries, I had a
-                    fallback environment ready for exactly this reason."</li>
+                    fallback environment ready for exactly this reason."
+                </li>
             </ul>
+
+            <h2>References & Further Reading</h2>
+            <div
+                style="background: var(--bg-card); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                <ol style="margin-left: 24px; line-height: 2; font-size: 0.95rem;">
+                    <li>Tufte, E. R. (2001). <em>The Visual Display of Quantitative Information</em>. Graphics Press.
+                    </li>
+                    <li>Duarte, N. (2008). <em>slide:ology: The Art and Science of Creating Great Presentations</em>.
+                        O'Reilly Media.</li>
+                    <li>Reynolds, G. (2008). <em>Presentation Zen</em>. New Riders.</li>
+                </ol>
+            </div>
 
             <div class="lesson-footer"
                 style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
