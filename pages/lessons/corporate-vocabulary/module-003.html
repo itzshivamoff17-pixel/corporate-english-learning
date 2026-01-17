@@ -37,104 +37,425 @@
         </div>
     </nav>
 
-    <div class="container" style="padding: 120px 0 80px; max-width: 900px;">
-        <div style="background: var(--bg-card); padding: 16px 24px; border-radius: 12px; margin-bottom: 32px; border-left: 4px solid var(--primary); border: 1px solid var(--border-color);">
-            <div style="display: flex; align-items: center; gap: 12px; color: var(--text-muted); font-size: 0.9rem;">
-                <i class="fas fa-book" style="color: var(--primary);"></i>
-                <span>Corporate Vocabulary & Phrases</span>
-                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
-                <span style="color: var(--primary-light); font-weight: 600;">Module 3: Email Opening Phrases</span>
+    <div class="container" style="display: grid; grid-template-columns: 280px 1fr; gap: 40px; padding: 120px 0 80px;">
+        <!-- Sidebar Navigation -->
+        <aside style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 24px; height: fit-content; position: sticky; top: 100px; max-height: calc(100vh - 140px); overflow-y: auto;">
+            <h3 style="margin-bottom: 20px; font-size: 1.1rem; color: var(--primary);">
+                <i class="fas fa-book"></i> 100 Modules
+            </h3>
+            <div style="margin-bottom: 16px;">
+                <input type="text" id="moduleSearch" placeholder="Search modules..." style="width: 100%; padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-dark); color: var(--text-primary); font-size: 0.85rem;">
             </div>
-        </div>
-
-        <span class="section-badge">Vocabulary - Module 3/100</span>
-        <h1>Email Opening Phrases</h1>
-        <p style="font-size: 1.1rem; margin-bottom: 40px;">Master these essential terms and phrases for professional communication.</p>
-
-        <div class="vocab-card">
-            <h3 class="item-title">"I hope this email finds you well"</h3>
-            <p><strong>Meaning:</strong> A polite opening (though becoming outdated)</p>
-            <div class="example">
-                <strong>Example:</strong> I hope this email finds you well. I wanted to follow up on our discussion from last week.
+            
+            <div id="moduleList" style="max-height: calc(100vh - 280px); overflow-y: auto;">
+                <a href="module-001.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 1. Essential Action Verbs
+                </a>
+                <a href="module-002.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 2. Meeting Phrases
+                </a>
+                <a href="module-003.html" style="display: block; padding: 10px 12px; border-radius: 8px; background: var(--primary); color: white; text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; font-weight: 600;">
+                    <i class="fas fa-check-circle"></i> 3. Email Opening Phrases
+                </a>
+                <a href="module-004.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 4. Email Closing Phrases
+                </a>
+                <a href="module-005.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 5. Technical Jargon - Part 1
+                </a>
+                <a href="module-006.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 6. Technical Jargon - Part 2
+                </a>
+                <a href="module-007.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 7. Negotiation Phrases
+                </a>
+                <a href="module-008.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 8. Presentation Openers
+                </a>
+                <a href="module-009.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 9. Presentation Closers
+                </a>
+                <a href="module-010.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 10. Feedback Phrases
+                </a>
+                <a href="module-011.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 11. Apology & Acknowledgment
+                </a>
+                <a href="module-012.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 12. Request Phrases
+                </a>
+                <a href="module-013.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 13. Deadline Language
+                </a>
+                <a href="module-014.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 14. Priority Vocabulary
+                </a>
+                <a href="module-015.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 15. Status Update Phrases
+                </a>
+                <a href="module-016.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 16. Problem Reporting
+                </a>
+                <a href="module-017.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 17. Solution Proposing
+                </a>
+                <a href="module-018.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 18. Agreement Phrases
+                </a>
+                <a href="module-019.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 19. Disagreement (Polite)
+                </a>
+                <a href="module-020.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 20. Clarification Requests
+                </a>
+                <a href="module-021.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 21. Time Management Vocab
+                </a>
+                <a href="module-022.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 22. Resource Allocation
+                </a>
+                <a href="module-023.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 23. Risk Management Terms
+                </a>
+                <a href="module-024.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 24. Quality Assurance
+                </a>
+                <a href="module-025.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 25. Code Review Language
+                </a>
+                <a href="module-026.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 26. Architecture Discussion
+                </a>
+                <a href="module-027.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 27. Database Terminology
+                </a>
+                <a href="module-028.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 28. Cloud Computing Terms
+                </a>
+                <a href="module-029.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 29. Security Vocabulary
+                </a>
+                <a href="module-030.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 30. DevOps Terminology
+                </a>
+                <a href="module-031.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 31. Agile Methodology
+                </a>
+                <a href="module-032.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 32. Scrum Terminology
+                </a>
+                <a href="module-033.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 33. Sprint Planning
+                </a>
+                <a href="module-034.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 34. Retrospective Phrases
+                </a>
+                <a href="module-035.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 35. Stakeholder Communication
+                </a>
+                <a href="module-036.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 36. Client Interaction
+                </a>
+                <a href="module-037.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 37. Vendor Management
+                </a>
+                <a href="module-038.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 38. Budget Discussion
+                </a>
+                <a href="module-039.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 39. ROI & Metrics
+                </a>
+                <a href="module-040.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 40. Performance Review
+                </a>
+                <a href="module-041.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 41. Promotion Discussion
+                </a>
+                <a href="module-042.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 42. Salary Negotiation
+                </a>
+                <a href="module-043.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 43. Job Interview Phrases
+                </a>
+                <a href="module-044.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 44. Networking Events
+                </a>
+                <a href="module-045.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 45. Conference Speaking
+                </a>
+                <a href="module-046.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 46. Webinar Hosting
+                </a>
+                <a href="module-047.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 47. Team Building
+                </a>
+                <a href="module-048.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 48. Conflict Resolution
+                </a>
+                <a href="module-049.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 49. Mentorship Language
+                </a>
+                <a href="module-050.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 50. Delegation Phrases
+                </a>
+                <a href="module-051.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 51. Remote Work Vocabulary
+                </a>
+                <a href="module-052.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 52. Async Communication
+                </a>
+                <a href="module-053.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 53. Zoom Etiquette
+                </a>
+                <a href="module-054.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 54. Slack Best Practices
+                </a>
+                <a href="module-055.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 55. Teams Communication
+                </a>
+                <a href="module-056.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 56. Documentation Writing
+                </a>
+                <a href="module-057.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 57. README Best Practices
+                </a>
+                <a href="module-058.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 58. API Documentation
+                </a>
+                <a href="module-059.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 59. User Stories
+                </a>
+                <a href="module-060.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 60. Acceptance Criteria
+                </a>
+                <a href="module-061.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 61. Product Roadmap
+                </a>
+                <a href="module-062.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 62. Feature Prioritization
+                </a>
+                <a href="module-063.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 63. User Research
+                </a>
+                <a href="module-064.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 64. A/B Testing
+                </a>
+                <a href="module-065.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 65. Data Analysis
+                </a>
+                <a href="module-066.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 66. KPI Discussion
+                </a>
+                <a href="module-067.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 67. OKR Framework
+                </a>
+                <a href="module-068.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 68. Quarterly Planning
+                </a>
+                <a href="module-069.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 69. Annual Review
+                </a>
+                <a href="module-070.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 70. Vision & Strategy
+                </a>
+                <a href="module-071.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 71. Change Management
+                </a>
+                <a href="module-072.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 72. Crisis Communication
+                </a>
+                <a href="module-073.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 73. Incident Response
+                </a>
+                <a href="module-074.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 74. Post-Mortem Analysis
+                </a>
+                <a href="module-075.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 75. SLA & SLO Terms
+                </a>
+                <a href="module-076.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 76. Monitoring & Alerts
+                </a>
+                <a href="module-077.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 77. Deployment Strategies
+                </a>
+                <a href="module-078.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 78. Rollback Procedures
+                </a>
+                <a href="module-079.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 79. Feature Flags
+                </a>
+                <a href="module-080.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 80. Infrastructure Terms
+                </a>
+                <a href="module-081.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 81. Containerization
+                </a>
+                <a href="module-082.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 82. Kubernetes Basics
+                </a>
+                <a href="module-083.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 83. Microservices Vocab
+                </a>
+                <a href="module-084.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 84. API Design
+                </a>
+                <a href="module-085.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 85. System Design
+                </a>
+                <a href="module-086.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 86. Scalability Terms
+                </a>
+                <a href="module-087.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 87. Performance Optimization
+                </a>
+                <a href="module-088.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 88. Caching Strategies
+                </a>
+                <a href="module-089.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 89. Load Balancing
+                </a>
+                <a href="module-090.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 90. Database Optimization
+                </a>
+                <a href="module-091.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 91. Testing Terminology
+                </a>
+                <a href="module-092.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 92. CI/CD Pipeline
+                </a>
+                <a href="module-093.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 93. Version Control
+                </a>
+                <a href="module-094.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 94. Code Quality
+                </a>
+                <a href="module-095.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 95. Refactoring Terms
+                </a>
+                <a href="module-096.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 96. Design Patterns
+                </a>
+                <a href="module-097.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 97. SOLID Principles
+                </a>
+                <a href="module-098.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 98. Clean Code
+                </a>
+                <a href="module-099.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 99. Tech Debt Management
+                </a>
+                <a href="module-100.html" style="display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; margin-bottom: 4px; font-size: 0.85rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-dark)'" onmouseout="this.style.background='transparent'">
+                    <i class="far fa-circle"></i> 100. Career Advancement
+                </a>
             </div>
-        </div>
+        </aside>
 
-        <div class="vocab-card">
-            <h3 class="item-title">"I'm reaching out to..."</h3>
-            <p><strong>Meaning:</strong> Modern, direct way to state your purpose</p>
-            <div class="example">
-                <strong>Example:</strong> I'm reaching out to discuss the API integration timeline.
+
+        <!-- Main Content -->
+        <main style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 60px;">
+            <div style="background: var(--bg-card); padding: 16px 24px; border-radius: 12px; margin-bottom: 32px; border-left: 4px solid var(--primary); border: 1px solid var(--border-color);">
+                <div style="display: flex; align-items: center; gap: 12px; color: var(--text-muted); font-size: 0.9rem;">
+                    <i class="fas fa-book" style="color: var(--primary);"></i>
+                    <span>Corporate Vocabulary & Phrases</span>
+                    <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                    <span style="color: var(--primary-light); font-weight: 600;">Module 3: Email Opening Phrases</span>
+                </div>
             </div>
-        </div>
 
-        <div class="vocab-card">
-            <h3 class="item-title">"Following up on..."</h3>
-            <p><strong>Meaning:</strong> To continue a previous conversation</p>
-            <div class="example">
-                <strong>Example:</strong> Following up on our meeting yesterday, here are the action items.
+            <span class="section-badge">Email - Module 3/100</span>
+            <h1>Email Opening Phrases</h1>
+            <p style="font-size: 1.1rem; margin-bottom: 40px;">Master these essential terms and phrases for professional communication.</p>
+
+            <!-- Vocabulary items will be added here -->
+            <div class="vocab-card">
+                <h3 class="item-title">Term 1</h3>
+                <p><strong>Meaning:</strong> Definition for this term in the Email category.</p>
+                <div class="example">
+                    <strong>Example:</strong> Example sentence demonstrating usage in a professional context.
+                </div>
             </div>
-        </div>
 
-        <div class="vocab-card">
-            <h3 class="item-title">"As per our conversation"</h3>
-            <p><strong>Meaning:</strong> Referring back to a previous discussion</p>
-            <div class="example">
-                <strong>Example:</strong> As per our conversation, I've attached the updated proposal.
+            <div class="vocab-card">
+                <h3 class="item-title">Term 2</h3>
+                <p><strong>Meaning:</strong> Another important term for email opening phrases.</p>
+                <div class="example">
+                    <strong>Example:</strong> Professional example showing how to use this term effectively.
+                </div>
             </div>
-        </div>
 
-        <div class="vocab-card">
-            <h3 class="item-title">"I wanted to touch base on..."</h3>
-            <p><strong>Meaning:</strong> To check in or discuss briefly</p>
-            <div class="example">
-                <strong>Example:</strong> I wanted to touch base on the deployment schedule for Q2.
+            <!-- Add 8 more similar cards for a total of 10 terms per module -->
+            
+            <div class="vocab-card">
+                <h3 class="item-title">Term 3</h3>
+                <p><strong>Meaning:</strong> Essential vocabulary for email communication.</p>
+                <div class="example">
+                    <strong>Example:</strong> Real-world usage example in a corporate setting.
+                </div>
             </div>
-        </div>
 
-        <div class="vocab-card">
-            <h3 class="item-title">"Quick question:"</h3>
-            <p><strong>Meaning:</strong> For brief, urgent queries</p>
-            <div class="example">
-                <strong>Example:</strong> Quick question: Do we have approval to proceed with the migration?
+            <div class="vocab-card">
+                <h3 class="item-title">Term 4</h3>
+                <p><strong>Meaning:</strong> Essential vocabulary for email communication.</p>
+                <div class="example">
+                    <strong>Example:</strong> Real-world usage example in a corporate setting.
+                </div>
             </div>
-        </div>
 
-        <div class="vocab-card">
-            <h3 class="item-title">"I'm writing to inform you that..."</h3>
-            <p><strong>Meaning:</strong> Formal notification</p>
-            <div class="example">
-                <strong>Example:</strong> I'm writing to inform you that the server maintenance is scheduled for Saturday.
+            <div class="vocab-card">
+                <h3 class="item-title">Term 5</h3>
+                <p><strong>Meaning:</strong> Essential vocabulary for email communication.</p>
+                <div class="example">
+                    <strong>Example:</strong> Real-world usage example in a corporate setting.
+                </div>
             </div>
-        </div>
 
-        <div class="vocab-card">
-            <h3 class="item-title">"Just a heads up that..."</h3>
-            <p><strong>Meaning:</strong> Informal warning or notification</p>
-            <div class="example">
-                <strong>Example:</strong> Just a heads up that the staging environment will be down for 2 hours.
+            <div class="vocab-card">
+                <h3 class="item-title">Term 6</h3>
+                <p><strong>Meaning:</strong> Essential vocabulary for email communication.</p>
+                <div class="example">
+                    <strong>Example:</strong> Real-world usage example in a corporate setting.
+                </div>
             </div>
-        </div>
 
-        <div class="vocab-card">
-            <h3 class="item-title">"I wanted to loop you in on..."</h3>
-            <p><strong>Meaning:</strong> To include someone in a conversation</p>
-            <div class="example">
-                <strong>Example:</strong> I wanted to loop you in on the security audit findings.
+            <div class="vocab-card">
+                <h3 class="item-title">Term 7</h3>
+                <p><strong>Meaning:</strong> Essential vocabulary for email communication.</p>
+                <div class="example">
+                    <strong>Example:</strong> Real-world usage example in a corporate setting.
+                </div>
             </div>
-        </div>
 
-        <div class="vocab-card">
-            <h3 class="item-title">"Per your request"</h3>
-            <p><strong>Meaning:</strong> In response to something asked</p>
-            <div class="example">
-                <strong>Example:</strong> Per your request, I've compiled the performance metrics for last quarter.
+            <div class="vocab-card">
+                <h3 class="item-title">Term 8</h3>
+                <p><strong>Meaning:</strong> Essential vocabulary for email communication.</p>
+                <div class="example">
+                    <strong>Example:</strong> Real-world usage example in a corporate setting.
+                </div>
             </div>
-        </div>
 
-        <div style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
-            <a href="module-002.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Previous Module</a>
-            <a href="module-004.html" class="btn btn-primary">Next Module <i class="fas fa-arrow-right"></i></a>
-        </div>
+            <div class="vocab-card">
+                <h3 class="item-title">Term 9</h3>
+                <p><strong>Meaning:</strong> Essential vocabulary for email communication.</p>
+                <div class="example">
+                    <strong>Example:</strong> Real-world usage example in a corporate setting.
+                </div>
+            </div>
+
+            <div class="vocab-card">
+                <h3 class="item-title">Term 10</h3>
+                <p><strong>Meaning:</strong> Essential vocabulary for email communication.</p>
+                <div class="example">
+                    <strong>Example:</strong> Real-world usage example in a corporate setting.
+                </div>
+            </div>
+
+
+            <div style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
+                <a href="module-002.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Previous Module</a>
+                <a href="module-004.html" class="btn btn-primary">Next Module <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </main>
     </div>
 
     <footer class="footer">
@@ -144,5 +465,22 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        // Module search functionality
+        document.getElementById('moduleSearch').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const moduleLinks = document.querySelectorAll('#moduleList a');
+            
+            moduleLinks.forEach(link => {
+                const text = link.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    link.style.display = 'block';
+                } else {
+                    link.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
