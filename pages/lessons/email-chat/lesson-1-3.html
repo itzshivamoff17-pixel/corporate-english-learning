@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1.3: Async vs Sync Etiquette - ProSpeak English</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .lesson-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            padding: 120px 0 80px;
+        }
+
+        .lesson-sidebar {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 24px;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .lesson-nav-item {
+            padding: 12px;
+            border-radius: 8px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            border: 1px solid transparent;
+            text-decoration: none;
+        }
+
+        .lesson-nav-item.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .lesson-nav-item.completed {
+            color: var(--success);
+        }
+
+        .lesson-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 60px;
+        }
+
+        .lesson-content h1 {
+            margin-bottom: 24px;
+        }
+
+        .lesson-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-light);
+        }
+
+        .lesson-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 32px 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 16px;
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background: var(--bg-dark);
+            color: var(--primary-light);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo"><i class="fas fa-language"></i><span>ProSpeak</span></a>
+            <div class="nav-actions"><a href="../../dashboard.html" class="btn btn-outline btn-sm">Dashboard</a></div>
+        </div>
+    </nav>
+
+    <div class="container lesson-container">
+        <aside class="lesson-sidebar">
+            <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Writing Progress</h3>
+            <a href="lesson-1-1.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.1 Email
+                Structure</a>
+            <a href="lesson-1-2.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.2 Tone &
+                Pitch</a>
+            <div class="lesson-nav-item active"><i class="fas fa-play-circle"></i> 1.3 Async vs Sync</div>
+        </aside>
+
+        <main class="lesson-content">
+            <span class="section-badge">Module 1.3</span>
+            <h1>Async vs. Sync Etiquette</h1>
+
+            <p>In a global MNC, you'll be working across timezones. Mastering asynchronous communication (Email, Slack,
+                Jira) vs. synchronous communication (Calls, Real-time chat) is vital for productivity.</p>
+
+            <h2>When to use What?</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Channel</th>
+                        <th>Best for...</th>
+                        <th>Expectation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Email</td>
+                        <td>Official approvals, long-form logic, documentation.</td>
+                        <td>24-hour response</td>
+                    </tr>
+                    <tr>
+                        <td>Slack / Teams</td>
+                        <td>Quick updates, casual team syncs, urgent blockers.</td>
+                        <td>1-2 hour response</td>
+                    </tr>
+                    <tr>
+                        <td>Meeting / Call</td>
+                        <td>Complex debates, conflict resolution, brainstorming.</td>
+                        <td>Real-time</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>The 'Hand-off' Message</h2>
+            <p>When you finish your shift and Hand-off work to a colleague in another timezone, clarity is everything.
+            </p>
+            <div class="example-box"
+                style="background: var(--bg-dark); border-left: 4px solid var(--primary); padding: 24px; margin: 32px 0;">
+                <p><strong>Perfect Hand-off:</strong> "I've completed the [X] module. The code is pushed to branch [Y].
+                    I've left a few comments on the PR regarding the [Z] logic. Over to you!"</p>
+            </div>
+
+            <div class="lesson-footer"
+                style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
+                <a href="lesson-1-2.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Previous</a>
+                <a href="../../dashboard.html" class="btn btn-primary">Finish Writing Module</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ProSpeak English.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

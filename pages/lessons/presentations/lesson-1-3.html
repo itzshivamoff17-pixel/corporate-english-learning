@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module 1: High-Impact Stand-ups - ProSpeak English</title>
+    <title>Module 1.3: Visual Hierarchy - ProSpeak English</title>
     <link rel="stylesheet" href="../../../assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -36,11 +36,18 @@
             align-items: center;
             gap: 10px;
             margin-bottom: 8px;
+            border: 1px solid transparent;
+            text-decoration: none;
         }
 
         .lesson-nav-item.active {
             background: var(--primary);
             color: white;
+            border-color: var(--primary);
+        }
+
+        .lesson-nav-item.completed {
+            color: var(--success);
         }
 
         .lesson-content {
@@ -64,14 +71,6 @@
             font-size: 1.1rem;
             margin-bottom: 20px;
         }
-
-        .example-box {
-            background: var(--bg-dark);
-            border-left: 4px solid var(--primary);
-            padding: 24px;
-            margin: 32px 0;
-            border-radius: 0 12px 12px 0;
-        }
     </style>
 </head>
 
@@ -85,43 +84,43 @@
 
     <div class="container lesson-container">
         <aside class="lesson-sidebar">
-            <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Meetings Toolkit</h3>
-            <div class="lesson-nav-item active"><i class="fas fa-check-circle"></i> 1.1 Efficient Stand-ups</div>
-            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.2 Agile Ceremonies</div>
-            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.3 Handling Interruptions</div>
+            <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Presentation Skills</h3>
+            <a href="lesson-1-1.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.1
+                Storytelling Structure</a>
+            <a href="lesson-1-2.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.2 The
+                'Hook' Meta</a>
+            <div class="lesson-nav-item active"><i class="fas fa-play-circle"></i> 1.3 Visual Hierarchy</div>
         </aside>
 
         <main class="lesson-content">
-            <span class="section-badge">Module 1.1</span>
-            <h1>The Daily Stand-up: Past, Present, Future</h1>
+            <span class="section-badge">Module 1.3</span>
+            <h1>Visual Hierarchy for Tech Slides</h1>
 
-            <p>In Agile teams, the Daily Stand-up (DSU) is the most frequent speaking opportunity. Many engineers make
-                the mistake of being too technical or too vague. The 'Past, Present, Future' framework solves this.</p>
+            <p>Engineers often cram too much code or data onto a single slide. Visual hierarchy ensures your audience
+                looks where you want them to look.</p>
 
-            <h2>Phase 1: What I did (Past)</h2>
-            <p>Focus on completion, not just effort.</p>
-            <div class="example-box">
-                <p><strong>Phrasing:</strong> "Since our last sync, I successfully pushed the fixes for..."</p>
-            </div>
+            <h2>The 10-20-30 Rule (Modified for Tech)</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 20px;"><strong>10 Slides Max:</strong> Keep it concise. Stakeholders have
+                    short attention spans.</li>
+                <li style="margin-bottom: 20px;"><strong>20 Minutes Max:</strong> Leave at least 10 minutes for Q&A.
+                </li>
+                <li style="margin-bottom: 20px;"><strong>30 Point Font:</strong> If they can't read it from the back of
+                    the room (or on a small Zoom window), it shouldn't be there.</li>
+            </ul>
 
-            <h2>Phase 2: What I'm doing (Present)</h2>
-            <p>Focus on your current priority.</p>
-            <div class="example-box">
-                <p><strong>Phrasing:</strong> "Today, my main focus is on finalizing the API integration..."</p>
-            </div>
-
-            <h2>Phase 3: The Blockers (Future/Risks)</h2>
-            <p>Be direct. This is your chance to ask for help.</p>
-            <div class="example-box">
-                <p><strong>Phrasing:</strong> "I'm currently blocked by the credentials for the staging env. Can someone
-                    help with that?"</p>
+            <h2>Highlighting Code Snippets</h2>
+            <p>If you must show code, never show a whole file. Use "Spotlighting".</p>
+            <div class="example-box"
+                style="background: var(--bg-dark); border-left: 4px solid var(--primary); padding: 24px; margin: 32px 0;">
+                <p><strong>Linguistic Tip:</strong> "On line 42, you'll see the core optimization logic. Everything else
+                    on this slide is just boilerplate for context."</p>
             </div>
 
             <div class="lesson-footer"
                 style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
-                <a href="#" class="btn btn-outline" style="visibility: hidden;">Previous</a>
-                <a href="lesson-1-2.html" class="btn btn-primary">Next: Agile Ceremonies <i
-                        class="fas fa-arrow-right"></i></a>
+                <a href="lesson-1-2.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Previous</a>
+                <a href="../../dashboard.html" class="btn btn-primary">Finish Presentation Module</a>
             </div>
         </main>
     </div>

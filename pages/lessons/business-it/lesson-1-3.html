@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module 1: High-Impact Stand-ups - ProSpeak English</title>
+    <title>Module 1.3: Strategic Networking Phrases - ProSpeak English</title>
     <link rel="stylesheet" href="../../../assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -36,11 +36,18 @@
             align-items: center;
             gap: 10px;
             margin-bottom: 8px;
+            border: 1px solid transparent;
+            text-decoration: none;
         }
 
         .lesson-nav-item.active {
             background: var(--primary);
             color: white;
+            border-color: var(--primary);
+        }
+
+        .lesson-nav-item.completed {
+            color: var(--success);
         }
 
         .lesson-content {
@@ -65,12 +72,12 @@
             margin-bottom: 20px;
         }
 
-        .example-box {
+        .phrase-card {
             background: var(--bg-dark);
-            border-left: 4px solid var(--primary);
-            padding: 24px;
-            margin: 32px 0;
-            border-radius: 0 12px 12px 0;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            border-left: 4px solid var(--accent);
         }
     </style>
 </head>
@@ -85,43 +92,46 @@
 
     <div class="container lesson-container">
         <aside class="lesson-sidebar">
-            <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Meetings Toolkit</h3>
-            <div class="lesson-nav-item active"><i class="fas fa-check-circle"></i> 1.1 Efficient Stand-ups</div>
-            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.2 Agile Ceremonies</div>
-            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.3 Handling Interruptions</div>
+            <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Course Progress</h3>
+            <a href="lesson-1-1.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.1 The
+                Elevator Pitch</a>
+            <a href="lesson-1-2.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.2 MNC
+                Formalities</a>
+            <div class="lesson-nav-item active"><i class="fas fa-play-circle"></i> 1.3 Networking Phrasing</div>
+            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.4 Module 1 Quiz</div>
         </aside>
 
         <main class="lesson-content">
-            <span class="section-badge">Module 1.1</span>
-            <h1>The Daily Stand-up: Past, Present, Future</h1>
+            <span class="section-badge">Module 1.3</span>
+            <h1>Strategic Networking Phrases</h1>
 
-            <p>In Agile teams, the Daily Stand-up (DSU) is the most frequent speaking opportunity. Many engineers make
-                the mistake of being too technical or too vague. The 'Past, Present, Future' framework solves this.</p>
+            <p>Networking is not about selling—it's about building relationships. For engineers, this often happens at
+                tech meetups, lunch rooms, or virtual 'coffee chats'.</p>
 
-            <h2>Phase 1: What I did (Past)</h2>
-            <p>Focus on completion, not just effort.</p>
-            <div class="example-box">
-                <p><strong>Phrasing:</strong> "Since our last sync, I successfully pushed the fixes for..."</p>
+            <h2>Ice-Breakers for Engineers</h2>
+            <div class="phrase-card">
+                <h4>At a Tech Conference</h4>
+                <p>"I really enjoyed your point about [Topic]. How are you handling [Specific Challenge] at your
+                    organization?"</p>
+            </div>
+            <div class="phrase-card">
+                <h4>During a Virtual Coffee Chat</h4>
+                <p>"I've been following your work on [Project]. I'd love to learn more about how your team approaches
+                    [Architecture Pattern]."</p>
             </div>
 
-            <h2>Phase 2: What I'm doing (Present)</h2>
-            <p>Focus on your current priority.</p>
-            <div class="example-box">
-                <p><strong>Phrasing:</strong> "Today, my main focus is on finalizing the API integration..."</p>
-            </div>
-
-            <h2>Phase 3: The Blockers (Future/Risks)</h2>
-            <p>Be direct. This is your chance to ask for help.</p>
-            <div class="example-box">
-                <p><strong>Phrasing:</strong> "I'm currently blocked by the credentials for the staging env. Can someone
-                    help with that?"</p>
+            <h2>Closing the Conversation</h2>
+            <p>Always end with an 'Open Door'—a way to stay in touch without being pushy.</p>
+            <div class="example-box"
+                style="background: var(--bg-dark); border-left: 4px solid var(--primary); padding: 24px; margin: 32px 0;">
+                <p><strong>Pro Tip:</strong> "It was great chatting with you! I'd love to stay in touch—are you on
+                    LinkedIn or X (Twitter)?"</p>
             </div>
 
             <div class="lesson-footer"
                 style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
-                <a href="#" class="btn btn-outline" style="visibility: hidden;">Previous</a>
-                <a href="lesson-1-2.html" class="btn btn-primary">Next: Agile Ceremonies <i
-                        class="fas fa-arrow-right"></i></a>
+                <a href="lesson-1-2.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Previous</a>
+                <a href="../../dashboard.html" class="btn btn-primary">Finish Module</a>
             </div>
         </main>
     </div>

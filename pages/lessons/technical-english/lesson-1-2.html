@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module 1: Architecture Deep-Dives - ProSpeak English</title>
+    <title>Module 1.2: Data Flow Vocabulary - ProSpeak English</title>
     <link rel="stylesheet" href="../../../assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -36,11 +36,18 @@
             align-items: center;
             gap: 10px;
             margin-bottom: 8px;
+            border: 1px solid transparent;
+            text-decoration: none;
         }
 
         .lesson-nav-item.active {
             background: var(--primary);
             color: white;
+            border-color: var(--primary);
+        }
+
+        .lesson-nav-item.completed {
+            color: var(--success);
         }
 
         .lesson-content {
@@ -65,21 +72,19 @@
             margin-bottom: 20px;
         }
 
-        .example-box {
-            background: var(--bg-dark);
-            border-left: 4px solid var(--primary);
-            padding: 24px;
-            margin: 32px 0;
-            border-radius: 0 12px 12px 0;
+        .term-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-color);
         }
 
-        .code-snippet {
-            background: #000;
-            border-radius: 8px;
-            padding: 20px;
+        .term-word {
             font-family: 'JetBrains Mono', monospace;
-            margin-bottom: 24px;
-            color: #10b981;
+            font-weight: 700;
+            color: var(--accent);
+            white-space: nowrap;
         }
     </style>
 </head>
@@ -95,47 +100,56 @@
     <div class="container lesson-container">
         <aside class="lesson-sidebar">
             <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Technical Content</h3>
-            <div class="lesson-nav-item active"><i class="fas fa-check-circle"></i> 1.1 Explaining Systems</div>
-            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.2 Data Flow Vocabulary</div>
+            <a href="lesson-1-1.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.1
+                Explaining Systems</a>
+            <div class="lesson-nav-item active"><i class="fas fa-play-circle"></i> 1.2 Data Flow Vocabulary</div>
             <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.3 Trade-offs & Choices</div>
         </aside>
 
         <main class="lesson-content">
-            <span class="section-badge">Module 1.1</span>
-            <h1>Articulating System Design</h1>
+            <span class="section-badge">Module 1.2</span>
+            <h1>Data Flow Vocabulary</h1>
 
-            <p>As a senior engineer, your job isn't just to build systems, but to explain <strong>why</strong> they were
-                built that way. This lesson focuses on the vocabulary of "Architecture Storytelling."</p>
+            <p>Moving beyond "The data goes here," a professional engineer uses precise verbs to describe the lifecycle
+                of data within a system.</p>
 
-            <h2>Phase 1: High-Level Overview</h2>
-            <p>Start with the objective. Avoid jumping into specific microservices immediately.</p>
+            <h2>Precise Technical Verbs</h2>
 
-            <div class="example-box">
-                <h4>Core Phrasing</h4>
-                <p>Instead of "We have a server," use: <strong>"The system is designed to handle..."</strong> or
-                    <strong>"The core architecture revolves around..."</strong>
-                </p>
+            <div class="term-item">
+                <div class="term-word">Ingest</div>
+                <div>The initial entry of data from external sources. "Our Kafka layer <strong>ingests</strong> events
+                    from the UI clients."</div>
             </div>
 
-            <h2>Phase 2: Explaining Data Flow</h2>
-            <p>Use active verbs to describe how data moves through your system.</p>
-            <div class="code-snippet">
-                // Vocabulary Checklist:<br>
-                - Ingests / Consumes (data)<br>
-                - Process / Transform<br>
-                - Dispatches / Proxies<br>
-                - Persists to (Database)
+            <div class="term-item">
+                <div class="term-word">Propagate</div>
+                <div>The spread of data/state across nodes or services. "Changes to the config are
+                    <strong>propagated</strong> to all regions within 5 seconds."</div>
             </div>
 
-            <h2>The "Reasoning" Framework</h2>
-            <p>When justifying a tech stack choice, use the <em>Constraint -> Solution -> Result</em> framework.</p>
-            <p><strong>Example:</strong> "Because we faced high read-heavy traffic (Constraint), we implemented a Redis
-                caching layer (Solution), which brought our latency down to sub-10ms (Result)."</p>
+            <div class="term-item">
+                <div class="term-word">Aggregate</div>
+                <div>Combining multiple data streams into one. "The analytics engine <strong>aggregates</strong> raw
+                    logs into hourly metrics."</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-word">Stale</div>
+                <div>Describing outdated data. "Using a TTL of 1 second prevents the cache from serving
+                    <strong>stale</strong> data."</div>
+            </div>
+
+            <div class="example-box"
+                style="background: var(--bg-dark); border-left: 4px solid var(--primary); padding: 24px; margin: 32px 0;">
+                <h4>Pro Pattern: Event-Driven Phrasing</h4>
+                <p>"When a user [triggers X], the system [emits an event], which is then [consumed by Y] to [perform
+                    Z]."</p>
+            </div>
 
             <div class="lesson-footer"
                 style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
-                <a href="#" class="btn btn-outline" style="visibility: hidden;">Previous</a>
-                <a href="lesson-1-2.html" class="btn btn-primary">Next: Data Flow Vocab <i
+                <a href="lesson-1-1.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Previous</a>
+                <a href="lesson-1-3.html" class="btn btn-primary">Next: Trade-offs <i
                         class="fas fa-arrow-right"></i></a>
             </div>
         </main>

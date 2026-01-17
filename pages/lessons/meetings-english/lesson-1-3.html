@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1.3: Handling Interruptions - ProSpeak English</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .lesson-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            padding: 120px 0 80px;
+        }
+
+        .lesson-sidebar {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 24px;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .lesson-nav-item {
+            padding: 12px;
+            border-radius: 8px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            border: 1px solid transparent;
+            text-decoration: none;
+        }
+
+        .lesson-nav-item.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .lesson-nav-item.completed {
+            color: var(--success);
+        }
+
+        .lesson-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 60px;
+        }
+
+        .lesson-content h1 {
+            margin-bottom: 24px;
+        }
+
+        .lesson-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-light);
+        }
+
+        .lesson-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .phrase-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .phrase-list li {
+            background: var(--bg-dark);
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .phrase-list li i {
+            color: var(--primary-light);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo"><i class="fas fa-language"></i><span>ProSpeak</span></a>
+            <div class="nav-actions"><a href="../../dashboard.html" class="btn btn-outline btn-sm">Dashboard</a></div>
+        </div>
+    </nav>
+
+    <div class="container lesson-container">
+        <aside class="lesson-sidebar">
+            <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Meetings Toolkit</h3>
+            <a href="lesson-1-1.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.1
+                Efficient Stand-ups</a>
+            <a href="lesson-1-2.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.2 Agile
+                Ceremonies</a>
+            <div class="lesson-nav-item active"><i class="fas fa-play-circle"></i> 1.3 Handling Interruptions</div>
+        </aside>
+
+        <main class="lesson-content">
+            <span class="section-badge">Module 1.3</span>
+            <h1>Handling Interruptions Professionally</h1>
+
+            <p>In virtual meetings, people often talk over each other. Knowing how to handle this with authority—without
+                being rude—is a key leadership skill.</p>
+
+            <h2>When YOU Are Interrupted</h2>
+            <p>If someone cuts you off, use these phrases to regain control while maintaining the flow.</p>
+            <ul class="phrase-list">
+                <li><i class="fas fa-reply"></i> "Sorry, if I could just finish my thought on the database migration..."
+                </li>
+                <li><i class="fas fa-reply"></i> "That’s a great point, let me just wrap up this section and I'd love to
+                    hear more."</li>
+                <li><i class="fas fa-reply"></i> "Hold that thought for just a second, I’m almost done with the
+                    technical overview."</li>
+            </ul>
+
+            <h2>When You Need to Interrupt (Interjecting)</h2>
+            <p>Sometimes you must speak up to correct a technical error or clarify a point before the conversation moves
+                on.</p>
+            <ul class="phrase-list">
+                <li><i class="fas fa-comment-dots"></i> "May I interject for a moment? Regarding the load balancer
+                    config..."</li>
+                <li><i class="fas fa-comment-dots"></i> "Sorry to jump in, but I want to make sure we’re aligned on the
+                    latency requirements."</li>
+                <li><i class="fas fa-comment-dots"></i> "If I could add one detail to what [Name] just mentioned..."
+                </li>
+            </ul>
+
+            <div class="example-box"
+                style="background: var(--bg-dark); border-left: 4px solid var(--primary); padding: 24px; margin: 32px 0;">
+                <h4>Leadership Secret: The 'Hands Up' Hack</h4>
+                <p>In Zoom or Teams, using the digital 'Raise Hand' feature is the most polite way to signal you have
+                    something to add without breaking the speaker's flow.</p>
+            </div>
+
+            <div class="lesson-footer"
+                style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
+                <a href="lesson-1-2.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Previous</a>
+                <a href="../../dashboard.html" class="btn btn-primary">Finish Meetings Module</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ProSpeak English.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

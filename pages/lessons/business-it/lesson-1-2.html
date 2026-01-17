@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1.2: MNC Formalities & Etiquette - ProSpeak English</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .lesson-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            padding: 120px 0 80px;
+        }
+
+        .lesson-sidebar {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 24px;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .lesson-nav-item {
+            padding: 12px;
+            border-radius: 8px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            border: 1px solid transparent;
+        }
+
+        .lesson-nav-item.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .lesson-nav-item.completed {
+            color: var(--success);
+        }
+
+        .lesson-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 60px;
+        }
+
+        .lesson-content h1 {
+            margin-bottom: 24px;
+        }
+
+        .lesson-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-light);
+        }
+
+        .lesson-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .example-box {
+            background: var(--bg-dark);
+            border-left: 4px solid var(--primary);
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .do-dont-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin: 32px 0;
+        }
+
+        .do-box {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid var(--success);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .dont-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid var(--error);
+            padding: 20px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo"><i class="fas fa-language"></i><span>ProSpeak</span></a>
+            <div class="nav-actions"><a href="../../dashboard.html" class="btn btn-outline btn-sm">Dashboard</a></div>
+        </div>
+    </nav>
+
+    <div class="container lesson-container">
+        <aside class="lesson-sidebar">
+            <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Course Progress</h3>
+            <a href="lesson-1-1.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.1 The
+                Elevator Pitch</a>
+            <div class="lesson-nav-item active"><i class="fas fa-play-circle"></i> 1.2 MNC Formalities</div>
+            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.3 Networking Phrasing</div>
+            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.4 Module 1 Quiz</div>
+        </aside>
+
+        <main class="lesson-content">
+            <span class="section-badge">Module 1.2</span>
+            <h1>MNC Formalities & Workplace Etiquette</h1>
+
+            <p>Working in a global MNC requires an understanding of diverse cultural norms and professional levels of
+                formality. What works in a local startup might not work in a Fortune 500 company.</p>
+
+            <h2>Power Distance & Addressing Colleagues</h2>
+            <p>In most modern tech MNCs, "Sir/Ma'am" is rarely used. However, "politeness" is still paramount. The usage
+                of first names is common, but should be paired with respectful language.</p>
+
+            <div class="do-dont-grid">
+                <div class="do-box">
+                    <h4 style="color: var(--success); margin-bottom: 12px;"><i class="fas fa-check"></i> Do</h4>
+                    <ul style="list-style: none;">
+                        <li>Use first names: "Hi Sarah,"</li>
+                        <li>Use "Could you please..."</li>
+                        <li>Respect timezones</li>
+                    </ul>
+                </div>
+                <div class="dont-box">
+                    <h4 style="color: var(--error); margin-bottom: 12px;"><i class="fas fa-times"></i> Don't</h4>
+                    <ul style="list-style: none;">
+                        <li>Use "Sir/Madam"</li>
+                        <li>Send late-night pings</li>
+                        <li>Be overly direct/blunt</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>The 'Soft' Approach to Feedback</h2>
+            <p>Global teams often use the 'Feedback Sandwich' or 'Softening' techniques when discussing blockers or
+                bugs.</p>
+
+            <div class="example-box">
+                <h4>Softening Language</h4>
+                <p>Instead of: "Your API is broken."</p>
+                <p>Use: <strong>"I've noticed some unexpected behavior in the API response. Could we take a look
+                        together?"</strong></p>
+            </div>
+
+            <div class="lesson-footer"
+                style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
+                <a href="lesson-1-1.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Previous</a>
+                <a href="lesson-1-3.html" class="btn btn-primary">Next: Networking <i
+                        class="fas fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ProSpeak English.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1.2: Mastering Visuals & Demos - ProSpeak English</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .lesson-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            padding: 120px 0 80px;
+        }
+
+        .lesson-sidebar {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 24px;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .lesson-nav-item {
+            padding: 12px;
+            border-radius: 8px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            border: 1px solid transparent;
+            text-decoration: none;
+        }
+
+        .lesson-nav-item.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .lesson-nav-item.completed {
+            color: var(--success);
+        }
+
+        .lesson-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 60px;
+        }
+
+        .lesson-content h1 {
+            margin-bottom: 24px;
+        }
+
+        .lesson-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-light);
+        }
+
+        .lesson-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .tip-card {
+            background: var(--bg-dark);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            border-top: 4px solid var(--primary);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo"><i class="fas fa-language"></i><span>ProSpeak</span></a>
+            <div class="nav-actions"><a href="../../dashboard.html" class="btn btn-outline btn-sm">Dashboard</a></div>
+        </div>
+    </nav>
+
+    <div class="container lesson-container">
+        <aside class="lesson-sidebar">
+            <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Presentation Skills</h3>
+            <a href="lesson-1-1.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.1
+                Storytelling Structure</a>
+            <div class="lesson-nav-item active"><i class="fas fa-play-circle"></i> 1.2 The 'Hook' Meta</div>
+            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.3 Visual Hierarchy</div>
+        </aside>
+
+        <main class="lesson-content">
+            <span class="section-badge">Module 1.2</span>
+            <h1>The 'Hook' Meta & Live Demos</h1>
+
+            <p>A "Hook" isn't a joke or a fancy slide. In a technical context, a hook is a <strong>Shared Pain
+                    Point</strong>. It creates a reason for the audience to pay attention.</p>
+
+            <h2>Creating the Technical Hook</h2>
+            <div class="tip-card">
+                <h4>Method 1: The 'Cost' Hook</h4>
+                <p>"By the end of this demo, I’ll show you how we can save $5,000/month by optimizing our cloud
+                    instances."</p>
+            </div>
+            <div class="tip-card">
+                <h4>Method 2: The 'Error' Hook</h4>
+                <p>"We’ve all seen the [X] error in our logs. Today, I'm presenting the permanent fix."</p>
+            </div>
+
+            <h2>The Golden Rules of Live Demos</h2>
+            <p>Demos are the ultimate proof of work. But they are also high-risk. Follow these linguistic rules to keep
+                the audience engaged even when things go slow.</p>
+
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 16px;"><i class="fas fa-check" style="color: var(--success);"></i>
+                    <strong>Narrate the Action:</strong> "As you can see, I am now initializing the script..."</li>
+                <li style="margin-bottom: 16px;"><i class="fas fa-check" style="color: var(--success);"></i>
+                    <strong>Fill the 'Wait':</strong> "While this build completes (it usually takes 30s), I want to
+                    highlight the [X] configuration."</li>
+                <li style="margin-bottom: 16px;"><i class="fas fa-check" style="color: var(--success);"></i>
+                    <strong>Handle the 'Fail':</strong> "It seems we have a connection timeout. No worries, I had a
+                    fallback environment ready for exactly this reason."</li>
+            </ul>
+
+            <div class="lesson-footer"
+                style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
+                <a href="lesson-1-1.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Previous</a>
+                <a href="lesson-1-3.html" class="btn btn-primary">Next: Visual Hierarchy <i
+                        class="fas fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ProSpeak English.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

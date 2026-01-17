@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1.2: Tone & Pitch in Text - ProSpeak English</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .lesson-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            padding: 120px 0 80px;
+        }
+
+        .lesson-sidebar {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 24px;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .lesson-nav-item {
+            padding: 12px;
+            border-radius: 8px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            border: 1px solid transparent;
+            text-decoration: none;
+        }
+
+        .lesson-nav-item.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .lesson-nav-item.completed {
+            color: var(--success);
+        }
+
+        .lesson-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 60px;
+        }
+
+        .lesson-content h1 {
+            margin-bottom: 24px;
+        }
+
+        .lesson-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-light);
+        }
+
+        .lesson-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .tone-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 32px 0;
+        }
+
+        .tone-box {
+            background: var(--bg-dark);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo"><i class="fas fa-language"></i><span>ProSpeak</span></a>
+            <div class="nav-actions"><a href="../../dashboard.html" class="btn btn-outline btn-sm">Dashboard</a></div>
+        </div>
+    </nav>
+
+    <div class="container lesson-container">
+        <aside class="lesson-sidebar">
+            <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Writing Progress</h3>
+            <a href="lesson-1-1.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.1 Email
+                Structure</a>
+            <div class="lesson-nav-item active"><i class="fas fa-play-circle"></i> 1.2 Tone & Pitch</div>
+            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.3 Async vs Sync</div>
+        </aside>
+
+        <main class="lesson-content">
+            <span class="section-badge">Module 1.2</span>
+            <h1>Tone & Pitch in Professional Text</h1>
+
+            <p>In text communication, you lose body language and vocal inflection. This is why "Direct" can often be
+                misinterpreted as "Aggressive". Master the art of professional softening.</p>
+
+            <h2>Direct vs. Polished</h2>
+            <div class="tone-grid">
+                <div class="tone-box">
+                    <h4 style="color: var(--error);">Too Direct</h4>
+                    <p>"Fix this bug before EOD."</p>
+                </div>
+                <div class="tone-box">
+                    <h4 style="color: var(--success);">Polished</h4>
+                    <p>"Could you please take a look at this bug? It's a priority for the EOD release."</p>
+                </div>
+            </div>
+
+            <h2>Using 'Hedges' to Reduce Friction</h2>
+            <p>Hedges are words that make your requests sound less like a command and more like a collaboration.</p>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: var(--primary);"></i>
+                    <strong>"It seems..."</strong> (Instead of "It is")</li>
+                <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: var(--primary);"></i>
+                    <strong>"Perhaps we could..."</strong> (Instead of "We should")</li>
+                <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: var(--primary);"></i>
+                    <strong>"I was wondering if..."</strong> (Instead of "Can you")</li>
+            </ul>
+
+            <div class="example-box"
+                style="background: var(--bg-dark); border-left: 4px solid var(--primary); padding: 24px; margin: 32px 0;">
+                <h4>The 'Update' Pitch</h4>
+                <p>When giving a status update on a delay: "We've run into a slight complication with the [Module].
+                    We're currently [X] and expect to be back on track by [Time]."</p>
+            </div>
+
+            <div class="lesson-footer"
+                style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
+                <a href="lesson-1-1.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Previous</a>
+                <a href="lesson-1-3.html" class="btn btn-primary">Next: Async vs Sync <i
+                        class="fas fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ProSpeak English.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

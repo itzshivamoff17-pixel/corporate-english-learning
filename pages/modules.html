@@ -32,6 +32,12 @@
             display: flex;
             gap: 24px;
             align-items: center;
+            transition: var(--transition-base);
+        }
+
+        .module-item:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
         }
 
         .module-icon {
@@ -63,6 +69,7 @@
         .module-actions {
             display: flex;
             gap: 12px;
+            align-items: center;
         }
 
         .module-status {
@@ -72,6 +79,14 @@
             display: flex;
             align-items: center;
             gap: 6px;
+        }
+
+        .module-tag {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            background: var(--bg-dark);
+            border-radius: 4px;
+            color: var(--text-muted);
         }
     </style>
 </head>
@@ -100,60 +115,118 @@
     <header class="page-header">
         <div class="container">
             <h1 class="gradient-text">Learning Modules</h1>
-            <p>Daily bite-sized lessons for rapid progress.</p>
+            <p>Master specific workplace scenarios with deep-dive text guides.</p>
         </div>
     </header>
 
     <div class="container">
         <div class="modules-container">
+            <!-- Business English Module 1 -->
             <div class="module-item">
-                <div class="module-icon"><i class="fas fa-sun"></i></div>
+                <div class="module-icon"><i class="fas fa-briefcase"></i></div>
                 <div class="module-info">
-                    <h3>Daily Office Conversations</h3>
-                    <p>Common phrases for small talk and casual interactions with colleagues.</p>
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                        <h3>MNC Workplace Foundation</h3>
+                        <span class="module-tag">Business IT</span>
+                    </div>
+                    <p>Elevator pitches, formalities, and professional networking within a global corporate environment.
+                    </p>
                     <div class="module-actions">
-                        <a href="#" class="btn btn-primary btn-sm">Start Lesson</a>
-                        <span class="module-status"><i class="fas fa-check-circle"></i> Completed</span>
+                        <a href="lessons/business-it/lesson-1-1.html" class="btn btn-primary btn-sm">Start Module</a>
+                        <span class="module-status"><i class="fas fa-clock"></i> ~15 mins</span>
                     </div>
                 </div>
             </div>
+
+            <!-- Technical English Module 1 -->
             <div class="module-item">
-                <div class="module-icon"><i class="fas fa-microphone"></i></div>
+                <div class="module-icon"><i class="fas fa-code"></i></div>
                 <div class="module-info">
-                    <h3>Stand-up Meetings</h3>
-                    <p>Learn to report progress, blockers, and plans effectively in under 2 minutes.</p>
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                        <h3>System Design Articulation</h3>
+                        <span class="module-tag">Technical English</span>
+                    </div>
+                    <p>Learn to explain complex architectures and data flows to both technical and non-technical
+                        stakeholders.</p>
                     <div class="module-actions">
-                        <a href="#" class="btn btn-primary btn-sm">Start Lesson</a>
+                        <a href="lessons/technical-english/lesson-1-1.html" class="btn btn-primary btn-sm">Start
+                            Module</a>
+                        <span class="module-status"><i class="fas fa-clock"></i> ~20 mins</span>
                     </div>
                 </div>
             </div>
+
+            <!-- Meetings Module 1 -->
             <div class="module-item">
-                <div class="module-icon"><i class="fas fa-phone-alt"></i></div>
+                <div class="module-icon"><i class="fas fa-users"></i></div>
                 <div class="module-info">
-                    <h3>Client Calls</h3>
-                    <p>Handling difficult questions and explaining delays professionally.</p>
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                        <h3>High-Impact Stand-ups</h3>
+                        <span class="module-tag">Meetings English</span>
+                    </div>
+                    <p>The Past-Present-Future framework for reporting progress and handling blockers in Agile
+                        ceremonies.</p>
                     <div class="module-actions">
-                        <a href="#" class="btn btn-primary btn-sm">Start Lesson</a>
+                        <a href="lessons/meetings-english/lesson-1-1.html" class="btn btn-primary btn-sm">Start
+                            Module</a>
+                        <span class="module-status"><i class="fas fa-clock"></i> ~10 mins</span>
                     </div>
                 </div>
             </div>
+
+            <!-- Email Module 1 -->
             <div class="module-item">
-                <div class="module-icon"><i class="fas fa-chart-bar"></i></div>
+                <div class="module-icon"><i class="fas fa-envelope"></i></div>
                 <div class="module-info">
-                    <h3>Reporting Progress</h3>
-                    <p>Structure your weekly updates and project status reports for management.</p>
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                        <h3>The One-Read Email</h3>
+                        <span class="module-tag">Email & Chat</span>
+                    </div>
+                    <p>Writing clear, concise emails that get actioned. Subject line strategies and asynchronous
+                        etiquette.</p>
                     <div class="module-actions">
-                        <a href="#" class="btn btn-primary btn-sm">Start Lesson</a>
+                        <a href="lessons/email-chat/lesson-1-1.html" class="btn btn-primary btn-sm">Start Module</a>
+                        <span class="module-status"><i class="fas fa-clock"></i> ~15 mins</span>
                     </div>
                 </div>
             </div>
+
+            <!-- Presentation Module 1 -->
             <div class="module-item">
-                <div class="module-icon"><i class="fas fa-lightbulb"></i></div>
+                <div class="module-icon"><i class="fas fa-presentation-screen"></i></div>
                 <div class="module-info">
-                    <h3>Explaining Technical Concepts</h3>
-                    <p>Simplify complex logic for non-technical stakeholders.</p>
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                        <h3>Technical Storytelling</h3>
+                        <span class="module-tag">Public Speaking</span>
+                    </div>
+                    <p>Move from "What we did" to "Why it matters". Hook-Meat-Payoff framework for high-stakes demos.
+                    </p>
                     <div class="module-actions">
-                        <a href="#" class="btn btn-primary btn-sm">Start Lesson</a>
+                        <a href="lessons/presentations/lesson-1-1.html" class="btn btn-primary btn-sm">Start Module</a>
+                        <span class="module-status"><i class="fas fa-clock"></i> ~25 mins</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Career Module 1 -->
+            <div class="module-item">
+                <div class="module-icon"><i class="fas fa-rocket"></i></div>
+                <div class="module-info">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                        <h3>ATS-Optimized Resumes</h3>
+                        <span class="module-tag">Career Growth</span>
+                    </div>
+                    <p>Tech-focused power verbs and the Google "X by Y by Z" rule for quantifiying impact on your CV.
+                    </p>
+                    <div class="module-actions">
+                        <a href="lessons/career/lesson-1-1.html" class="btn btn-primary btn-sm">Start Module</a>
+                        <span class="module-status"><i class="fas fa-clock"></i> ~20 mins</span>
                     </div>
                 </div>
             </div>

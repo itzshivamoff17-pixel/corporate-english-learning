@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module 1: High-Impact Stand-ups - ProSpeak English</title>
+    <title>Module 1.2: Agile Ceremonies - ProSpeak English</title>
     <link rel="stylesheet" href="../../../assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -36,11 +36,18 @@
             align-items: center;
             gap: 10px;
             margin-bottom: 8px;
+            border: 1px solid transparent;
+            text-decoration: none;
         }
 
         .lesson-nav-item.active {
             background: var(--primary);
             color: white;
+            border-color: var(--primary);
+        }
+
+        .lesson-nav-item.completed {
+            color: var(--success);
         }
 
         .lesson-content {
@@ -65,12 +72,20 @@
             margin-bottom: 20px;
         }
 
-        .example-box {
+        .ceremony-card {
             background: var(--bg-dark);
-            border-left: 4px solid var(--primary);
             padding: 24px;
-            margin: 32px 0;
-            border-radius: 0 12px 12px 0;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border-color);
+        }
+
+        .ceremony-card h4 {
+            color: var(--accent);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
     </style>
 </head>
@@ -86,41 +101,51 @@
     <div class="container lesson-container">
         <aside class="lesson-sidebar">
             <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Meetings Toolkit</h3>
-            <div class="lesson-nav-item active"><i class="fas fa-check-circle"></i> 1.1 Efficient Stand-ups</div>
-            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.2 Agile Ceremonies</div>
+            <a href="lesson-1-1.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.1
+                Efficient Stand-ups</a>
+            <div class="lesson-nav-item active"><i class="fas fa-play-circle"></i> 1.2 Agile Ceremonies</div>
             <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.3 Handling Interruptions</div>
         </aside>
 
         <main class="lesson-content">
-            <span class="section-badge">Module 1.1</span>
-            <h1>The Daily Stand-up: Past, Present, Future</h1>
+            <span class="section-badge">Module 1.2</span>
+            <h1>Spoken English for Agile Ceremonies</h1>
 
-            <p>In Agile teams, the Daily Stand-up (DSU) is the most frequent speaking opportunity. Many engineers make
-                the mistake of being too technical or too vague. The 'Past, Present, Future' framework solves this.</p>
+            <p>Beyond the daily stand-up, there are three key ceremonies where an engineer's voice is critical: Sprint
+                Planning, Grooming (Refinement), and Retrospectives.</p>
 
-            <h2>Phase 1: What I did (Past)</h2>
-            <p>Focus on completion, not just effort.</p>
-            <div class="example-box">
-                <p><strong>Phrasing:</strong> "Since our last sync, I successfully pushed the fixes for..."</p>
+            <div class="ceremony-card">
+                <h4><i class="fas fa-calendar-plus"></i> Sprint Planning</h4>
+                <p><strong>Goal:</strong> Commit to tasks accurately.</p>
+                <p><strong>Key Phrasing:</strong> "I’m confident we can deliver this, assuming the CI/CD pipeline
+                    remains stable."</p>
             </div>
 
-            <h2>Phase 2: What I'm doing (Present)</h2>
-            <p>Focus on your current priority.</p>
-            <div class="example-box">
-                <p><strong>Phrasing:</strong> "Today, my main focus is on finalizing the API integration..."</p>
+            <div class="ceremony-card">
+                <h4><i class="fas fa-magic"></i> Backlog Refinement</h4>
+                <p><strong>Goal:</strong> Clarify requirements.</p>
+                <p><strong>Key Phrasing:</strong> "Could we delve deeper into the edge cases for this user story? I'm
+                    concerned about the [specific condition]."</p>
             </div>
 
-            <h2>Phase 3: The Blockers (Future/Risks)</h2>
-            <p>Be direct. This is your chance to ask for help.</p>
-            <div class="example-box">
-                <p><strong>Phrasing:</strong> "I'm currently blocked by the credentials for the staging env. Can someone
-                    help with that?"</p>
+            <div class="ceremony-card">
+                <h4><i class="fas fa-history"></i> Sprint Retrospective</h4>
+                <p><strong>Goal:</strong> Continuous improvement.</p>
+                <p><strong>Key Phrasing:</strong> "One thing that worked well was our pair programming session on the
+                    legacy module. However, we could improve our documentation frequency."</p>
+            </div>
+
+            <div class="example-box"
+                style="background: var(--bg-dark); border-left: 4px solid var(--primary); padding: 24px; margin: 32px 0;">
+                <h4>Pro Tip: Asking for Clarification</h4>
+                <p>Instead of "I don't understand," say <strong>"Just so I'm clear, are you saying that [Repeat your
+                        understanding]?"</strong></p>
             </div>
 
             <div class="lesson-footer"
                 style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
-                <a href="#" class="btn btn-outline" style="visibility: hidden;">Previous</a>
-                <a href="lesson-1-2.html" class="btn btn-primary">Next: Agile Ceremonies <i
+                <a href="lesson-1-1.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Previous</a>
+                <a href="lesson-1-3.html" class="btn btn-primary">Next: Handling Interruptions <i
                         class="fas fa-arrow-right"></i></a>
             </div>
         </main>

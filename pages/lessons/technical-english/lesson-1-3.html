@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module 1: High-Impact Stand-ups - ProSpeak English</title>
+    <title>Module 1.3: Trade-offs & Choices - ProSpeak English</title>
     <link rel="stylesheet" href="../../../assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -36,11 +36,18 @@
             align-items: center;
             gap: 10px;
             margin-bottom: 8px;
+            border: 1px solid transparent;
+            text-decoration: none;
         }
 
         .lesson-nav-item.active {
             background: var(--primary);
             color: white;
+            border-color: var(--primary);
+        }
+
+        .lesson-nav-item.completed {
+            color: var(--success);
         }
 
         .lesson-content {
@@ -65,12 +72,12 @@
             margin-bottom: 20px;
         }
 
-        .example-box {
-            background: var(--bg-dark);
-            border-left: 4px solid var(--primary);
+        .tradeoff-box {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid var(--primary);
             padding: 24px;
+            border-radius: 12px;
             margin: 32px 0;
-            border-radius: 0 12px 12px 0;
         }
     </style>
 </head>
@@ -85,43 +92,50 @@
 
     <div class="container lesson-container">
         <aside class="lesson-sidebar">
-            <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Meetings Toolkit</h3>
-            <div class="lesson-nav-item active"><i class="fas fa-check-circle"></i> 1.1 Efficient Stand-ups</div>
-            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.2 Agile Ceremonies</div>
-            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.3 Handling Interruptions</div>
+            <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Technical Content</h3>
+            <a href="lesson-1-1.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.1
+                Explaining Systems</a>
+            <a href="lesson-1-2.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.2 Data
+                Flow Vocabulary</a>
+            <div class="lesson-nav-item active"><i class="fas fa-play-circle"></i> 1.3 Trade-offs & Choices</div>
         </aside>
 
         <main class="lesson-content">
-            <span class="section-badge">Module 1.1</span>
-            <h1>The Daily Stand-up: Past, Present, Future</h1>
+            <span class="section-badge">Module 1.3</span>
+            <h1>Articulating Trade-offs</h1>
 
-            <p>In Agile teams, the Daily Stand-up (DSU) is the most frequent speaking opportunity. Many engineers make
-                the mistake of being too technical or too vague. The 'Past, Present, Future' framework solves this.</p>
+            <p>Every architectural decision involves a trade-off. Senior engineers are measured by their ability to
+                identify these and communicate them to stakeholders.</p>
 
-            <h2>Phase 1: What I did (Past)</h2>
-            <p>Focus on completion, not just effort.</p>
-            <div class="example-box">
-                <p><strong>Phrasing:</strong> "Since our last sync, I successfully pushed the fixes for..."</p>
+            <h2>The 'Pros vs Cons' Myth</h2>
+            <p>Don't just list pros and cons. Contextualize them using the 'Priority Paradox' framework.</p>
+
+            <div class="tradeoff-box">
+                <h4>Trade-off Phrasing Pattern</h4>
+                <p>"While [Choice A] gives us [Benefit 1], it introduces [Risk 1]. Given our current priority of
+                    [Metric], we chose to move forward with [Choice A] because [Reasoning]."</p>
             </div>
 
-            <h2>Phase 2: What I'm doing (Present)</h2>
-            <p>Focus on your current priority.</p>
-            <div class="example-box">
-                <p><strong>Phrasing:</strong> "Today, my main focus is on finalizing the API integration..."</p>
+            <h2>Using "At the Expense of"</h2>
+            <p>This is a high-level professional phrase for engineers.</p>
+            <div class="example-box"
+                style="background: var(--bg-dark); border-left: 4px solid var(--primary); padding: 24px;">
+                <p>"We prioritized <strong>Consistency</strong> at the expense of <strong>Availability</strong>,
+                    aligning with our transactional requirements."</p>
             </div>
 
-            <h2>Phase 3: The Blockers (Future/Risks)</h2>
-            <p>Be direct. This is your chance to ask for help.</p>
-            <div class="example-box">
-                <p><strong>Phrasing:</strong> "I'm currently blocked by the credentials for the staging env. Can someone
-                    help with that?"</p>
-            </div>
+            <h2>Common Trade-off Keywords</h2>
+            <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                <li><i class="fas fa-exchange-alt"></i> Latency vs. Throughput</li>
+                <li><i class="fas fa-exchange-alt"></i> Cost vs. Performance</li>
+                <li><i class="fas fa-exchange-alt"></i> Flexibility vs. Stability</li>
+                <li><i class="fas fa-exchange-alt"></i> Speed vs. Security</li>
+            </ul>
 
             <div class="lesson-footer"
                 style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
-                <a href="#" class="btn btn-outline" style="visibility: hidden;">Previous</a>
-                <a href="lesson-1-2.html" class="btn btn-primary">Next: Agile Ceremonies <i
-                        class="fas fa-arrow-right"></i></a>
+                <a href="lesson-1-2.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Previous</a>
+                <a href="../../dashboard.html" class="btn btn-primary">Finish Technical Module</a>
             </div>
         </main>
     </div>

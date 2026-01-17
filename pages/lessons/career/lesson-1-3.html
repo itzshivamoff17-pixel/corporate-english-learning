@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1.3: Negotiation Logic - ProSpeak English</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .lesson-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            padding: 120px 0 80px;
+        }
+
+        .lesson-sidebar {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 24px;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .lesson-nav-item {
+            padding: 12px;
+            border-radius: 8px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            border: 1px solid transparent;
+            text-decoration: none;
+        }
+
+        .lesson-nav-item.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .lesson-nav-item.completed {
+            color: var(--success);
+        }
+
+        .lesson-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 60px;
+        }
+
+        .lesson-content h1 {
+            margin-bottom: 24px;
+        }
+
+        .lesson-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-light);
+        }
+
+        .lesson-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo"><i class="fas fa-language"></i><span>ProSpeak</span></a>
+            <div class="nav-actions"><a href="../../dashboard.html" class="btn btn-outline btn-sm">Dashboard</a></div>
+        </div>
+    </nav>
+
+    <div class="container lesson-container">
+        <aside class="lesson-sidebar">
+            <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Career Strategy</h3>
+            <a href="lesson-1-1.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.1 Tech
+                Power Verbs</a>
+            <a href="lesson-1-2.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.2 STAR
+                Method</a>
+            <div class="lesson-nav-item active"><i class="fas fa-play-circle"></i> 1.3 Negotiation Logic</div>
+        </aside>
+
+        <main class="lesson-content">
+            <span class="section-badge">Module 1.3</span>
+            <h1>The Language of Salary Negotiation</h1>
+
+            <p>Negotiation is not a battle; it’s a search for a mutually beneficial agreement. The key is to shift the
+                conversation from "What I want" to "What the market value is".</p>
+
+            <h2>Rule 1: Never Give the First Number</h2>
+            <p>If a recruiter asks for your expectations early, use the **Flexibility Pivot**.</p>
+            <div class="example-box"
+                style="background: var(--bg-dark); border-left: 4px solid var(--primary); padding: 24px; margin: 32px 0;">
+                <p><strong>Pivot Phrasing:</strong> "Right now, I'm more focused on finding the right fit for my
+                    technical skills. I’m happy to discuss compensation once we see that the role is a good match."</p>
+            </div>
+
+            <h2>Rule 2: Negotiating the Offer</h2>
+            <p>When you receive an offer, don't say "No". Say **"Is there room for...?"** or **"Based on my
+                research..."**.</p>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 16px;"><i class="fas fa-comments" style="color: var(--primary-light);"></i>
+                    "Thank you for the offer! I'm very excited about the team. Based on the responsibilities and my
+                    experience in [X], I was expecting something closer to [Range]."</li>
+                <li style="margin-bottom: 16px;"><i class="fas fa-comments" style="color: var(--primary-light);"></i>
+                    "Is there any flexibility on the sign-on bonus or the equity component?"</li>
+            </ul>
+
+            <div class="example-box"
+                style="background: var(--bg-dark); border-left: 4px solid var(--primary); padding: 24px; margin: 32px 0;">
+                <h4>The 'Levers' of Negotiation</h4>
+                <p>If they can't increase the Base Salary, ask for other levers: Remote work flexibility, Learning
+                    budget, or a 6-month performance review for a salary adjustment.</p>
+            </div>
+
+            <div class="lesson-footer"
+                style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
+                <a href="lesson-1-2.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Previous</a>
+                <a href="../../dashboard.html" class="btn btn-primary">Finish Career Module</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ProSpeak English.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
