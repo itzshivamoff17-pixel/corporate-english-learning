@@ -12,6 +12,9 @@ const requiredFiles = [
     'pages/blog.html',
     'pages/dashboard.html',
     'pages/course-it-business.html',
+    'pages/lessons/business-it/lesson-1-1.html',
+    'pages/lessons/technical-english/lesson-1-1.html',
+    'pages/lessons/meetings-english/lesson-1-1.html',
     'assets/css/style.css',
     'assets/js/main.js'
 ];
