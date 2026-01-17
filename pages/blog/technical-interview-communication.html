@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Communicate During Technical Interviews - ProSpeak English Blog</title>
+    <meta name="description"
+        content="Master the art of thinking out loud during coding interviews. Learn what to say when you're stuck, how to ask clarifying questions, and more.">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .article-header {
+            padding: 140px 0 60px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+            text-align: center;
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+            line-height: 1.8;
+        }
+
+        .article-content h2 {
+            margin-top: 48px;
+            margin-bottom: 24px;
+            color: var(--primary);
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: rgba(37, 99, 235, 0.05);
+            border-left: 4px solid var(--primary);
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .script-box {
+            background: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo"><i class="fas fa-language"></i><span>ProSpeak</span></a>
+            <ul class="nav-menu">
+                <li><a href="../../index.html" class="nav-link">Home</a></li>
+                <li><a href="../courses.html" class="nav-link">Courses</a></li>
+                <li><a href="../blog.html" class="nav-link active">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="article-header">
+        <div class="container">
+            <span
+                style="display: inline-block; padding: 6px 16px; background: var(--primary); color: white; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 16px;">INTERVIEWS</span>
+            <h1 style="font-size: 2.5rem; margin-bottom: 16px;">How to Communicate During Technical Interviews</h1>
+            <p style="font-size: 1.1rem; color: var(--text-secondary);">What to say when you're stuck, how to think out
+                loud, and more.</p>
+            <div style="margin-top: 24px; color: var(--text-muted); font-size: 0.9rem;">
+                <i class="fas fa-calendar"></i> January 18, 2026 · <i class="fas fa-clock"></i> 9 min read
+            </div>
+        </div>
+    </header>
+
+    <article class="article-content">
+        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-primary);">You can write perfect code and
+            still fail a technical interview. Why? Because <strong>communication matters more than correctness</strong>.
+        </p>
+
+        <p>According to a study by Triplebyte (2019), candidates who "think out loud" are 2.3x more likely to pass
+            technical interviews, even when their solution isn't optimal. Interviewers aren't just evaluating your
+            code—they're evaluating whether they want to work with you.</p>
+
+        <h2>The "Thinking Out Loud" Framework</h2>
+        <p>Most candidates go silent when coding. This is a mistake. Silence makes the interviewer nervous. They can't
+            tell if you're:</p>
+        <ul style="margin-left: 24px; line-height: 2;">
+            <li>Making progress</li>
+            <li>Stuck on a bug</li>
+            <li>Completely lost</li>
+        </ul>
+
+        <p>Instead, narrate your thought process like a sports commentator.</p>
+
+        <div class="highlight-box">
+            <h3 style="margin-bottom: 16px; color: var(--primary);">The 5-Step Communication Flow</h3>
+            <ol style="margin-left: 24px; line-height: 2;">
+                <li><strong>Clarify the problem</strong> (2 minutes)</li>
+                <li><strong>Discuss the approach</strong> (3 minutes)</li>
+                <li><strong>Code while narrating</strong> (15-20 minutes)</li>
+                <li><strong>Test your solution</strong> (3 minutes)</li>
+                <li><strong>Optimize and discuss trade-offs</strong> (5 minutes)</li>
+            </ol>
+        </div>
+
+        <h2>Step 1: Clarify the Problem (2 minutes)</h2>
+        <p>Never start coding immediately. Ask clarifying questions to show you think before you code.</p>
+
+        <div class="script-box">
+            <strong>Example Questions:</strong><br><br>
+            • "Can I assume the input array is sorted?"<br>
+            • "What should I return if the input is empty?"<br>
+            • "Are there any constraints on time or space complexity?"<br>
+            • "Can I use additional data structures, or should this be in-place?"<br>
+            • "What's the expected size of the input? Are we optimizing for small inputs or large ones?"
+        </div>
+
+        <p><strong>Why this works:</strong> It shows you're thorough and won't make assumptions in production code.</p>
+
+        <h2>Step 2: Discuss the Approach (3 minutes)</h2>
+        <p>Before writing any code, explain your high-level approach. This gives the interviewer a chance to
+            course-correct if you're going down the wrong path.</p>
+
+        <div class="script-box">
+            <strong>Template:</strong><br><br>
+            "Okay, so my initial thought is to use a [data structure] because [reason]. The algorithm would be:<br>
+            1. [Step 1]<br>
+            2. [Step 2]<br>
+            3. [Step 3]<br><br>
+            This would give us O(n) time complexity and O(n) space. Does that sound reasonable, or would you like me to
+            explore a different approach?"
+        </div>
+
+        <p><strong>Pro tip:</strong> If the interviewer says "That works, but can you do better?", they're giving you a
+            hint. Don't get defensive—say "Great, let me think about optimizations."</p>
+
+        <h2>Step 3: Code While Narrating (15-20 minutes)</h2>
+        <p>This is where most candidates go silent. Don't. Narrate what you're doing as you code.</p>
+
+        <div
+            style="background: var(--bg-card); padding: 32px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+            <h3 style="margin-bottom: 20px; color: var(--primary);">What to Say While Coding</h3>
+
+            <div style="margin-bottom: 20px;">
+                <strong style="color: var(--accent);">When starting a new section:</strong>
+                <p style="font-style: italic; margin-top: 8px;">"Now I'm going to initialize a hash map to store the
+                    frequencies..."</p>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <strong style="color: var(--accent);">When writing a loop:</strong>
+                <p style="font-style: italic; margin-top: 8px;">"I'm iterating through the array to find all pairs that
+                    sum to the target..."</p>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <strong style="color: var(--accent);">When making a design decision:</strong>
+                <p style="font-style: italic; margin-top: 8px;">"I'm using a set here instead of an array because we
+                    need O(1) lookup time..."</p>
+            </div>
+
+            <div>
+                <strong style="color: var(--accent);">When you spot a potential bug:</strong>
+                <p style="font-style: italic; margin-top: 8px;">"Wait, I need to handle the edge case where the array is
+                    empty. Let me add that check..."</p>
+            </div>
+        </div>
+
+        <h2>What to Say When You're Stuck</h2>
+        <p>This is the moment that separates good candidates from great ones. When you're stuck, <strong>don't panic in
+                silence</strong>.</p>
+
+        <div class="highlight-box">
+            <h3 style="margin-bottom: 16px; color: var(--primary);">The "Stuck" Script</h3>
+            <p style="font-style: italic;">"I'm hitting a roadblock with [specific issue]. Let me think through this out
+                loud..."</p>
+            <p style="font-style: italic; margin-top: 12px;">"One approach could be [Option A], but that would be O(n²).
+                Another option is [Option B], which is more complex but faster. What do you think—should I prioritize
+                simplicity or performance here?"</p>
+        </div>
+
+        <p><strong>Why this works:</strong> You're showing problem-solving skills and inviting collaboration.
+            Interviewers often give hints when you do this.</p>
+
+        <h2>Step 4: Test Your Solution (3 minutes)</h2>
+        <p>Don't wait for the interviewer to ask. Proactively test your code.</p>
+
+        <div class="script-box">
+            <strong>Testing Script:</strong><br><br>
+            "Let me walk through this with a test case. If the input is [1, 2, 3, 4] and the target is 5...<br>
+            • First iteration: i=0, we check if 5-1=4 exists in the set. It doesn't, so we add 1.<br>
+            • Second iteration: i=1, we check if 5-2=3 exists. It doesn't, so we add 2.<br>
+            • Third iteration: i=2, we check if 5-3=2 exists. Yes! So we return [1, 2]."
+        </div>
+
+        <p>Also test edge cases:</p>
+        <ul style="margin-left: 24px; line-height: 2;">
+            <li>Empty input</li>
+            <li>Single element</li>
+            <li>Duplicates</li>
+            <li>Negative numbers (if applicable)</li>
+        </ul>
+
+        <h2>Step 5: Optimize and Discuss Trade-offs (5 minutes)</h2>
+        <p>Even if your solution works, discuss how it could be improved.</p>
+
+        <div class="script-box">
+            <strong>Optimization Script:</strong><br><br>
+            "This solution is O(n) time and O(n) space. If space is a concern, we could sort the array first and use two
+            pointers, which would be O(n log n) time but O(1) space. The trade-off is that sorting changes the original
+            array, which might not be acceptable depending on the requirements."
+        </div>
+
+        <h2>Common Communication Mistakes</h2>
+        <ul style="margin-left: 24px; line-height: 2; margin-top: 20px;">
+            <li><strong>Going silent for 5+ minutes:</strong> The interviewer thinks you're stuck.</li>
+            <li><strong>Saying "This is easy":</strong> Comes across as arrogant.</li>
+            <li><strong>Apologizing excessively:</strong> "Sorry, I'm not sure..." shows lack of confidence.</li>
+            <li><strong>Arguing with the interviewer:</strong> If they suggest a different approach, explore it.</li>
+        </ul>
+
+        <h2>The "Collaborative" Mindset</h2>
+        <p>Treat the interview like a <strong>pair programming session</strong>, not an interrogation. Use phrases like:
+        </p>
+
+        <div style="background: var(--bg-dark); padding: 24px; border-radius: 12px; margin: 24px 0;">
+            <ul style="list-style: none; padding: 0; line-height: 2;">
+                <li>✓ "What do you think about this approach?"</li>
+                <li>✓ "Does this align with what you had in mind?"</li>
+                <li>✓ "I'm considering two options here. Which would you prioritize?"</li>
+                <li>✓ "Is there a specific constraint I should optimize for?"</li>
+            </ul>
+        </div>
+
+        <h2>References & Further Reading</h2>
+        <div
+            style="background: var(--bg-card); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+            <ol style="margin-left: 24px; line-height: 2; font-size: 0.95rem;">
+                <li>Triplebyte. (2019). "How to Pass a Programming Interview." <em>Triplebyte Blog</em>.</li>
+                <li>Laakmann McDowell, G. (2015). <em>Cracking the Coding Interview</em>. CareerCup.</li>
+                <li>Aziz, A., et al. (2018). <em>Elements of Programming Interviews</em>. EPI LLC.</li>
+            </ol>
+        </div>
+
+        <div
+            style="background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 100%); padding: 40px; border-radius: 20px; text-align: center; margin-top: 60px; color: white;">
+            <h3 style="color: white; margin-bottom: 16px;">Want to Practice Technical Communication?</h3>
+            <p style="color: rgba(255,255,255,0.9); margin-bottom: 24px;">Learn how to explain complex technical
+                concepts clearly in our Technical English course.</p>
+            <a href="../lessons/technical-english/lesson-1-1.html" class="btn"
+                style="background: white; color: var(--primary);">Start Technical English</a>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ProSpeak English.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
