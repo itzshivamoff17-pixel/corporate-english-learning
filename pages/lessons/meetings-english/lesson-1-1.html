@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1: High-Impact Stand-ups - ProSpeak English</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .lesson-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            padding: 120px 0 80px;
+        }
+
+        .lesson-sidebar {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 24px;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .lesson-nav-item {
+            padding: 12px;
+            border-radius: 8px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .lesson-nav-item.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .lesson-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 60px;
+        }
+
+        .lesson-content h1 {
+            margin-bottom: 24px;
+        }
+
+        .lesson-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-light);
+        }
+
+        .lesson-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .example-box {
+            background: var(--bg-dark);
+            border-left: 4px solid var(--primary);
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 0 12px 12px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo"><i class="fas fa-language"></i><span>ProSpeak</span></a>
+            <div class="nav-actions"><a href="../../dashboard.html" class="btn btn-outline btn-sm">Dashboard</a></div>
+        </div>
+    </nav>
+
+    <div class="container lesson-container">
+        <aside class="lesson-sidebar">
+            <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Meetings Toolkit</h3>
+            <div class="lesson-nav-item active"><i class="fas fa-check-circle"></i> 1.1 Efficient Stand-ups</div>
+            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.2 Agile Ceremonies</div>
+            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.3 Handling Interruptions</div>
+        </aside>
+
+        <main class="lesson-content">
+            <span class="section-badge">Module 1.1</span>
+            <h1>The Daily Stand-up: Past, Present, Future</h1>
+
+            <p>In Agile teams, the Daily Stand-up (DSU) is the most frequent speaking opportunity. Many engineers make
+                the mistake of being too technical or too vague. The 'Past, Present, Future' framework solves this.</p>
+
+            <h2>Phase 1: What I did (Past)</h2>
+            <p>Focus on completion, not just effort.</p>
+            <div class="example-box">
+                <p><strong>Phrasing:</strong> "Since our last sync, I successfully pushed the fixes for..."</p>
+            </div>
+
+            <h2>Phase 2: What I'm doing (Present)</h2>
+            <p>Focus on your current priority.</p>
+            <div class="example-box">
+                <p><strong>Phrasing:</strong> "Today, my main focus is on finalizing the API integration..."</p>
+            </div>
+
+            <h2>Phase 3: The Blockers (Future/Risks)</h2>
+            <p>Be direct. This is your chance to ask for help.</p>
+            <div class="example-box">
+                <p><strong>Phrasing:</strong> "I'm currently blocked by the credentials for the staging env. Can someone
+                    help with that?"</p>
+            </div>
+
+            <div class="lesson-footer"
+                style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
+                <a href="#" class="btn btn-outline" style="visibility: hidden;">Previous</a>
+                <a href="#" class="btn btn-primary">Next: Agile Ceremonies <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ProSpeak English.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
