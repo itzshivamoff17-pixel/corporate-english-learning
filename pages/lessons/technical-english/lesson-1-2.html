@@ -107,43 +107,135 @@
         </aside>
 
         <main class="lesson-content">
-            <span class="section-badge">Module 1.2</span>
+            <!-- Module Breadcrumb -->
+            <div
+                style="background: var(--bg-card); padding: 16px 24px; border-radius: 12px; margin-bottom: 32px; border-left: 4px solid var(--primary); border: 1px solid var(--border-color);">
+                <div
+                    style="display: flex; align-items: center; gap: 12px; color: var(--text-muted); font-size: 0.9rem;">
+                    <i class="fas fa-microchip" style="color: var(--primary);"></i>
+                    <span>Technical English for Engineers</span>
+                    <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                    <span style="color: var(--primary-light); font-weight: 600;">Module 1.2: Data Flow Vocabulary</span>
+                </div>
+            </div>
+
+            <span class="section-badge">System Architecture - Lesson 2</span>
             <h1>Data Flow Vocabulary</h1>
 
-            <p>Moving beyond "The data goes here," a professional engineer uses precise verbs to describe the lifecycle
-                of data within a system.</p>
+            <p style="font-size: 1.15rem; line-height: 1.8;">Moving beyond "The data goes here," a professional engineer
+                uses precise verbs to describe the lifecycle of data within a system. This precision is critical for
+                distributed systems.</p>
 
-            <h2>Precise Technical Verbs</h2>
+            <h2>The Language of Distributed Systems</h2>
+            <p>Google's SRE book and Martin Fowler's architectural guides emphasize that distributed systems introduce
+                complexity that requires specific vocabulary. You can't just say "save" anymore.</p>
 
-            <div class="term-item">
-                <div class="term-word">Ingest</div>
-                <div>The initial entry of data from external sources. "Our Kafka layer <strong>ingests</strong> events
-                    from the UI clients."</div>
+            <div
+                style="background: var(--bg-card); padding: 32px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                <h3 style="margin-bottom: 20px; color: var(--primary);">The Data Lifecycle Verbs</h3>
+                <div class="term-item">
+                    <div class="term-word">Ingest</div>
+                    <div>The initial high-speed entry of data from external sources. <br>
+                        <em>"Maximum intake."</em><br>
+                        <span style="color: var(--success);">"Our Kafka layer <strong>ingests</strong> 50k events/sec
+                            from the IoT sensors."</span>
+                    </div>
+                </div>
+
+                <div class="term-item">
+                    <div class="term-word">Propagate</div>
+                    <div>The spread of data/state across nodes or services over time.<br>
+                        <em>"Like a virus."</em><br>
+                        <span style="color: var(--success);">"Changes to the feature flag are
+                            <strong>propagated</strong> to all regions within 30 seconds."</span>
+                    </div>
+                </div>
+
+                <div class="term-item">
+                    <div class="term-word">Aggregate / Reduce</div>
+                    <div>Combining multiple data streams into a single summary.<br>
+                        <em>"Summarizing."</em><br>
+                        <span style="color: var(--success);">"The analytics engine <strong>aggregates</strong> raw logs
+                            into hourly metrics heaps."</span>
+                    </div>
+                </div>
+
+                <div class="term-item">
+                    <div class="term-word">Hydrate</div>
+                    <div>Filling a skeletal object with data from a database.<br>
+                        <em>"Adding water."</em><br>
+                        <span style="color: var(--success);">"The frontend receives a user ID and
+                            <strong>hydrates</strong> the user profile from the API."</span>
+                    </div>
+                </div>
+
+                <div class="term-item" style="border-bottom: none;">
+                    <div class="term-word">Reconcile</div>
+                    <div>Comparing two datasets and fixing discrepancies.<br>
+                        <em>"Balancing the checkbook."</em><br>
+                        <span style="color: var(--success);">"A nightly cron job <strong>reconciles</strong> the payment
+                            gateway records with our internal ledger."</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="term-item">
-                <div class="term-word">Propagate</div>
-                <div>The spread of data/state across nodes or services. "Changes to the config are
-                    <strong>propagated</strong> to all regions within 5 seconds."</div>
+            <h2>Consistency Models: "Stale" vs. "Fresh"</h2>
+            <p>In the era of NoSQL and microservices, "Eventual Consistency" is the norm. Research from Amazon DynamoDB
+                shows that explaining this trade-off is the #1 communication challenge for backend engineers.</p>
+
+            <div
+                style="background: var(--bg-dark); padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid var(--accent);">
+                <h3 style="margin-bottom: 16px;">Explaining "Eventual Consistency"</h3>
+                <p style="margin-bottom: 16px;"><strong>The Concept:</strong> Data isn't the same everywhere instantly.
+                    It takes time to catch up.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                    <div style="background: rgba(255, 255, 255, 0.05); padding: 16px; border-radius: 8px;">
+                        <strong style="color: var(--text-secondary);">The Coffee Shop Analogy</strong>
+                        <p style="margin-top: 8px; font-size: 0.95rem;">"Imagine you order a latte at Starbucks. The
+                            cashier (Write Node) takes your order. The barista (Read Node) doesn't know about it
+                            instantly. The cup has to travel down the line. For 30 seconds, the system is
+                            'inconsistent'. But eventually, you get your coffee."</p>
+                    </div>
+                    <div style="background: rgba(255, 255, 255, 0.05); padding: 16px; border-radius: 8px;">
+                        <strong style="color: var(--text-secondary);">Professional Phrasing</strong>
+                        <p style="margin-top: 8px; font-size: 0.95rem;">"We accept <strong>stale reads</strong> for the
+                            user profile to maximize performance, but the payment transaction must be <strong>strongly
+                                consistent</strong>."</p>
+                    </div>
+                </div>
+                <p style="margin-top: 20px; font-size: 0.95rem; color: var(--text-muted);"><em>Reference: Vogels, W.
+                        (2009). "Eventually Consistent." ACM Queue.</em></p>
             </div>
 
-            <div class="term-item">
-                <div class="term-word">Aggregate</div>
-                <div>Combining multiple data streams into one. "The analytics engine <strong>aggregates</strong> raw
-                    logs into hourly metrics."</div>
-            </div>
-
-            <div class="term-item">
-                <div class="term-word">Stale</div>
-                <div>Describing outdated data. "Using a TTL of 1 second prevents the cache from serving
-                    <strong>stale</strong> data."</div>
-            </div>
+            <h2>Event-Driven Architecture (EDA) Patterns</h2>
+            <p>Describing EDA requires specific "Producer/Consumer" vocabulary. ThoughtWorks Technology Radar highlights
+                this as a key literacy for modern devs.</p>
 
             <div class="example-box"
-                style="background: var(--bg-dark); border-left: 4px solid var(--primary); padding: 24px; margin: 32px 0;">
-                <h4>Pro Pattern: Event-Driven Phrasing</h4>
-                <p>"When a user [triggers X], the system [emits an event], which is then [consumed by Y] to [perform
-                    Z]."</p>
+                style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 24px; margin: 32px 0;">
+                <h4>The Standard EDA Sentence Structure</h4>
+                <p style="font-family: 'JetBrains Mono', monospace; color: var(--primary);">[Subject] emits a [Topic]
+                    event, which is consumed by [Service], triggering [Action].</p>
+
+                <p style="margin-top: 24px;"><strong>Examples:</strong></p>
+                <ul style="margin-top: 12px; line-height: 1.8;">
+                    <li>"The Order Service <strong>publishes</strong> a 'PaymentSuccess' event."</li>
+                    <li>"The Shipping Service <strong>subscribes</strong> to that topic."</li>
+                    <li>"Upon receiving the message, it <strong>triggers</strong> the label generation workflow."</li>
+                    <li>"If the consumer fails, the message is sent to a <strong>Dead Letter Queue (DLQ)</strong>."</li>
+                </ul>
+            </div>
+
+            <h2>References & Further Reading</h2>
+            <div
+                style="background: var(--bg-card); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                <ol style="margin-left: 24px; line-height: 2; font-size: 0.95rem;">
+                    <li>Beyer, B., et al. (2016). <em>Site Reliability Engineering: How Google Runs Production
+                            Systems</em>. O'Reilly Media.</li>
+                    <li>Fowler, M. (2017). "Event-Driven Architecture." <em>martinfowler.com</em>.</li>
+                    <li>Vogels, W. (2009). "Eventually Consistent." <em>ACM Queue</em>.</li>
+                    <li>Kleppmann, M. (2017). <em>Designing Data-Intensive Applications</em>. O'Reilly Media.</li>
+                </ol>
             </div>
 
             <div class="lesson-footer"

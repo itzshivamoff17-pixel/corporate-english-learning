@@ -101,36 +101,152 @@
         </aside>
 
         <main class="lesson-content">
-            <span class="section-badge">Module 1.3</span>
-            <h1>Articulating Trade-offs</h1>
-
-            <p>Every architectural decision involves a trade-off. Senior engineers are measured by their ability to
-                identify these and communicate them to stakeholders.</p>
-
-            <h2>The 'Pros vs Cons' Myth</h2>
-            <p>Don't just list pros and cons. Contextualize them using the 'Priority Paradox' framework.</p>
-
-            <div class="tradeoff-box">
-                <h4>Trade-off Phrasing Pattern</h4>
-                <p>"While [Choice A] gives us [Benefit 1], it introduces [Risk 1]. Given our current priority of
-                    [Metric], we chose to move forward with [Choice A] because [Reasoning]."</p>
+            <!-- Module Breadcrumb -->
+            <div
+                style="background: var(--bg-card); padding: 16px 24px; border-radius: 12px; margin-bottom: 32px; border-left: 4px solid var(--primary); border: 1px solid var(--border-color);">
+                <div
+                    style="display: flex; align-items: center; gap: 12px; color: var(--text-muted); font-size: 0.9rem;">
+                    <i class="fas fa-microchip" style="color: var(--primary);"></i>
+                    <span>Technical English for Engineers</span>
+                    <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                    <span style="color: var(--primary-light); font-weight: 600;">Module 1.3: Documenting
+                        Trade-offs</span>
+                </div>
             </div>
 
-            <h2>Using "At the Expense of"</h2>
-            <p>This is a high-level professional phrase for engineers.</p>
-            <div class="example-box"
-                style="background: var(--bg-dark); border-left: 4px solid var(--primary); padding: 24px;">
-                <p>"We prioritized <strong>Consistency</strong> at the expense of <strong>Availability</strong>,
-                    aligning with our transactional requirements."</p>
+            <span class="section-badge">Architecture Decision Records - Lesson 3</span>
+            <h1>Documenting Trade-offs & Decisions</h1>
+
+            <p style="font-size: 1.15rem; line-height: 1.8;">"There are no solutions, only trade-offs." This quote by
+                economist Thomas Sowell is the unofficial motto of senior engineering. This lesson teaches you how to
+                document the <em>why</em> behind your code using the industry-standard ADR format.</p>
+
+            <h2>The "No Silver Bullet" Principle</h2>
+            <p>Fred Brooks, in his Turing Award-winning paper, argued that there is no single technology or methodology
+                that causes a 10x improvement in productivity. Every choice has a cost.</p>
+
+            <div
+                style="background: var(--bg-card); padding: 32px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                <h3 style="margin-bottom: 20px; color: var(--primary);">The "Buy vs. Build" Dilemma</h3>
+                <p>One of the most common trade-off discussions. Use this framework to articulate your choice:</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px;">
+                    <div
+                        style="background: rgba(16, 185, 129, 0.05); border: 1px solid var(--success); padding: 20px; border-radius: 12px;">
+                        <h4 style="color: var(--success); margin-bottom: 12px;">Choosing "Buy" (SaaS)</h4>
+                        <p>"We are choosing <strong>Stripe</strong> over building a custom payments gateway.
+                            <br><br><strong>Trade-off:</strong> We accept vendor lock-in and fees <em>at the expense
+                                of</em> lower control, to gain speed to market and reduced security liability."</p>
+                    </div>
+                    <div
+                        style="background: rgba(59, 130, 246, 0.05); border: 1px solid var(--primary); padding: 20px; border-radius: 12px;">
+                        <h4 style="color: var(--primary); margin-bottom: 12px;">Choosing "Build" (Custom)</h4>
+                        <p>"We are building a custom recommendation engine.<br><br><strong>Trade-off:</strong> We accept
+                            higher maintenance costs and dev time <em>at the expense of</em> speed, to gain a
+                            proprietary competitive advantage that off-the-shelf tools can't provide."</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>The ADR Standard (ThoughtWorks)</h2>
+            <p>ThoughtWorks Technology Radar and GitHub recommend using <strong>Architecture Decision Records
+                    (ADRs)</strong> to capture the context of decisions. This prevents the "Why did they build it this
+                way?" confusion 6 months later.</p>
+
+            <div
+                style="background: var(--bg-dark); padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid var(--accent);">
+                <h3 style="margin-bottom: 16px;">Anatomy of a Perfect ADR</h3>
+                <p>Michael Nygard proposed this widely adopted 5-part structure:</p>
+
+                <div style="margin-top: 20px; font-family: 'Inter', sans-serif;">
+                    <div style="margin-bottom: 16px;">
+                        <span
+                            style="color: var(--primary-light); font-weight: 700; text-transform: uppercase; font-size: 0.8rem;">1.
+                            Title</span>
+                        <p style="margin-top: 4px;"><strong>ADR-001: Use PostgreSQL for User Data</strong></p>
+                    </div>
+                    <div style="margin-bottom: 16px;">
+                        <span
+                            style="color: var(--primary-light); font-weight: 700; text-transform: uppercase; font-size: 0.8rem;">2.
+                            Context</span>
+                        <p style="margin-top: 4px;">We need a reliable, ACID-compliant database for user transactions.
+                            We anticipate 10k users in Year 1.</p>
+                    </div>
+                    <div style="margin-bottom: 16px;">
+                        <span
+                            style="color: var(--primary-light); font-weight: 700; text-transform: uppercase; font-size: 0.8rem;">3.
+                            Decision</span>
+                        <p style="margin-top: 4px;">We will use PostgreSQL 15 hosted on AWS RDS.</p>
+                    </div>
+                    <div style="margin-bottom: 16px;">
+                        <span
+                            style="color: var(--primary-light); font-weight: 700; text-transform: uppercase; font-size: 0.8rem;">4.
+                            Consequences (The Trade-offs)</span>
+                        <p style="margin-top: 4px;">
+                            <span style="color: var(--success);">(+) Strong consistency and easy hiring.</span><br>
+                            <span style="color: var(--error);">(-) Harder to scale horizontally compared to
+                                DynamoDB.</span>
+                        </p>
+                    </div>
+                    <div>
+                        <span
+                            style="color: var(--primary-light); font-weight: 700; text-transform: uppercase; font-size: 0.8rem;">5.
+                            Status</span>
+                        <p
+                            style="margin-top: 4px; display: inline-block; padding: 2px 8px; background: var(--success); color: white; border-radius: 4px; font-size: 0.8rem;">
+                            ACCEPTED</p>
+                    </div>
+                </div>
+                <p style="margin-top: 20px; font-size: 0.95rem; color: var(--text-muted);"><em>Reference: Nygard, M.
+                        (2011). "Documenting Architecture Decisions." thinkrelevance.com.</em></p>
+            </div>
+
+            <h2>Phrasing Trade-offs in Code Reviews</h2>
+            <p>When suggesting a change in a PR, frame it as a trade-off discussion rather than a command. This
+                increases psychological safety.</p>
+
+            <div class="tradeoff-box">
+                <h4><i class="fas fa-comment-dots"></i> The "Consider X vs. Y" Pattern</h4>
+                <p>"I see you chose to use an in-memory cache here.</p>
+                <p style="margin-top: 12px; font-style: italic;"><strong>Observation:</strong> While this is super fast
+                    (low latency), it means we might lose data if the service crashes (low durability).</p>
+                <p style="margin-top: 12px; font-style: italic;"><strong>Suggestion:</strong> Have we considered using
+                    Redis so the data persists across restarts? It adds a network hop (latency), but improves
+                    reliability."</p>
             </div>
 
             <h2>Common Trade-off Keywords</h2>
             <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-                <li><i class="fas fa-exchange-alt"></i> Latency vs. Throughput</li>
-                <li><i class="fas fa-exchange-alt"></i> Cost vs. Performance</li>
-                <li><i class="fas fa-exchange-alt"></i> Flexibility vs. Stability</li>
-                <li><i class="fas fa-exchange-alt"></i> Speed vs. Security</li>
+                <li
+                    style="background: var(--bg-card); padding: 12px; border-radius: 8px; border: 1px solid var(--border-color);">
+                    <i class="fas fa-exchange-alt" style="color: var(--primary); margin-right: 8px;"></i> Latency vs.
+                    Throughput</li>
+                <li
+                    style="background: var(--bg-card); padding: 12px; border-radius: 8px; border: 1px solid var(--border-color);">
+                    <i class="fas fa-exchange-alt" style="color: var(--primary); margin-right: 8px;"></i> Cost vs.
+                    Performance</li>
+                <li
+                    style="background: var(--bg-card); padding: 12px; border-radius: 8px; border: 1px solid var(--border-color);">
+                    <i class="fas fa-exchange-alt" style="color: var(--primary); margin-right: 8px;"></i> Flexibility
+                    vs. Stability</li>
+                <li
+                    style="background: var(--bg-card); padding: 12px; border-radius: 8px; border: 1px solid var(--border-color);">
+                    <i class="fas fa-exchange-alt" style="color: var(--primary); margin-right: 8px;"></i> Security vs.
+                    UX</li>
             </ul>
+
+            <h2>References & Further Reading</h2>
+            <div
+                style="background: var(--bg-card); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                <ol style="margin-left: 24px; line-height: 2; font-size: 0.95rem;">
+                    <li>Brooks, F. P. (1987). "No Silver Bullet — Essence and Accident in Software Engineering."
+                        <em>IEEE Computer</em>.</li>
+                    <li>Nygard, M. (2011). "Documenting Architecture Decisions." <em>Concept</em>.</li>
+                    <li>Bass, L., Clements, P., & Kazman, R. (2012). <em>Software Architecture in Practice</em>.
+                        Addison-Wesley.</li>
+                    <li>Keeling, M. (2017). <em>Design It!: From Programmer to Software Architect</em>. Pragmatic
+                        Bookshelf.</li>
+                </ol>
+            </div>
 
             <div class="lesson-footer"
                 style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
