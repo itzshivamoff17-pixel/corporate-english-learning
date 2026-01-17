@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1.4: Mastering Technical Demos - ProSpeak English</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .lesson-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            padding: 120px 0 80px;
+        }
+
+        .lesson-sidebar {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 24px;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .lesson-nav-item {
+            padding: 12px;
+            border-radius: 8px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            border: 1px solid transparent;
+            text-decoration: none;
+        }
+
+        .lesson-nav-item.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .lesson-nav-item.completed {
+            color: var(--success);
+        }
+
+        .lesson-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 60px;
+        }
+
+        .lesson-content h1 {
+            margin-bottom: 24px;
+        }
+
+        .lesson-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-light);
+        }
+
+        .lesson-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .checklist-box {
+            background: var(--bg-darker);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 32px;
+            margin: 32px 0;
+        }
+
+        .checklist-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+            align-items: flex-start;
+        }
+
+        .checklist-item i {
+            color: var(--success);
+            margin-top: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo"><i class="fas fa-language"></i><span>ProSpeak</span></a>
+            <div class="nav-actions"><a href="../../courses.html" class="btn btn-outline btn-sm">All Courses</a></div>
+        </div>
+    </nav>
+
+    <div class="container lesson-container">
+        <aside class="lesson-sidebar">
+            <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Presentation Skills</h3>
+            <a href="lesson-1-1.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.1
+                Storytelling Structure</a>
+            <a href="lesson-1-2.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.2 The
+                'Hook' Meta</a>
+            <a href="lesson-1-3.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.3 Handling
+                Q&A</a>
+            <div class="lesson-nav-item active"><i class="fas fa-play-circle"></i> 1.4 Technical Demos</div>
+        </aside>
+
+        <main class="lesson-content">
+            <!-- Module Breadcrumb -->
+            <div
+                style="background: var(--bg-card); padding: 16px 24px; border-radius: 12px; margin-bottom: 32px; border-left: 4px solid var(--primary); border: 1px solid var(--border-color);">
+                <div
+                    style="display: flex; align-items: center; gap: 12px; color: var(--text-muted); font-size: 0.9rem;">
+                    <i class="fas fa-chalkboard-teacher" style="color: var(--primary);"></i>
+                    <span>Public Speaking & Presentations</span>
+                    <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                    <span style="color: var(--primary-light); font-weight: 600;">Module 1.4: Mastering Technical
+                        Demos</span>
+                </div>
+            </div>
+
+            <span class="section-badge">Live Performance - Lesson 4</span>
+            <h1>Mastering the Technical Demo</h1>
+
+            <p style="font-size: 1.15rem; line-height: 1.8;">Live coding is the most dangerous form of public speaking.
+                Things <em>will</em> break. This lesson covers the "Demo Gods" protocol and how to handle failure with
+                grace.</p>
+
+            <h2>The "Demo Gods" Pre-Flight Checklist</h2>
+            <p>Pilots use checklists to avoid crashing planes. Engineers should use them to avoid crashing demos.</p>
+
+            <div class="checklist-box">
+                <div class="checklist-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Clean Environment:</strong> Close all Chrome tabs, Slack, and Discord. Use a fresh
+                        "Demo" browser profile.
+                    </div>
+                </div>
+                <div class="checklist-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Resolution & Font Size:</strong> Set screen resolution to 1080p (easier for streaming).
+                        Increase IDE font size to 18px or 24px.
+                    </div>
+                </div>
+                <div class="checklist-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Do Not Disturb:</strong> Turn on OS-level focus mode. A text from your mom popping up
+                        during a board meeting is unprofessional.
+                    </div>
+                </div>
+                <div class="checklist-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Localhost Fallback:</strong> Have the app running on `localhost` AND a staging URL. If
+                        one fails, switch instantly.
+                    </div>
+                </div>
+            </div>
+
+            <h2>The "Narrated Action" Technique</h2>
+            <p>Silence is deadly during a demo. Never move your mouse without explaining <em>why</em>. Use these linking
+                phrases:</p>
+
+            <div
+                style="background: var(--bg-dark); padding: 24px; border-radius: 12px; border-left: 4px solid var(--accent); margin-bottom: 32px;">
+                <p style="font-family: monospace; color: var(--success);">
+                    "I'm going to navigate to the settings panel..."<br>
+                    "Now, I'll trigger the build pipeline..."<br>
+                    "While this is loading, let me explain the architecture..."
+                </p>
+            </div>
+
+            <h2>The "Backup Video" Strategy (Cheating Professionally)</h2>
+            <p>Top presenters at Apple and Google often use pre-recorded videos that <em>look</em> like live demos. This
+                removes all risk.</p>
+            <p><strong>The Protocol:</strong></p>
+            <ol style="margin-left: 24px; line-height: 2;">
+                <li>Record your demo perfectly using QuickTime or OBS.</li>
+                <li>Keep the video file open in full screen on a separate desktop space.</li>
+                <li>If the live code breaks, swipe over and say: <em>"The network seems a bit slow, so here's a
+                        recording I made earlier to respect your time."</em></li>
+            </ol>
+
+            <h2>Remote Presentation Specifics</h2>
+            <p>When presenting on Zoom/Teams, you are a TV broadcaster. Setup matters.</p>
+            <ul style="margin-left: 24px; line-height: 2;">
+                <li><strong>Eye Contact:</strong> Look at the camera lens, not the faces on the screen. Stick a post-it
+                    note with an arrow near your webcam.</li>
+                <li><strong>Lighting:</strong> Light should be <em>in front</em> of you. Do not sit with a window behind
+                    you (silhouetting).</li>
+                <li><strong>Audio:</strong> A $50 USB microphone sounds 10x better than built-in laptop audio. Audio
+                    quality correlates with perceived competence.</li>
+            </ul>
+
+            <h2>Handling Failure (When it Breaks)</h2>
+            <p>If it breaks, do NOT say "It worked on my machine." Use these phrases:</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px;">
+                <div
+                    style="background: rgba(239, 68, 68, 0.05); padding: 20px; border-radius: 8px; border: 1px solid var(--error);">
+                    <h4 style="color: var(--error);">❌ Don't Say</h4>
+                    <p>"Uh oh. That's weird. Why is it doing that? Sorry guys."</p>
+                </div>
+                <div
+                    style="background: rgba(16, 185, 129, 0.05); padding: 20px; border-radius: 8px; border: 1px solid var(--success);">
+                    <h4 style="color: var(--success);">✅ Say This</h4>
+                    <p>"It seems we hit an edge case with the staging environment. I'll note that for the logs. Let's
+                        move to the next feature which demonstrates..."</p>
+                </div>
+            </div>
+
+            <h2>References & Further Reading</h2>
+            <div
+                style="background: var(--bg-card); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                <ol style="margin-left: 24px; line-height: 2; font-size: 0.95rem;">
+                    <li>Duarte, N. (2020). <em>Virtual Presentation Best Practices</em>. Duarte Design.</li>
+                    <li>GitLab. (2021). "The Remote Manifesto." <em>GitLab Handbook</em>.</li>
+                    <li>Hanselman, S. (2014). "The Art of the Demo." (Microsoft executive strategy).</li>
+                </ol>
+            </div>
+
+            <div class="lesson-footer"
+                style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
+                <a href="lesson-1-3.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Previous</a>
+                <a href="../../courses.html" class="btn btn-primary">Complete Course</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ProSpeak English.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
