@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaking Scenario Simulator - ProSpeak English</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .simulator-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 24px 80px;
+            min-height: 80vh;
+        }
+
+        .scenario-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+        }
+
+        .scenario-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .scenario-btn {
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            background: var(--bg-dark);
+            cursor: pointer;
+            transition: var(--transition-base);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .scenario-btn:hover {
+            border-color: var(--primary);
+            background: rgba(37, 99, 235, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .scenario-btn i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .dialogue-box {
+            display: none;
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .dialogue-step {
+            background: var(--bg-darker);
+            border-left: 4px solid var(--secondary);
+            padding: 24px;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 24px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .speaker-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .user-turn {
+            border-left-color: var(--success);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .controls {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo"><i class="fas fa-language"></i><span>ProSpeak</span></a>
+            <div class="nav-actions"><a href="../practice.html" class="btn btn-outline btn-sm">Back to Tools</a></div>
+        </div>
+    </nav>
+
+    <div class="simulator-container">
+        <div class="scenario-card" id="selection-screen">
+            <h1 class="gradient-text">Select a Scenario</h1>
+            <p style="margin-top: 16px;">Choose a workplace situation to practice your speaking skills.</p>
+
+            <div class="scenario-options">
+                <button class="scenario-btn" onclick="startScenario('status-update')">
+                    <i class="fas fa-clock"></i>
+                    <strong>Status Update</strong>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Explain a delay to your manager</span>
+                </button>
+                <button class="scenario-btn" onclick="startScenario('client-call')">
+                    <i class="fas fa-headset"></i>
+                    <strong>Client Call</strong>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Handle a feature request</span>
+                </button>
+                <button class="scenario-btn" onclick="startScenario('code-review')">
+                    <i class="fas fa-code-branch"></i>
+                    <strong>Code Review</strong>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Defend your technical decision</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="dialogue-box" id="dialogue-screen">
+            <h2 id="scenario-title" style="margin-bottom: 24px;">Scenario Title</h2>
+            <div id="conversation-flow"></div>
+
+            <div class="controls">
+                <button class="btn btn-outline" onclick="resetScenario()">End Practice</button>
+                <button class="btn btn-primary" id="next-btn" onclick="nextStep()">Next Step <i
+                        class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const scenarios = {
+            'status-update': {
+                title: "The Delayed Project",
+                steps: [
+                    {
+                        speaker: "Manager",
+                        text: "Hey, I noticed the API integration isn't moving. Are we still on track for Friday?"
+                    },
+                    {
+                        speaker: "You (Practice This)",
+                        text: "Actually, we hit a blocker with the authentication service. I need to re-route the traffic through the new gateway, which will take an extra day.",
+                        type: "user"
+                    },
+                    {
+                        speaker: "Manager",
+                        text: "That's worrying. The client is expecting a demo on Monday. What's the risk level?"
+                    },
+                    {
+                        speaker: "You (Practice This)",
+                        text: "I'm confident we can finish by Sunday evening if I focus 100% on this. I'll need to deprioritize the UI bug fixes for now.",
+                        type: "user"
+                    },
+                    {
+                        speaker: "Manager",
+                        text: "Okay, let's do that. Send me a short email confirming the plan."
+                    }
+                ]
+            },
+            'client-call': {
+                title: "The Scope Creep",
+                steps: [
+                    {
+                        speaker: "Client",
+                        text: "We love the dashboard! But can we also add a real-time chat feature before the launch next week?"
+                    },
+                    {
+                        speaker: "You (Practice This)",
+                        text: "I'm glad you like the dashboard. Regarding the chat feature, that's a significant addition. Given our launch timeline, adding it now would risk the stability of the core platform.",
+                        type: "user"
+                    },
+                    {
+                        speaker: "Client",
+                        text: "But it's critical for our users. We really need it."
+                    },
+                    {
+                        speaker: "You (Practice This)",
+                        text: "I understand it's a priority. How about we launch the dashboard as planned to ensure stability, and then treat the chat feature as the top priority for 'Phase 2' immediately after?",
+                        type: "user"
+                    }
+                ]
+            },
+            'code-review': {
+                title: "Defending Your Code",
+                steps: [
+                    {
+                        speaker: "Senior Dev",
+                        text: "Why did you use a custom hook here instead of the standard Redux action?"
+                    },
+                    {
+                        speaker: "You (Practice This)",
+                        text: "I chose a custom hook to keep this component isolated. It doesn't need global state, so this reduces the complexity and makes it easier to unit test.",
+                        type: "user"
+                    },
+                    {
+                        speaker: "Senior Dev",
+                        text: "I see your point, but we generally prefer Redux for consistency."
+                    },
+                    {
+                        speaker: "You (Practice This)",
+                        text: "That makes sense. If consistency is the priority, I'm happy to refactor it. However, for this specific isolated widget, I do think the hook is more performant.",
+                        type: "user"
+                    }
+                ]
+            }
+        };
+
+        let currentScenario = null;
+        let stepIndex = 0;
+
+        function startScenario(id) {
+            currentScenario = scenarios[id];
+            stepIndex = 0;
+            document.getElementById('selection-screen').style.display = 'none';
+            document.getElementById('dialogue-screen').style.display = 'block';
+            document.getElementById('scenario-title').innerText = currentScenario.title;
+            document.getElementById('conversation-flow').innerHTML = '';
+            document.getElementById('next-btn').style.display = 'inline-flex';
+            nextStep();
+        }
+
+        function nextStep() {
+            if (stepIndex >= currentScenario.steps.length) {
+                const completHTML = `
+                    <div class="dialogue-step" style="background: rgba(16, 185, 129, 0.1); border-color: var(--success); text-align: center;">
+                        <h3 style="color: var(--success); margin-bottom: 8px;">Scenario Complete! 🎉</h3>
+                        <p>Great practice. Try speaking the lines out loud to build muscle memory.</p>
+                    </div>
+                `;
+                document.getElementById('conversation-flow').insertAdjacentHTML('beforeend', completHTML);
+                document.getElementById('next-btn').style.display = 'none';
+                return;
+            }
+
+            const step = currentScenario.steps[stepIndex];
+            const isUser = step.type === 'user';
+
+            const html = `
+                <div class="dialogue-step ${isUser ? 'user-turn' : ''}">
+                    <span class="speaker-label" style="${isUser ? 'color: var(--success);' : ''}">${step.speaker}</span>
+                    <p style="font-size: 1.1rem; line-height: 1.6;">${step.text}</p>
+                </div>
+            `;
+
+            document.getElementById('conversation-flow').insertAdjacentHTML('beforeend', html);
+            stepIndex++;
+        }
+
+        function resetScenario() {
+            document.getElementById('selection-screen').style.display = 'block';
+            document.getElementById('dialogue-screen').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
