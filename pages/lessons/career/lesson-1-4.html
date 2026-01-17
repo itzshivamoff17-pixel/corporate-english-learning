@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1.4: The Narrative Pitch - ProSpeak English</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .lesson-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            padding: 120px 0 80px;
+        }
+
+        .lesson-sidebar {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 24px;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .lesson-nav-item {
+            padding: 12px;
+            border-radius: 8px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            border: 1px solid transparent;
+            text-decoration: none;
+        }
+
+        .lesson-nav-item.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .lesson-nav-item.completed {
+            color: var(--success);
+        }
+
+        .lesson-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 60px;
+        }
+
+        .lesson-content h1 {
+            margin-bottom: 24px;
+        }
+
+        .lesson-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-light);
+        }
+
+        .lesson-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .pitch-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin: 32px 0;
+        }
+
+        .framework-step {
+            background: var(--bg-dark);
+            padding: 24px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo"><i class="fas fa-language"></i><span>ProSpeak</span></a>
+            <div class="nav-actions"><a href="../../courses.html" class="btn btn-outline btn-sm">All Courses</a></div>
+        </div>
+    </nav>
+
+    <div class="container lesson-container">
+        <aside class="lesson-sidebar">
+            <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Career Strategy</h3>
+            <a href="lesson-1-1.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.1 Tech
+                Power Verbs</a>
+            <a href="lesson-1-2.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.2 STAR
+                Method</a>
+            <a href="lesson-1-3.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.3
+                Negotiation Logic</a>
+            <div class="lesson-nav-item active"><i class="fas fa-play-circle"></i> 1.4 Narrative Pitch</div>
+            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.5 Handling Gaps</div>
+            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.6 Benefit Package</div>
+        </aside>
+
+        <main class="lesson-content">
+            <!-- Module Breadcrumb -->
+            <div
+                style="background: var(--bg-card); padding: 16px 24px; border-radius: 12px; margin-bottom: 32px; border-left: 4px solid var(--primary); border: 1px solid var(--border-color);">
+                <div
+                    style="display: flex; align-items: center; gap: 12px; color: var(--text-muted); font-size: 0.9rem;">
+                    <i class="fas fa-briefcase" style="color: var(--primary);"></i>
+                    <span>Interview & Career Growth</span>
+                    <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                    <span style="color: var(--primary-light); font-weight: 600;">Module 1.4: The Narrative Pitch</span>
+                </div>
+            </div>
+
+            <span class="section-badge">The "Tell Me About Yourself" Hack - Lesson 4</span>
+            <h1>Constructing Your Narrative Pitch</h1>
+
+            <p style="font-size: 1.15rem; line-height: 1.8;">"Tell me about yourself" is the most common opening
+                question in any interview. It is also where 90% of candidates fail. They recite their resume
+                chronologically. Don't do that. Tell a story of <strong>transformation</strong>.</p>
+
+            <h2>The Past-Present-Future Framework</h2>
+            <p>This simple structure ensures your answer is concise (under 2 minutes) and relevant. It shows trajectory.
+            </p>
+
+            <div class="framework-step">
+                <h3 style="color: var(--primary); margin-bottom: 8px;">1. The Past (10-15 seconds)</h3>
+                <p><strong>Goal:</strong> Establish your background and hook them with your initial passion/expertise.
+                </p>
+                <p style="font-style: italic; color: var(--text-muted);">"I started my career as a backend developer at
+                    [Company], where I fell in love with distributed systems and scaling high-traffic APIs."</p>
+            </div>
+
+            <div class="framework-step">
+                <h3 style="color: var(--primary); margin-bottom: 8px;">2. The Present (45-60 seconds)</h3>
+                <p><strong>Goal:</strong> Highlight your current key achievement and role scope.</p>
+                <p style="font-style: italic; color: var(--text-muted);">"Currently, I'm a Senior Engineer at [Company],
+                    where I lead a team of 5. My biggest recent win was re-architecting our legacy monolith into
+                    microservices, which cut deployment time by 50%."</p>
+            </div>
+
+            <div class="framework-step">
+                <h3 style="color: var(--primary); margin-bottom: 8px;">3. The Future (15-20 seconds)</h3>
+                <p><strong>Goal:</strong> Connect your goal to <strong>this specific job</strong>.</p>
+                <p style="font-style: italic; color: var(--text-muted);">"However, I've hit a ceiling in terms of cloud
+                    complexity there. I'm looking to move into a Principal role where I can tackle multi-region
+                    architecture challenges, which is why I'm so excited about [Company]'s global expansion."</p>
+            </div>
+
+            <h2>The "Theme" Strategy</h2>
+            <p>Great characters have a theme. Are you "The Builder"? "The Fixer"? "The Scaler"? Pick one theme and weave
+                it through your pitch.</p>
+
+            <div class="pitch-grid">
+                <div
+                    style="background: rgba(37, 99, 235, 0.05); padding: 20px; border-radius: 12px; border: 1px solid var(--primary);">
+                    <h4 style="margin-bottom: 12px;">🏗️ The Builder</h4>
+                    <p>"I love 0 to 1 projects. I thrive in chaos and turning abstract requirements into shipping code."
+                    </p>
+                </div>
+                <div
+                    style="background: rgba(16, 185, 129, 0.05); padding: 20px; border-radius: 12px; border: 1px solid var(--success);">
+                    <h4 style="margin-bottom: 12px;">🔧 The Fixer</h4>
+                    <p>"I specialize in optimization. I find inefficient systems and make them faster, cheaper, and more
+                        reliable."</p>
+                </div>
+            </div>
+
+            <h2>Common Pitfalls to Avoid</h2>
+            <ul style="margin-left: 24px; line-height: 2; margin-top: 24px;">
+                <li><strong>The Autobio:</strong> "I was born in..." (Too far back. Start with your professional
+                    career).</li>
+                <li><strong>The Resume Read:</strong> "Then I worked at X, then I worked at Y..." (Boring. Focus on
+                    <em>why</em> you moved).</li>
+                <li><strong>The Personal Overshare:</strong> "I have 3 cats and love hiking." (Save this for the literal
+                    end, if at all).</li>
+            </ul>
+
+            <h2>References & Further Reading</h2>
+            <div
+                style="background: var(--bg-card); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                <ol style="margin-left: 24px; line-height: 2; font-size: 0.95rem;">
+                    <li>Clark, D. (2017). "How to Answer 'Tell Me About Yourself'." <em>Harvard Business Review</em>.
+                    </li>
+                    <li>Laakmann McDowell, G. (2015). <em>Cracking the Coding Interview</em>. CareerCup.</li>
+                </ol>
+            </div>
+
+            <div class="lesson-footer"
+                style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
+                <a href="lesson-1-3.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Previous</a>
+                <a href="lesson-1-5.html" class="btn btn-primary">Next: Handling Gaps <i
+                        class="fas fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ProSpeak English.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
