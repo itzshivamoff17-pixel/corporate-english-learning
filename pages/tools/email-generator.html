@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Email Generator - ProSpeak English</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 120px 24px 80px;
+        }
+
+        .generator-layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+        }
+
+        .sidebar {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            height: fit-content;
+        }
+
+        .category-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            text-align: left;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-secondary);
+            font-weight: 500;
+            border-radius: 6px;
+            margin-bottom: 4px;
+        }
+
+        .category-btn:hover {
+            background: rgba(37, 99, 235, 0.05);
+            color: var(--primary);
+        }
+
+        .category-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .email-editor {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+        }
+
+        .form-textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            min-height: 300px;
+            line-height: 1.6;
+        }
+
+        .copy-btn {
+            background: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            transition: var(--transition-fast);
+        }
+
+        .copy-btn:hover {
+            border-color: var(--success);
+            color: var(--success);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo"><i class="fas fa-language"></i><span>ProSpeak</span></a>
+            <div class="nav-actions"><a href="../practice.html" class="btn btn-outline btn-sm">Back to Tools</a></div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="gradient-text" style="margin-bottom: 40px; text-align: center;">Email Template Generator</h1>
+
+        <div class="generator-layout">
+            <aside class="sidebar">
+                <h3 style="margin-bottom: 16px; font-size: 1.1rem;">Categories</h3>
+                <button class="category-btn active" onclick="loadTemplate('status')">Weekly Status Update</button>
+                <button class="category-btn" onclick="loadTemplate('blocker')">Escalating a Blocker</button>
+                <button class="category-btn" onclick="loadTemplate('sick')">Sick Leave / OOO</button>
+                <button class="category-btn" onclick="loadTemplate('thankyou')">Post-Interview Thank You</button>
+                <button class="category-btn" onclick="loadTemplate('referral')">Asking for a Referral</button>
+                <button class="category-btn" onclick="loadTemplate('decline')">Declining a Meeting</button>
+            </aside>
+
+            <main class="email-editor">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                    <h2 id="template-title" style="font-size: 1.5rem;">Status Update</h2>
+                    <button class="copy-btn" onclick="copyToClipboard()"><i class="fas fa-copy"></i> Copy to
+                        Clipboard</button>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Subject Line</label>
+                    <input type="text" class="form-input" id="email-subject">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Email Body</label>
+                    <textarea class="form-textarea" id="email-body"></textarea>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        const templates = {
+            'status': {
+                title: "Weekly Status Update",
+                subject: "Weekly Update: [Project Name] - [Date]",
+                body: "Hi [Manager Name],\n\nHere is the progress report for this week:\n\n✅ Highlights:\n- Completed the API integration for the payment gateway.\n- Fixed the critical bug in the login flow (Ticket #123).\n\n⚠️ Risks/Blockers:\n- The QA environment is unstable; this might delay testing by 1 day.\n- Waiting for design assets for the new dashboard.\n\n📅 Next Week's Focus:\n- Moving to the UAT phase.\n- Starting the documentation for the new endpoint.\n\nBest,\n[Your Name]"
+            },
+            'blocker': {
+                title: "Escalating a Blocker",
+                subject: "Blocker: [Project Name] delayed due to [Reason]",
+                body: "Hi [Manager Name],\n\nI want to flag a risk to our timeline for the [Project Name] launch.\n\nWe are currently blocked by [Specific Dependency/Issue]. Without resolution, we cannot proceed to [Next Step].\n\nImpact: This puts the release date at risk by [Number] days.\n\nProposed Solution: [Propose a fix or workaround].\n\nPlease let me know if you can assist in unblocking this resource.\n\nBest,\n[Your Name]"
+            },
+            'sick': {
+                title: "Sick Leave / OOO",
+                subject: "OOO - [Date] - [Your Name]",
+                body: "Hi Team,\n\nI'm feeling under the weather today and will be taking a sick day to recover.\n\nI won't be checking emails, but for anything urgent regarding [Project], please reach out to [Colleague's Name].\n\nI expect to be back online tomorrow.\n\nBest,\n[Your Name]"
+            },
+            'thankyou': {
+                title: "Post-Interview Thank You",
+                subject: "Thank you - [Job Title] Interview - [Your Name]",
+                body: "Hi [Interviewer Name],\n\nThank you for taking the time to speak with me today about the [Job Title] role. I really enjoyed learning more about how the team manages [Specific Topic Discussed].\n\nI am even more excited about the opportunity to contribute to [Company Name]'s mission, especially [Specific Detail].\n\nI look forward to hearing about the next steps.\n\nBest,\n[Your Name]"
+            },
+            'referral': {
+                title: "Asking for a Referral",
+                subject: "Quick question: Role at [Company]",
+                body: "Hi [Name],\n\nI hope you're doing well!\n\nI noticed that [Company] has an opening for a [Job Title], and given your experience there, I wanted to reach out.\n\nI've been following [Company]'s work on [Project] and think my background in [Your Skill] would be a great fit. Would you be open to referring me for the role?\n\nI've attached my resume and a short blurb below to make it easy. No pressure at all if you aren't comfortable.\n\nBest,\n[Your Name]"
+            },
+            'decline': {
+                title: "Declining a Meeting",
+                subject: "Decline: [Meeting Name]",
+                body: "Hi [Organizer],\n\nThanks for the invite.\n\nI have a conflict at that time / I need to focus on heads-down work for the [Project] deadline.\n\nWould it be possible to handle this async? If you send over the agenda or questions, I'd be happy to provide my updates via email or Slack.\n\nThanks for understanding,\n[Your Name]"
+            }
+        };
+
+        function loadTemplate(key) {
+            // Update active button
+            document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Load content
+            const template = templates[key];
+            document.getElementById('template-title').innerText = template.title;
+            document.getElementById('email-subject').value = template.subject;
+            document.getElementById('email-body').value = template.body;
+        }
+
+        function copyToClipboard() {
+            const subject = document.getElementById('email-subject').value;
+            const body = document.getElementById('email-body').value;
+            const fullText = `Subject: ${subject}\n\n${body}`;
+
+            navigator.clipboard.writeText(fullText).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 2000);
+            });
+        }
+
+        // Initialize with first template
+        window.onload = function () {
+            loadTemplate('status');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1.4: Managing Conflict & Escalation - ProSpeak English</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .lesson-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            padding: 120px 0 80px;
+        }
+
+        .lesson-sidebar {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 24px;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .lesson-nav-item {
+            padding: 12px;
+            border-radius: 8px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            border: 1px solid transparent;
+            text-decoration: none;
+        }
+
+        .lesson-nav-item.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .lesson-nav-item.completed {
+            color: var(--success);
+        }
+
+        .lesson-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 60px;
+        }
+
+        .lesson-content h1 {
+            margin-bottom: 24px;
+        }
+
+        .lesson-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-light);
+        }
+
+        .lesson-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .conflict-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin: 32px 0;
+        }
+
+        .conflict-card {
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid;
+        }
+
+        .conflict-bad {
+            background: rgba(239, 68, 68, 0.05);
+            border-color: var(--error);
+        }
+
+        .conflict-good {
+            background: rgba(16, 185, 129, 0.05);
+            border-color: var(--success);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="nav-logo"><i class="fas fa-language"></i><span>ProSpeak</span></a>
+            <div class="nav-actions"><a href="../../courses.html" class="btn btn-outline btn-sm">All Courses</a></div>
+        </div>
+    </nav>
+
+    <div class="container lesson-container">
+        <aside class="lesson-sidebar">
+            <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Email & Chat Skills</h3>
+            <a href="lesson-1-1.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.1 Email
+                Structure</a>
+            <a href="lesson-1-2.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.2 Slack &
+                Teams</a>
+            <a href="lesson-1-3.html" class="lesson-nav-item completed"><i class="fas fa-check-circle"></i> 1.3
+                Asynchronous Work</a>
+            <div class="lesson-nav-item active"><i class="fas fa-fire"></i> 1.4 Managing Conflict</div>
+        </aside>
+
+        <main class="lesson-content">
+            <!-- Module Breadcrumb -->
+            <div
+                style="background: var(--bg-card); padding: 16px 24px; border-radius: 12px; margin-bottom: 32px; border-left: 4px solid var(--primary); border: 1px solid var(--border-color);">
+                <div
+                    style="display: flex; align-items: center; gap: 12px; color: var(--text-muted); font-size: 0.9rem;">
+                    <i class="fas fa-envelope-open-text" style="color: var(--primary);"></i>
+                    <span>Email & Chat Communication</span>
+                    <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                    <span style="color: var(--primary-light); font-weight: 600;">Module 1.4: Managing Conflict &
+                        Escalation</span>
+                </div>
+            </div>
+
+            <span class="section-badge">Crisis Management - Lesson 4</span>
+            <h1>Managing Conflict & Escalation</h1>
+
+            <p style="font-size: 1.15rem; line-height: 1.8;">Conflict in text is dangerous because it lacks tone. A
+                simple "Why?" can sound aggressive. This lesson teaches you how to de-escalate tension and disagree
+                professionally.</p>
+
+            <h2>The "15-Minute Rule" (Emotional Latency)</h2>
+            <p><strong>Rule:</strong> Never reply to a frustrating email immediately. The "amygdala hijack" lasts about
+                15 minutes. Draft your response, go for a walk, then re-read it.</p>
+            <p>If you feel your heart rate up, step away from the keyboard.</p>
+
+            <h2>De-escalation Phrases</h2>
+            <p>When someone is angry or accusing you, do not defend yourself immediately. First,
+                <strong>validate</strong>.</p>
+
+            <div
+                style="background: var(--bg-card); padding: 24px; border-radius: 12px; border: 1px solid var(--border-color); margin: 32px 0;">
+                <ul style="margin-left: 24px; line-height: 2;">
+                    <li>"I understand your frustration regarding the delay..." (Validation)</li>
+                    <li>"Let's take a step back and look at the timeline..." (Reset)</li>
+                    <li>"I want to make sure I understand your concern correctly. Are you saying..." (Clarification)
+                    </li>
+                    <li>"This seems better suited for a quick sync. Do you have 5 minutes?" (Channel Switch)</li>
+                </ul>
+            </div>
+
+            <h2>How to Disagree (Without Being "Toxic")</h2>
+            <p>Use the "Yes, AND" approach rather than "No, BUT".</p>
+
+            <div class="conflict-grid">
+                <div class="conflict-card conflict-bad">
+                    <h4 style="color: var(--error); margin-bottom: 12px;">❌ Aggressive Disagreement</h4>
+                    <p>"That won't work. You didn't consider the load balancer limitations. We need to do it my way."
+                    </p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px;"><em>(Sounds arrogant and
+                            dismissive)</em></p>
+                </div>
+                <div class="conflict-card conflict-good">
+                    <h4 style="color: var(--success); margin-bottom: 12px;">✅ Constructive Pushback</h4>
+                    <p>"I see the merit in that approach. However, I have a concern about the load balancer limitations.
+                        Could we treat that as a risk?"</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px;"><em>(Validates, then adds
+                            new information)</em></p>
+                </div>
+            </div>
+
+            <h2>The Protocol for "Cc-ing the Manager"</h2>
+            <p>Adding a manager to a thread (Cc) can be seen as an act of war ("tattling"). Use it carefully.</p>
+            <p><strong>When to Cc:</strong></p>
+            <ul style="margin-left: 24px; line-height: 2;">
+                <li>When a decision impacts budget or timeline (CYA - Cover Your Assets).</li>
+                <li>When you are genuinely blocked and need authority to proceed.</li>
+            </ul>
+            <p><strong>How to do it cleanly:</strong><br>
+                <em>"Adding [Manager Name] for visibility on the timeline impact."</em> (Be transparent about why they
+                are there).
+            </p>
+
+            <h2>The "Clean Escalation" Email Template</h2>
+            <p>When you need to escalate a blocker to management, strip out the emotion. Use Facts Only.</p>
+
+            <div
+                style="background: var(--bg-dark); padding: 24px; border-radius: 12px; border-left: 4px solid var(--accent); margin-top: 24px;">
+                <p><strong>Subject:</strong> [Blocker] Deployment delayed due to API dependency</p>
+                <p>Hi [Manager],</p>
+                <p>I'm writing to flag a risk to the Q3 launch.</p>
+                <p><strong>The Situation:</strong> We are currently blocked on the Payment API integration.</p>
+                <p><strong>The Impact:</strong> Without this, we cannot proceed to UAT testing, which pushes the launch
+                    date by 3 days.</p>
+                <p><strong>Proposed Solution:</strong> I recommend we swap the priority and focus on the Admin Dashboard
+                    for now, while the API team resolves the issue.</p>
+                <p>Please let me know if you agree with this adjustment.</p>
+                <p>Best,<br>[Your Name]</p>
+            </div>
+
+            <div class="lesson-footer"
+                style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
+                <a href="lesson-1-3.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Previous</a>
+                <a href="../../courses.html" class="btn btn-primary">Complete Course</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ProSpeak English.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
