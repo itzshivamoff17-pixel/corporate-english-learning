@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Review Etiquette: Kindness in Code - ProSpeak English</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .blog-header {
+            padding: 160px 0 80px;
+            background: var(--bg-darker);
+            text-align: center;
+        }
+
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        .blog-content p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+
+        .blog-content h2 {
+            margin-top: 48px;
+            margin-bottom: 24px;
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 32px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background: var(--bg-dark);
+            font-weight: 600;
+        }
+
+        .author-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 60px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .author-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo"><i class="fas fa-language"></i><span>ProSpeak</span></a>
+            <div class="nav-actions"><a href="../blog.html" class="btn btn-outline btn-sm">Back to Blog</a></div>
+        </div>
+    </nav>
+
+    <header class="blog-header">
+        <div class="container">
+            <span class="section-badge">TECHNICAL COMMUNICATION</span>
+            <h1 class="gradient-text" style="font-size: 3rem; margin-top: 16px;">Code Review Etiquette</h1>
+            <p style="margin-top: 24px; color: var(--text-secondary);">How to give feedback that improves code without
+                destroying morale.</p>
+        </div>
+    </header>
+
+    <article class="blog-content">
+        <p>Code reviews are the number one source of conflict in engineering teams. A comment like "Why did you do it
+            this way?" can ruin someone's day. It sounds accusatory, even if you didn't mean it.</p>
+
+        <p>Google's Engineering Guidelines explicitly state: <strong>" Critique the code, not the person."</strong> This
+            sounds simple, but linguistic nuances make it hard.</p>
+
+        <h2>The "Question" vs. The "Statement"</h2>
+        <p>Statements feel like orders. Questions feel like collaboration. Whenever possible, frame your feedback as a
+            curiosity.</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>❌ Toxic Phrasing</th>
+                    <th>✅ Collaborative Phrasing</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>"This is inefficient."</td>
+                    <td>"Have we considered the performance impact here for large datasets?"</td>
+                </tr>
+                <tr>
+                    <td>"Fix this function naming."</td>
+                    <td>"Would a more descriptive name like 'fetchUserData' help readability?"</td>
+                </tr>
+                <tr>
+                    <td>"You forgot to handle the error."</td>
+                    <td>"What happens if the API returns a 500 here?"</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>The Power of "We"</h2>
+        <p>Using "You" puts the recipient on the defensive. Using "We" makes it a team problem.</p>
+        <p><strong>Bad:</strong> "You need to update the documentation."<br>
+            <strong>Good:</strong> "We should probably update the docs so our future selves don't get confused."
+        </p>
+
+        <h2>The Sandwich Method (With a Twist)</h2>
+        <p>The classic "Good, Bad, Good" sandwich is cliché. Instead, use the <strong>"Validation + Suggestion"</strong>
+            model.</p>
+        <p><strong>Example:</strong> "I really like how you handled the state management here; it's very clean. One
+            suggestion: could we extract this logic into a utility function to make it reusable?"</p>
+        <p>This validates their effort first, making them more open to the suggestion.</p>
+
+        <h2>Nitpicks vs. Blockers</h2>
+        <p>Not all comments are equal. Explicitly label your comments to reduce anxiety:</p>
+        <ul style="margin-left: 24px; line-height: 2;">
+            <li><strong>[NIT]</strong> (Nitpick): "Minor indentation issue. Feel free to ignore if you're in a rush."
+            </li>
+            <li><strong>[BLOCKER]</strong>: "This logic introduces a security vulnerability. We need to fix this before
+                merging."</li>
+            <li><strong>[QUESTION]</strong>: "Just curious, why did we choose this library?"</li>
+        </ul>
+
+        <h2>Receiving Feedback Gracefully</h2>
+        <p>When you are the one being reviewed, your job is to be "coachable."</p>
+        <p>If someone points out a bug, don't say: <em>"Well, I did it that way because..."</em> (Defensive).</p>
+        <p>Say: <em>"Good catch. I hadn't considered that case. I'll fix it."</em> (Professional).</p>
+
+        <div class="author-card">
+            <div class="author-img"></div>
+            <div>
+                <h4 style="margin-bottom: 4px;">ProSpeak Editorial Team</h4>
+                <p style="font-size: 0.9rem; color: var(--text-secondary);">Curated insights for engineering
+                    professionals.</p>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ProSpeak English.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
