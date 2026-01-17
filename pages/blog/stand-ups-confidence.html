@@ -93,100 +93,155 @@
     </header>
 
     <article class="article-content">
-        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-primary);">If you've ever felt like you're
-            saying the same thing every day in stand-ups, you're not alone. Most engineers struggle with making their
-            daily updates sound fresh and valuable. Here's how to fix that.</p>
+        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-primary);">The "Daily Stand-up" (or Daily
+            Scrum) is the heartbeat of Agile development. Yet, for many engineers, it is a source of anxiety. "Did I do
+            enough yesterday?" "Will I sound stupid?" "Does anyone even care?"</p>
 
-        <h2>The Problem with "I'm Working On..."</h2>
-        <p>The most common mistake in stand-ups is using vague, repetitive language:</p>
+        <p>This comprehensive guide transforms your stand-up update from a nervous status report into a career-building
+            leadership moment. We will analyze the psychology, the structure, and the exact scripts used by Senior Staff
+            Engineers at FAANG companies.</p>
 
-        <div class="example-bad">
-            <strong style="color: #ef4444;">❌ Weak Update:</strong><br>
-            <em>"I'm working on the login feature. I'll continue working on it today. No blockers."</em><br>
-            <span style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px; display: block;">This tells your
-                team nothing about progress or value.</span>
-        </div>
-
-        <h2>The Past-Present-Future Framework</h2>
-        <p>Instead, structure your update using this proven formula:</p>
-
-        <div class="highlight-box">
-            <h3 style="margin-bottom: 16px; color: var(--primary);">The P-P-F Structure</h3>
-            <ol style="margin-left: 24px; line-height: 2;">
-                <li><strong>PAST (Yesterday):</strong> What you completed + measurable outcome</li>
-                <li><strong>PRESENT (Today):</strong> What you're tackling + why it matters</li>
-                <li><strong>FUTURE (Blockers):</strong> What could slow you down + what you need</li>
-            </ol>
-        </div>
-
-        <h2>Real Example: Before & After</h2>
-
-        <div class="example-grid">
-            <div class="example-bad">
-                <strong style="color: #ef4444;">❌ Before:</strong><br><br>
-                <em>"Yesterday I worked on the API. Today I'll keep working on it. No blockers."</em>
-            </div>
-            <div class="example-good">
-                <strong style="color: var(--success);">✅ After:</strong><br><br>
-                <em>"Yesterday, I finished the authentication endpoint and wrote unit tests—coverage is now at 85%.
-                    Today, I'm integrating it with the frontend, which should unblock Sarah's work on the dashboard. One
-                    potential blocker: I might need DevOps help with the staging environment if the deployment
-                    fails."</em>
-            </div>
-        </div>
-
-        <h2>Power Phrases for Stand-ups</h2>
-        <p>Use these high-impact phrases to sound more professional:</p>
+        <h2>The Science of Stand-ups: Why Do We Do This?</h2>
+        <p>Before mastering the "How," we must understand the "Why." Jeff Sutherland, the co-creator of Scrum, didn't
+            design the Daily Scrum to be a status report for managers.</p>
 
         <div
-            style="background: var(--bg-card); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
-            <ul style="margin-left: 24px; line-height: 2;">
-                <li><strong>"I completed..."</strong> (not "I worked on")</li>
-                <li><strong>"This unblocks..."</strong> (shows impact on team)</li>
-                <li><strong>"I'm tackling..."</strong> (more dynamic than "working on")</li>
-                <li><strong>"I might need support with..."</strong> (proactive blocker management)</li>
-                <li><strong>"This moves us closer to..."</strong> (connects to sprint goal)</li>
+            style="background: var(--bg-card); padding: 32px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+            <h3 style="margin-bottom: 20px; color: var(--primary);">The "inspect and Adapt" Loop</h3>
+            <p>According to Sutherland's research in <em>Scrum: The Art of Doing Twice the Work in Half the Time</em>,
+                the stand-up is a micro-planning meeting. Its purpose is to:</p>
+            <ul style="list-style: none; padding: 0; line-height: 2;">
+                <li><i class="fas fa-check" style="color: var(--success); margin-right: 10px;"></i> <strong>Sync
+                        Context:</strong> Ensure everyone knows the state of the "Game Field."</li>
+                <li><i class="fas fa-check" style="color: var(--success); margin-right: 10px;"></i> <strong>Remove
+                        Friction:</strong> Identify blockers immediately, not at the end of the week.</li>
+                <li><i class="fas fa-check" style="color: var(--success); margin-right: 10px;"></i>
+                    <strong>Commitment:</strong> Publicly commit to a micro-goal for the day (Psychological effect of
+                    consistency).</li>
             </ul>
         </div>
 
-        <h2>The 30-Second Rule</h2>
-        <p>Keep your update under 30 seconds. If it's longer, you're either:</p>
-        <ul style="margin-left: 24px; line-height: 1.8;">
-            <li>Going into unnecessary technical details</li>
-            <li>Discussing something that should be a separate conversation</li>
-            <li>Not being concise enough</li>
-        </ul>
+        <h2>Psychological Safety: Google's Project Aristotle</h2>
+        <p>Google conducted a massive study called <strong>Project Aristotle</strong> to find out what makes the perfect
+            team. The #1 factor wasn't IQ or coding speed—it was <strong>Psychological Safety</strong>.</p>
+        <p>Your stand-up is the primary arena where this safety is built or destroyed. If you hide your blockers because
+            you are afraid of looking "weak," you destroy team safety. <span
+                style="background: #fef3c7; padding: 2px 4px; border-radius: 4px;">Admitting a blocker is not weakness;
+                it is a professional duty.</span></p>
 
-        <p><strong>Pro Tip:</strong> Practice your update before the meeting. It sounds silly, but saying it out loud
-            once helps you trim the fat.</p>
+        <h2>The Framework: Past-Present-Future (P-P-F)</h2>
+        <p>The most common mistake is the "I worked on..." trap. This is passive language. Shift to the P-P-F Active
+            Framework.</p>
 
-        <h2>Handling "No Progress" Days</h2>
-        <p>Sometimes you genuinely have nothing new to report. Here's how to handle it professionally:</p>
-
-        <div class="example-good">
-            <strong style="color: var(--success);">✅ Honest Update:</strong><br><br>
-            <em>"Yesterday was mostly spent in meetings and code reviews for the team. Today, I'm back to implementing
-                the payment gateway. No blockers, but I'm expecting this to take another 2-3 days based on the
-                complexity."</em>
+        <div class="highlight-box">
+            <h3 style="margin-bottom: 16px; color: var(--primary);">The P-P-F Structure</h3>
+            <div style="display: grid; grid-template-columns: 1fr; gap: 24px;">
+                <div
+                    style="background: white; padding: 20px; border-radius: 8px; border: 1px solid var(--border-color);">
+                    <h4 style="color: var(--text-primary); margin-bottom: 8px;">1. PAST (The Achievement)</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Don't say what you "worked on." Say what
+                        you <strong>completed</strong> or <strong>learned</strong>.</p>
+                </div>
+                <div
+                    style="background: white; padding: 20px; border-radius: 8px; border: 1px solid var(--border-color);">
+                    <h4 style="color: var(--text-primary); margin-bottom: 8px;">2. PRESENT (The Mission)</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">What is the <strong>one key
+                            thing</strong> you must finish today to move the sprint forward?</p>
+                </div>
+                <div
+                    style="background: white; padding: 20px; border-radius: 8px; border: 1px solid var(--border-color);">
+                    <h4 style="color: var(--text-primary); margin-bottom: 8px;">3. FUTURE (The Ask)</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">What is blocking you? Be specific. Name
+                        people if necessary (politely).</p>
+                </div>
+            </div>
         </div>
 
-        <h2>Cultural Nuances for Global Teams</h2>
-        <p>If you're working with international colleagues:</p>
-        <ul style="margin-left: 24px; line-height: 1.8;">
-            <li><strong>US teams:</strong> Appreciate directness. State blockers clearly.</li>
-            <li><strong>UK teams:</strong> May use understatement. "Bit of a challenge" = serious blocker.</li>
-            <li><strong>Asian teams:</strong> May avoid saying "blocker" directly. Watch for phrases like "might take
-                longer than expected."</li>
+        <h2>Detailed Scripts by Role</h2>
+        <p>Your update should evolve as you grow in your career. Here are world-class scripts for different levels:</p>
+
+        <h3>1. The Junior Engineer (Focus: Learning & Task Completion)</h3>
+        <div class="example-good" style="margin-bottom: 32px;">
+            <p>"Yesterday, I <strong>completed the first draft</strong> of the login validation logic. I learned a lot
+                about how our Regex utility works. Today, I'm <strong>writing the unit tests</strong> to cover the edge
+                cases. No blockers, but I might ping @Sarah later for a quick code review if she has time."</p>
+            <p style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);"><em>Analysis: Shows progress,
+                    admits learning curve, proactively asks for review.</em></p>
+        </div>
+
+        <h3>2. The Senior Engineer (Focus: Architecture & Unblocking)</h3>
+        <div class="example-good" style="margin-bottom: 32px;">
+            <p>"Yesterday, I <strong>refactored the auth middleware</strong>, which reduced the latency by 20ms in local
+                testing. Today, I'm <strong>deploying this to staging</strong> and monitoring the logs. I'm blocked on
+                the API keys for the new payment gateway—@Mike, can we sync for 5 mins after this to get those
+                generated?"</p>
+            <p style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);"><em>Analysis: Focuses on metrics
+                    (20ms), system impact (deployment), and directly addresses a dependency.</em></p>
+        </div>
+
+        <h3>3. The Tech Lead / EM (Focus: Team Velocity & Risk)</h3>
+        <div class="example-good" style="margin-bottom: 32px;">
+            <p>"Yesterday was mostly <strong>code reviews and architecture planning</strong> for the Q3 roadmap. Today,
+                my focus is <strong>unblocking the mobile team</strong> on the GraphQL schema. A risk I'm seeing is the
+                3rd-party API stability; I suggest we implement a fallback circuit breaker in this sprint to be safe."
+            </p>
+            <p style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);"><em>Analysis: Focuses on enabling
+                    others, strategic risks, and architectural resilience.</em></p>
+        </div>
+
+        <h2>Handling the "I Did Nothing" Day</h2>
+        <p>We all have days where we get stuck in "Tutorial Hell," meetings, or a bug that just won't die. Honesty is
+            the best policy, but frame it as <strong>investigation</strong>.</p>
+
+        <div class="example-grid">
+            <div class="example-bad">
+                <strong style="color: #ef4444;">❌ The Victim:</strong><br><br>
+                "I was stuck on this bug all day. It's really hard. I didn't get anything done."
+            </div>
+            <div class="example-good">
+                <strong style="color: var(--success);">✅ The Investigator:</strong><br><br>
+                "Yesterday was a <strong>deep dive investigation</strong> into the memory leak. It looks like it's
+                related to the image processing library. I haven't fixed it yet, but I've <strong>ruled out</strong> the
+                database connection as the cause. Today, I'm profiling the heap to pinpoint the exact object."
+            </div>
+        </div>
+
+        <h2>Cultural Nuances: Global Teams</h2>
+        <p>In a distributed environment, your "Directness" must dial up or down depending on the culture.</p>
+        <ul style="list-style: none; padding: 0; line-height: 2;">
+            <li><strong>🇺🇸 US/Western Europe:</strong> Be Direct. "I am blocked by the API."</li>
+            <li><strong>🇮🇳 India/Asia:</strong> Often indirect. "I am facing some challenges with the API" usually
+                means "I am totally blocked." <br><span
+                    style="background: rgba(37, 99, 235, 0.1); padding: 2px 6px; border-radius: 4px; font-size: 0.9rem;">Tip:
+                    If you are in India managing a US client, maximize your directness. They appreciate it.</span></li>
+            <li><strong>🇬🇧 UK:</strong> Understatement. "It's a bit tricky" means "It is a disaster."</li>
         </ul>
 
-        <h2>Key Takeaways</h2>
+        <h2>References & Further Reading</h2>
+        <div
+            style="background: var(--bg-card); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+            <ol style="margin-left: 24px; line-height: 2; font-size: 0.95rem;">
+                <li>Sutherland, J. (2014). <em>Scrum: The Art of Doing Twice the Work in Half the Time</em>. Currency.
+                </li>
+                <li>Google. (2015). "Project Aristotle: ReWorking the Team." <em>re:Work</em>.</li>
+                <li>Edmondson, A. C. (2018). <em>The Fearless Organization: Creating Psychological Safety in the
+                        Workplace</em>. Wiley.</li>
+                <li>Duhigg, C. (2016). "What Google Learned From Its Quest to Build the Perfect Team." <em>The New York
+                        Times Magazine</em>.</li>
+            </ol>
+        </div>
+
+        <h2>Key Takeaways Checklist</h2>
         <div class="highlight-box">
             <ul style="margin-left: 24px; line-height: 2;">
-                <li>Use the <strong>Past-Present-Future</strong> framework</li>
-                <li>Include <strong>measurable outcomes</strong> (percentages, completion status)</li>
-                <li>Show <strong>team impact</strong> ("This unblocks...")</li>
-                <li>Keep it <strong>under 30 seconds</strong></li>
-                <li>Be <strong>proactive about blockers</strong></li>
+                <li><i class="fas fa-check-circle" style="color: var(--primary);"></i> Structure: <strong>Past (Result)
+                        -> Present (Goal) -> Future (Blocker)</strong></li>
+                <li><i class="fas fa-check-circle" style="color: var(--primary);"></i> Keep it under <strong>30-45
+                        seconds</strong>.</li>
+                <li><i class="fas fa-check-circle" style="color: var(--primary);"></i> Mention <strong>metrics</strong>
+                    where possible (latency, coverage).</li>
+                <li><i class="fas fa-check-circle" style="color: var(--primary);"></i> Admitting blockers builds
+                    <strong>trust</strong>, not weakness.</li>
             </ul>
         </div>
 
