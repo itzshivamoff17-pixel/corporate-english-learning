@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice & Tools - ProSpeak English</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            background: var(--bg-darker);
+            text-align: center;
+        }
+
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            padding: 80px 0;
+        }
+
+        .practice-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+        }
+
+        .practice-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .practice-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--gradient-secondary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .tool-list {
+            margin-top: 20px;
+        }
+
+        .tool-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 16px;
+            background: var(--bg-dark);
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+
+        .tool-item span {
+            font-size: 0.9rem;
+        }
+
+        .template-badge {
+            padding: 4px 10px;
+            background: var(--primary);
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><i class="fas fa-language"></i><span>ProSpeak</span></a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="courses.html" class="nav-link">Courses</a></li>
+                <li><a href="modules.html" class="nav-link">Modules</a></li>
+                <li><a href="practice.html" class="nav-link active">Practice</a></li>
+                <li><a href="career.html" class="nav-link">Career</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="gradient-text">Practice & Tools</h1>
+            <p>Interactive tools and downloadable templates for the workplace.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="practice-grid">
+            <div class="practice-card">
+                <div class="practice-header">
+                    <div class="practice-icon"><i class="fas fa-microphone"></i></div>
+                    <h3>Speaking Scenarios</h3>
+                </div>
+                <p>Role-play simulations for meetings, client calls, and technical discussions.</p>
+                <div class="tool-list">
+                    <div class="tool-item"><span>Manager One-on-One</span><a href="#"
+                            class="btn btn-outline btn-sm">Launch</a></div>
+                    <div class="tool-item"><span>Client Feedback Call</span><a href="#"
+                            class="btn btn-outline btn-sm">Launch</a></div>
+                    <div class="tool-item"><span>Sprint Retrospective</span><a href="#"
+                            class="btn btn-outline btn-sm">Launch</a></div>
+                </div>
+            </div>
+
+            <div class="practice-card">
+                <div class="practice-header">
+                    <div class="practice-icon"><i class="fas fa-file-download"></i></div>
+                    <h3>Email Templates</h3>
+                </div>
+                <p>Ready-to-use professional templates for every workplace situation.</p>
+                <div class="tool-list">
+                    <div class="tool-item"><span>Status Update Template</span><span
+                            class="template-badge">Outlook</span></div>
+                    <div class="tool-item"><span>Technical Escalation</span><span class="template-badge">Slack</span>
+                    </div>
+                    <div class="tool-item"><span>Meeting Invitation</span><span class="template-badge">Teams</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-card">
+                <div class="practice-header">
+                    <div class="practice-icon"><i class="fas fa-book"></i></div>
+                    <h3>IT Vocabulary</h3>
+                </div>
+                <p>Master 500+ common IT and corporate terms with context.</p>
+                <div class="tool-list">
+                    <div class="tool-item"><span>Agile/Scrum Terms</span><a href="#"
+                            class="btn btn-outline btn-sm">Study</a></div>
+                    <div class="tool-item"><span>Cloud Computing Vocab</span><a href="#"
+                            class="btn btn-outline btn-sm">Study</a></div>
+                </div>
+            </div>
+
+            <div class="practice-card">
+                <div class="practice-header">
+                    <div class="practice-icon"><i class="fas fa-pen-nib"></i></div>
+                    <h3>Grammar for Pros</h3>
+                </div>
+                <p>Simple, practical grammar focus without unnecessary rules.</p>
+                <div class="tool-list">
+                    <div class="tool-item"><span>Tenses for Reports</span><a href="#"
+                            class="btn btn-outline btn-sm">Start</a></div>
+                    <div class="tool-item"><span>Polite Requests</span><a href="#"
+                            class="btn btn-outline btn-sm">Start</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ProSpeak English.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
