@@ -97,16 +97,77 @@
     </header>
 
     <article class="blog-content">
-        <p>In a survey of 10,000 software engineers by the blind app, <strong style="color: var(--primary);">58%
-                reported experiencing imposter syndrome</strong>. Depending on who you ask at Google or Amazon, that
+        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-primary);">In a survey of 10,000 software
+            engineers by the Blind app, <strong style="color: var(--primary);">58%
+                reported experiencing imposter syndrome</strong>. At companies like Google and Amazon, that
             number effectively rises to 80%.</p>
 
         <p>You know the feeling: You're in a code review, and a Senior Engineer points out a flaw in your logic. Your
             heart sinks. Your brain immediately whispers, <em>"This is it. They finally found out I don't know what I'm
                 doing."</em></p>
 
-        <p>This article isn't about "fake it 'til you make it." It's about linguistic re-framing: changing the words you
+        <p>This article isn't about "fake it 'til you make it." It's about <strong>linguistic re-framing</strong>:
+            changing the words you
             use with yourself and others to build genuine confidence.</p>
+
+        <h2>What is Imposter Syndrome? (The Clinical Definition)</h2>
+        <p>The term was coined in 1978 by psychologists Pauline Clance and Suzanne Imes in their study of high-achieving
+            women. They defined it as:</p>
+
+        <div class="quote-box">
+            "An internal experience of intellectual phoniness in people who believe they are not intelligent, capable,
+            or creative despite evidence of high achievement."
+            <br><span style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 12px; display: block;">—
+                Clance & Imes (1978), <em>Psychotherapy: Theory, Research & Practice</em></span>
+        </div>
+
+        <p>In tech, this manifests as:</p>
+        <ul style="margin-left: 24px; line-height: 2; margin-top: 20px;">
+            <li>Attributing success to "luck" rather than skill.</li>
+            <li>Fear of being "exposed" as a fraud.</li>
+            <li>Overworking to compensate for perceived inadequacy.</li>
+            <li>Discounting positive feedback ("They're just being nice").</li>
+        </ul>
+
+        <h2>The Dunning-Kruger Effect: Why Competence Feels Like Incompetence</h2>
+        <p>Psychologically, imposter syndrome often hits the hardest when you move from <strong>"Unconscious
+                Incompetence"</strong>
+            (Ignorance is bliss) to <strong>"Conscious Incompetence"</strong> (You know how much you don't know).</p>
+
+        <div
+            style="background: var(--bg-card); padding: 32px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+            <h3 style="margin-bottom: 20px; color: var(--primary);">The Four Stages of Competence</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                <div style="background: var(--bg-dark); padding: 20px; border-radius: 8px;">
+                    <h4 style="color: var(--accent); margin-bottom: 8px;">Stage 1: Unconscious Incompetence</h4>
+                    <p style="font-size: 0.9rem;">"I don't know what I don't know." (Bootcamp graduate thinking they're
+                        ready for Staff Engineer roles).</p>
+                </div>
+                <div style="background: var(--bg-dark); padding: 20px; border-radius: 8px;">
+                    <h4 style="color: var(--accent); margin-bottom: 8px;">Stage 2: Conscious Incompetence</h4>
+                    <p style="font-size: 0.9rem;"><strong>← IMPOSTER SYNDROME PEAKS HERE.</strong> "I now realize how
+                        much I don't know." (Junior dev at first FAANG job).</p>
+                </div>
+                <div style="background: var(--bg-dark); padding: 20px; border-radius: 8px;">
+                    <h4 style="color: var(--accent); margin-bottom: 8px;">Stage 3: Conscious Competence</h4>
+                    <p style="font-size: 0.9rem;">"I can do this, but I have to think hard about it." (Mid-level
+                        engineer).</p>
+                </div>
+                <div style="background: var(--bg-dark); padding: 20px; border-radius: 8px;">
+                    <h4 style="color: var(--accent); margin-bottom: 8px;">Stage 4: Unconscious Competence</h4>
+                    <p style="font-size: 0.9rem;">"I can do this on autopilot." (Senior/Staff engineer).</p>
+                </div>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.95rem; color: var(--text-muted);"><em>Reference: Burch, N. (1970s).
+                    Four Stages of Competence Model.</em></p>
+        </div>
+
+        <div class="quote-box">
+            "The more you learn, the more you realize how much you don't know. Feeling stupid is actually a sign of
+            growth."
+            <br><span style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 12px; display: block;">— Dr.
+                Carol Dweck, Stanford University</span>
+        </div>
 
         <h2>The "I Don't Know" Trap</h2>
         <p>Junior engineers fear saying "I don't know." Senior engineers revel in it. The difference is <em>how</em>
@@ -124,25 +185,15 @@
         <p>Notice the difference? The senior response transforms "ignorance" into an "investigation." It turns a lack of
             knowledge into a plan of action.</p>
 
-        <h2>The Dunning-Kruger Effect</h2>
-        <p>Psychologically, imposter syndrome often hits the hardest when you move from "Unconscious Incompetence"
-            (Ignorance is bliss) to "Conscious Incompetence" (You know how much you don't know).</p>
-
-        <div class="quote-box">
-            "The more you learn, the more you realize how much you don't know. Feeling stupid is actually a sign of
-            growth."
-            <br><span style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 12px; display: block;">— Dr.
-                Carol Dweck, Stanford University</span>
-        </div>
-
-        <h2>3 Scripts to Reframe Your Mindset</h2>
+        <h2>5 Scripts to Reframe Your Mindset</h2>
 
         <h3>1. When You Make a Mistake</h3>
         <p>Avoid self-deprecation. Do not say "I'm so stupid."</p>
         <p><strong>Say instead:</strong> "Thanks for catching that. I see now that the race condition was caused by the
             async hook. I'll add a test case to prevent this in the future."</p>
         <p><strong>Why it works:</strong> You shift focus from your <em>identity</em> ("I am stupid") to the
-            <em>process</em> ("The hook caused the issue").</p>
+            <em>process</em> ("The hook caused the issue").
+        </p>
 
         <h3>2. When You Feel Overwhelmed</h3>
         <p>Don't suffer in silence to prove you can do it alone.</p>
@@ -158,11 +209,66 @@
         <p><strong>Why it works:</strong> You accept the credit while acknowledging the difficulty and sharing the win.
         </p>
 
+        <h3>4. When Asking for Help</h3>
+        <p>Don't apologize for needing clarification.</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0;">
+            <div
+                style="background: rgba(239, 68, 68, 0.05); border: 1px solid var(--error); padding: 20px; border-radius: 12px;">
+                <h4 style="color: var(--error); margin-bottom: 12px;">❌ Apologetic</h4>
+                <p style="font-size: 0.9rem;">"Sorry to bother you, but I'm confused about the GraphQL schema..."</p>
+            </div>
+            <div
+                style="background: rgba(16, 185, 129, 0.05); border: 1px solid var(--success); padding: 20px; border-radius: 12px;">
+                <h4 style="color: var(--success); margin-bottom: 12px;">✅ Direct</h4>
+                <p style="font-size: 0.9rem;">"I want to make sure I understand the GraphQL schema correctly before I
+                    start the migration. Can we sync for 10 minutes?"</p>
+            </div>
+        </div>
+
+        <h3>5. When You're the Only One Who Doesn't Understand</h3>
+        <p>In meetings, when everyone nods but you're lost, imposters stay silent. Leaders ask.</p>
+        <p><strong>Say instead:</strong> "Before we move on, can you clarify what you mean by 'eventual consistency' in
+            this context? I want to make sure I'm aligned on the trade-offs."</p>
+        <p><strong>Why it works:</strong> 90% of the room was also confused but afraid to ask. You just became the hero.
+        </p>
+
+        <h2>The "Competence Paradox"</h2>
+        <p>Research from Cornell University (Kruger & Dunning, 1999) shows that:</p>
+        <ul style="margin-left: 24px; line-height: 2;">
+            <li><strong>Low performers overestimate</strong> their ability (they don't know enough to know they're bad).
+            </li>
+            <li><strong>High performers underestimate</strong> their ability (they know enough to see the gaps).</li>
+        </ul>
+        <p>If you feel like an imposter, it's often because you're <strong>competent enough to recognize
+                complexity</strong>.</p>
+
+        <h2>References & Further Reading</h2>
+        <div
+            style="background: var(--bg-card); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+            <ol style="margin-left: 24px; line-height: 2; font-size: 0.95rem;">
+                <li>Clance, P. R., & Imes, S. A. (1978). "The Imposter Phenomenon in High Achieving Women."
+                    <em>Psychotherapy: Theory, Research & Practice</em>.</li>
+                <li>Kruger, J., & Dunning, D. (1999). "Unskilled and Unaware of It." <em>Journal of Personality and
+                        Social Psychology</em>.</li>
+                <li>Dweck, C. (2006). <em>Mindset: The New Psychology of Success</em>. Random House.</li>
+                <li>Burch, N. (1970s). "Four Stages of Competence" learning model.</li>
+            </ol>
+        </div>
+
         <h2>Conclusion</h2>
         <p>Imposter syndrome never fully goes away. Even Principal Engineers feel it when they switch domains. The goal
             isn't to kill the feeling. The goal is to stop it from silencing you in meetings.</p>
         <p>Speak up. Ask the "dumb" question. You'll be surprised how many others in the room were wondering the exact
             same thing.</p>
+
+        <div
+            style="background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 100%); padding: 40px; border-radius: 20px; text-align: center; margin-top: 60px; color: white;">
+            <h3 style="color: white; margin-bottom: 16px;">Want to Build Confidence in Meetings?</h3>
+            <p style="color: rgba(255,255,255,0.9); margin-bottom: 24px;">Learn how to structure your stand-up updates
+                and handle Q&A like a pro.</p>
+            <a href="../lessons/presentations/lesson-1-1.html" class="btn"
+                style="background: white; color: var(--primary);">Start Presentation Course</a>
+        </div>
 
         <div class="author-card">
             <div class="author-img"></div>
