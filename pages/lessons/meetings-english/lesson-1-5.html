@@ -45,22 +45,142 @@
 
             <main class="lesson-content"
                 style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 60px;">
-                <span class="section-badge">Module 1.5</span>
-                <h1>Explaining Technical Concepts</h1>
-                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px;">Simplify complex logic
-                    for non-technical stakeholders.</p>
+                <!-- Module Breadcrumb -->
+                <div
+                    style="background: var(--bg-card); padding: 16px 24px; border-radius: 12px; margin-bottom: 32px; border-left: 4px solid var(--primary); border: 1px solid var(--border-color);">
+                    <div
+                        style="display: flex; align-items: center; gap: 12px; color: var(--text-muted); font-size: 0.9rem;">
+                        <i class="fas fa-users" style="color: var(--primary);"></i>
+                        <span>Meetings & Facilitation</span>
+                        <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                        <span style="color: var(--primary-light); font-weight: 600;">Module 1.5: Explaining Technical
+                            Concepts</span>
+                    </div>
+                </div>
 
-                <h2 style="margin-bottom: 20px;">The Bridge Technique</h2>
-                <p>Non-technical stakeholders don't need to know "How" it works; they need to know "What it is" and "Why
-                    it impacts the business." Use analogies to bridge the gap.</p>
+                <span class="section-badge">Technical Communication - Lesson 5</span>
+                <h1>Explaining Technical Concepts to Non-Techies</h1>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px;">Bridging the gap
+                    between code and business value using the Feynman Technique and cognitive science.</p>
+
+                <h2>The Feynman Technique</h2>
+                <p>Nobel Prize-winning physicist Richard Feynman believed that <strong>if you can't explain it simply,
+                        you don't understand it well enough</strong>. His 4-step learning method is widely used by
+                    engineers to communicate effectively.</p>
 
                 <div
-                    style="background: var(--bg-dark); padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid var(--success);">
-                    <h3 style="margin-bottom: 16px;">The Analogy Power Play</h3>
-                    <p style="margin-bottom: 16px;">Instead of: "We’re horizontally scaling the Kubernetes pods to
-                        handle the ingress surge..."</p>
-                    <p><strong>Use:</strong> "It’s like adding more lanes to a highway during rush hour. It ensures the
-                        traffic (data) keeps moving without delays."</p>
+                    style="background: var(--bg-card); padding: 32px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                    <h3 style="margin-bottom: 20px; color: var(--primary);">The 4 Steps Applied to Software</h3>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li><strong>1. Pick the Concept:</strong> E.g., "Microservices."</li>
+                        <li><strong>2. Explain it to a 5-Year-Old (ELI5):</strong> Remove all jargon.</li>
+                        <li><strong>3. Identify Gaps:</strong> Where did you stumble? Where did you use buzzwords?</li>
+                        <li><strong>4. Organize & Simplify:</strong> Create a compelling analogy.</li>
+                    </ul>
+                    <div style="background: var(--bg-alt); padding: 16px; border-radius: 8px; margin-top: 16px;">
+                        <p><strong>Example (API):</strong></p>
+                        <p>❌ "An interface that allows multiple software components to communicate."<br>
+                            ✅ "It's like a waiter at a restaurant. You (the user) order from the menu (the app), and the
+                            waiter (API) takes it to the kitchen (server) and brings back your food."</p>
+                    </div>
+                    <p style="margin-top: 20px; font-size: 0.95rem; color: var(--text-muted);"><em>Reference: Gleick, J.
+                            (1993). Genius: The Life and Science of Richard Feynman. Pantheon.</em></p>
+                </div>
+
+                <h2>Cognitive Load Theory (MIT)</h2>
+                <p>Research from MIT indicates that the human brain has a limited "working memory" (about 4 chunks of
+                    information at once). <strong>Technical jargon increases extraneous cognitive load</strong>, making
+                    it impossible for stakeholders to make decisions.</p>
+
+                <div
+                    style="background: var(--bg-dark); padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid var(--accent);">
+                    <h3 style="margin-bottom: 16px;">The "Simplicity Audit"</h3>
+                    <p>Before sending an email or speaking, audit your language for these "Load Spikes":</p>
+                    <ul style="padding-left: 20px; margin-top: 12px; line-height: 1.8;">
+                        <li><strong>Acronyms:</strong> AWS, CI/CD, K8s, JWT. (Spell them out or explain the
+                            <em>value</em>).</li>
+                        <li><strong>Abstract Concepts:</strong> "Latency," "Throughput." (Use concrete numbers: "Wait
+                            time," "Users per second").</li>
+                        <li><strong>Implementation Details:</strong> "We used a B-tree index." (Stakeholders don't care.
+                            Say: "We optimized the search speed").</li>
+                    </ul>
+                    <p style="margin-top: 20px; font-size: 0.95rem; color: var(--text-muted);"><em>Reference: Sweller,
+                            J. (1988). "Cognitive Load During Problem Solving: Effects on Learning." Cognitive
+                            Science.</em></p>
+                </div>
+
+                <h2>The "Why-How-What" Framework (Simon Sinek)</h2>
+                <p>Engineers often start with the "What" (the code). Business leaders care about the "Why" (the value).
+                    Always invert your explanation.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0;">
+                    <div
+                        style="background: rgba(239, 68, 68, 0.05); border: 1px solid var(--error); padding: 24px; border-radius: 12px;">
+                        <h4 style="color: var(--error); margin-bottom: 12px;">❌ The Stack-First Approach</h4>
+                        <p style="font-style: italic;">"We are upgrading from Angular 12 to 16 because of the new
+                            hydration features and signals API..."</p>
+                        <p style="font-size: 0.9rem; margin-top: 12px;">(CEO: "So what? Will it cost more?")</p>
+                    </div>
+                    <div
+                        style="background: rgba(16, 185, 129, 0.05); border: 1px solid var(--success); padding: 24px; border-radius: 12px;">
+                        <h4 style="color: var(--success); margin-bottom: 12px;">✅ The Value-First Approach</h4>
+                        <p style="font-style: italic;">"<strong>Why:</strong> The site is currently too slow on mobile
+                            phones, losing us customers.<br><strong>How:</strong> By upgrading our frontend
+                            framework.<br><strong>What:</strong> We're moving to Angular 16."</p>
+                        <p style="font-size: 0.9rem; margin-top: 12px;">(CEO: "Approved.")</p>
+                    </div>
+                </div>
+
+                <h2>Mastering Analogies</h2>
+                <p>A good analogy maps a known concept (Source) to an unknown concept (Target). Here are 3 battle-tested
+                    metaphors for IT pros:</p>
+                <div
+                    style="background: var(--bg-card); padding: 24px; border-radius: 12px; border: 1px solid var(--border-color);">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--border-color);">
+                                <th style="padding: 12px; text-align: left;">Technical Concept</th>
+                                <th style="padding: 12px; text-align: left;">The Metaphor</th>
+                                <th style="padding: 12px; text-align: left;">The Explanation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid var(--border-color);">
+                                <td style="padding: 12px;"><strong>Technical Debt</strong></td>
+                                <td style="padding: 12px;"><strong>Financial Debt/Credit Card</strong></td>
+                                <td style="padding: 12px;">"We took a shortcut (loan) to launch fast. Now we have to pay
+                                    interest (bugs/slowness) until we pay off the principal."</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border-color);">
+                                <td style="padding: 12px;"><strong>Scaling/Load Balancing</strong></td>
+                                <td style="padding: 12px;"><strong>Supermarket Checkouts</strong></td>
+                                <td style="padding: 12px;">"Imagine a supermarket with one cashier. The line is long. We
+                                    are opening 5 more checkout lanes so customers don't wait."</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px;"><strong>Legacy Code</strong></td>
+                                <td style="padding: 12px;"><strong>Renovating an Old House</strong></td>
+                                <td style="padding: 12px;">"We can't just change the walls; we have to be careful with
+                                    the wiring inside, or the lights will go out."</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="margin-top: 20px; font-size: 0.95rem; color: var(--text-muted);"><em>Reference: Pollack,
+                            S. (2020). "Using Metaphors in Technical Communication." IEEE Professional Communication
+                            Society.</em></p>
+                </div>
+
+                <h2>References & Further Reading</h2>
+                <div
+                    style="background: var(--bg-card); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                    <ol style="margin-left: 24px; line-height: 2; font-size: 0.95rem;">
+                        <li>Gleick, J. (1993). <em>Genius: The Life and Science of Richard Feynman</em>. Pantheon.</li>
+                        <li>Sweller, J. (1988). "Cognitive Load During Problem Solving: Effects on Learning."
+                            <em>Cognitive Science</em>.</li>
+                        <li>Sinek, S. (2009). <em>Start with Why: How Great Leaders Inspire Everyone to Take
+                                Action</em>. Penguin.</li>
+                        <li>Pollack, S. (2020). "Using Metaphors in Technical Communication." <em>IEEE Professional
+                                Communication Society</em>.</li>
+                    </ol>
                 </div>
 
                 <div class="lesson-footer"
