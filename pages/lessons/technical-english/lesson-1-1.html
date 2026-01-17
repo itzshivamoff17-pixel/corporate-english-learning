@@ -88,7 +88,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="../../../index.html" class="nav-logo"><i class="fas fa-language"></i><span>ProSpeak</span></a>
-            <div class="nav-actions"><a href="../../dashboard.html" class="btn btn-outline btn-sm">Dashboard</a></div>
+            <div class="nav-actions"><a href="../../courses.html" class="btn btn-outline btn-sm">All Courses</a></div>
         </div>
     </nav>
 
@@ -96,8 +96,11 @@
         <aside class="lesson-sidebar">
             <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Technical Content</h3>
             <div class="lesson-nav-item active"><i class="fas fa-check-circle"></i> 1.1 Explaining Systems</div>
-            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.2 Data Flow Vocabulary</div>
-            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.3 Trade-offs & Choices</div>
+            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.2 Data Flow Vocab</div>
+            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.3 Trade-offs</div>
+            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.4 Incident RCA</div>
+            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.5 ADR Documentation</div>
+            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.6 Leading Syncs</div>
         </aside>
 
         <main class="lesson-content">
@@ -113,8 +116,7 @@
             <div class="example-box">
                 <h4>Core Phrasing</h4>
                 <p>Instead of "We have a server," use: <strong>"The system is designed to handle..."</strong> or
-                    <strong>"The core architecture revolves around..."</strong>
-                </p>
+                    <strong>"The core architecture revolves around..."</strong></p>
             </div>
 
             <h2>Phase 2: Explaining Data Flow</h2>
@@ -127,10 +129,71 @@
                 - Persists to (Database)
             </div>
 
-            <h2>The "Reasoning" Framework</h2>
-            <p>When justifying a tech stack choice, use the <em>Constraint -> Solution -> Result</em> framework.</p>
-            <p><strong>Example:</strong> "Because we faced high read-heavy traffic (Constraint), we implemented a Redis
-                caching layer (Solution), which brought our latency down to sub-10ms (Result)."</p>
+            <h2>📚 Phrase Breakdown & Meanings</h2>
+            <div style="overflow-x: auto; margin: 24px 0;">
+                <table
+                    style="width: 100%; border-collapse: collapse; background: var(--bg-dark); border-radius: 12px; overflow: hidden;">
+                    <thead>
+                        <tr style="background: var(--primary); color: white;">
+                            <th style="padding: 16px; text-align: left;">Phrase</th>
+                            <th style="padding: 16px; text-align: left;">Meaning</th>
+                            <th style="padding: 16px; text-align: left;">Usage Context</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 16px; font-weight: 600;">"Single point of failure"</td>
+                            <td style="padding: 16px;">A part of a system that, if it fails, stops the entire system.
+                            </td>
+                            <td style="padding: 16px;">Critiquing system reliability.</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 16px; font-weight: 600;">"Seamless integration"</td>
+                            <td style="padding: 16px;">Connecting components without issues or friction.</td>
+                            <td style="padding: 16px;">Explaining how a new tool fits into the stack.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; font-weight: 600;">"Under the hood"</td>
+                            <td style="padding: 16px;">Explaining the internal logic of a system.</td>
+                            <td style="padding: 16px;">Transitioning from UI to Backend talk.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>🗣️ Pronunciation Lab</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 24px 0;">
+                <div
+                    style="background: var(--bg-dark); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);">
+                    <h4 style="color: var(--primary-light); margin-bottom: 8px;">Architecture</h4>
+                    <p style="font-family: 'JetBrains Mono', monospace; color: var(--accent);">[ AR-ki-tek-cher ]</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px;">The 'ch' is soft, like
+                        'chair'. Stress the first syllable.</p>
+                </div>
+                <div
+                    style="background: var(--bg-dark); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);">
+                    <h4 style="color: var(--primary-light); margin-bottom: 8px;">Scalability</h4>
+                    <p style="font-family: 'JetBrains Mono', monospace; color: var(--accent);">[ skay-la-BIL-i-tee ]</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px;">Stress the 'BIL'. The 'ay'
+                        in 'skay' is like 'stay'.</p>
+                </div>
+            </div>
+
+            <h2>💡 Daily Corporate Vocab</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0;">
+                <div
+                    style="background: rgba(37, 99, 235, 0.1); border: 1px solid var(--primary); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem;">
+                    <strong>Redundant:</strong> Duplicate systems to prevent failure.
+                </div>
+                <div
+                    style="background: rgba(37, 99, 235, 0.1); border: 1px solid var(--primary); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem;">
+                    <strong>Throughput:</strong> The amount of material or data passing through a system.
+                </div>
+                <div
+                    style="background: rgba(37, 99, 235, 0.1); border: 1px solid var(--primary); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem;">
+                    <strong>Stateless:</strong> A system that doesn't save client data between sessions.
+                </div>
+            </div>
 
             <div class="lesson-footer"
                 style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
