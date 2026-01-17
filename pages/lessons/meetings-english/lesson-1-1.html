@@ -4,126 +4,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module 1: High-Impact Stand-ups - ProSpeak English</title>
+    <title>Module 1.1: Daily Office Conversations - ProSpeak English</title>
     <link rel="stylesheet" href="../../../assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        .lesson-container {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 40px;
-            padding: 120px 0 80px;
-        }
-
-        .lesson-sidebar {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 24px;
-            height: fit-content;
-            position: sticky;
-            top: 100px;
-        }
-
-        .lesson-nav-item {
-            padding: 12px;
-            border-radius: 8px;
-            color: var(--text-secondary);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 8px;
-        }
-
-        .lesson-nav-item.active {
-            background: var(--primary);
-            color: white;
-        }
-
-        .lesson-content {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 60px;
-        }
-
-        .lesson-content h1 {
-            margin-bottom: 24px;
-        }
-
-        .lesson-content h2 {
-            margin-top: 40px;
-            margin-bottom: 20px;
-            color: var(--primary-light);
-        }
-
-        .lesson-content p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-        }
-
-        .example-box {
-            background: var(--bg-dark);
-            border-left: 4px solid var(--primary);
-            padding: 24px;
-            margin: 32px 0;
-            border-radius: 0 12px 12px 0;
-        }
-    </style>
 </head>
 
 <body>
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="../../../index.html" class="nav-logo"><i class="fas fa-language"></i><span>ProSpeak</span></a>
-            <div class="nav-actions"><a href="../../dashboard.html" class="btn btn-outline btn-sm">Dashboard</a></div>
+            <div class="nav-actions"><a href="../../courses.html" class="btn btn-primary btn-sm">All Courses</a></div>
         </div>
     </nav>
 
-    <div class="container lesson-container">
-        <aside class="lesson-sidebar">
-            <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Meetings Toolkit</h3>
-            <div class="lesson-nav-item active"><i class="fas fa-check-circle"></i> 1.1 Efficient Stand-ups</div>
-            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.2 Agile Ceremonies</div>
-            <div class="lesson-nav-item"><i class="far fa-circle"></i> 1.3 Handling Interruptions</div>
-        </aside>
+    <div class="container" style="padding: 120px 0 80px;">
+        <div class="lesson-layout" style="display: grid; grid-template-columns: 300px 1fr; gap: 40px;">
+            <aside class="lesson-sidebar"
+                style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 24px; height: fit-content; position: sticky; top: 100px;">
+                <h3 style="margin-bottom: 20px;">Meetings Track</h3>
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <a href="lesson-1-1.html" class="btn btn-primary btn-sm"
+                        style="justify-content: flex-start; background: var(--primary);"><i class="fas fa-play"></i> 1.1
+                        Daily Conversations</a>
+                    <a href="lesson-1-2.html" class="btn btn-outline btn-sm"
+                        style="justify-content: flex-start; border-color: transparent;"><i class="far fa-circle"></i>
+                        1.2 Stand-up Meetings</a>
+                    <a href="lesson-1-3.html" class="btn btn-outline btn-sm"
+                        style="justify-content: flex-start; border-color: transparent;"><i class="far fa-circle"></i>
+                        1.3 Client Calls</a>
+                    <a href="lesson-1-4.html" class="btn btn-outline btn-sm"
+                        style="justify-content: flex-start; border-color: transparent;"><i class="far fa-circle"></i>
+                        1.4 Reporting Progress</a>
+                    <a href="lesson-1-5.html" class="btn btn-outline btn-sm"
+                        style="justify-content: flex-start; border-color: transparent;"><i class="far fa-circle"></i>
+                        1.5 Technical Concepts</a>
+                </div>
+            </aside>
 
-        <main class="lesson-content">
-            <span class="section-badge">Module 1.1</span>
-            <h1>The Daily Stand-up: Past, Present, Future</h1>
+            <main class="lesson-content"
+                style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 60px;">
+                <span class="section-badge">Module 1.1</span>
+                <h1>Daily Office Conversations</h1>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px;">Mastering the art of
+                    small talk and casual professional interactions.</p>
 
-            <p>In Agile teams, the Daily Stand-up (DSU) is the most frequent speaking opportunity. Many engineers make
-                the mistake of being too technical or too vague. The 'Past, Present, Future' framework solves this.</p>
+                <h2 style="margin-bottom: 20px;">The Importance of Small Talk</h2>
+                <p>In global MNCs, the first 5 minutes of a meeting or the time spent in the cafeteria is crucial for
+                    building rapport. Small talk isn't "empty" talk—it's relationship building.</p>
 
-            <h2>Phase 1: What I did (Past)</h2>
-            <p>Focus on completion, not just effort.</p>
-            <div class="example-box">
-                <p><strong>Phrasing:</strong> "Since our last sync, I successfully pushed the fixes for..."</p>
-            </div>
+                <div
+                    style="background: var(--bg-dark); padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid var(--primary);">
+                    <h3 style="margin-bottom: 16px;">Common Conversation Starters</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;"><i class="fas fa-comment"
+                                style="color: var(--primary); margin-right: 12px;"></i> "Hi [Name], how’s your week
+                            going so far?"</li>
+                        <li style="margin-bottom: 12px;"><i class="fas fa-comment"
+                                style="color: var(--primary); margin-right: 12px;"></i> "I saw your update on [Project],
+                            really great work!"</li>
+                        <li style="margin-bottom: 12px;"><i class="fas fa-comment"
+                                style="color: var(--primary); margin-right: 12px;"></i> "Any big plans for the weekend?"
+                        </li>
+                    </ul>
+                </div>
 
-            <h2>Phase 2: What I'm doing (Present)</h2>
-            <p>Focus on your current priority.</p>
-            <div class="example-box">
-                <p><strong>Phrasing:</strong> "Today, my main focus is on finalizing the API integration..."</p>
-            </div>
+                <h2 style="margin-top: 40px; margin-bottom: 20px;">Professional vs. Personal</h2>
+                <p>Always keep it neutral. Good topics include: Weather, Weekend plans, LinkedIn posts, or Office
+                    events. Avoid: Politics, Religion, or Salary.</p>
 
-            <h2>Phase 3: The Blockers (Future/Risks)</h2>
-            <p>Be direct. This is your chance to ask for help.</p>
-            <div class="example-box">
-                <p><strong>Phrasing:</strong> "I'm currently blocked by the credentials for the staging env. Can someone
-                    help with that?"</p>
-            </div>
+                <h2 style="margin-top: 40px;">📚 Phrase Breakdown & Meanings</h2>
+                <div style="overflow-x: auto; margin: 24px 0;">
+                    <table
+                        style="width: 100%; border-collapse: collapse; background: var(--bg-dark); border-radius: 12px; overflow: hidden;">
+                        <thead>
+                            <tr style="background: var(--primary); color: white;">
+                                <th style="padding: 16px; text-align: left;">Phrase</th>
+                                <th style="padding: 16px; text-align: left;">Meaning</th>
+                                <th style="padding: 16px; text-align: left;">Usage Context</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid var(--border-color);">
+                                <td style="padding: 16px; font-weight: 600;">"By the way..."</td>
+                                <td style="padding: 16px;">Connecting a new topic to the current one.</td>
+                                <td style="padding: 16px;">Transitioning from work to small talk.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border-color);">
+                                <td style="padding: 16px; font-weight: 600;">"Catch up"</td>
+                                <td style="padding: 16px;">To talk to someone you haven't seen in a while.</td>
+                                <td style="padding: 16px;">"Let's catch up over coffee."</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 16px; font-weight: 600;">"Keep me in the loop"</td>
+                                <td style="padding: 16px;">Keep me informed about the progress.</td>
+                                <td style="padding: 16px;">Ending a casual work discussion.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-            <div class="lesson-footer"
-                style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
-                <a href="#" class="btn btn-outline" style="visibility: hidden;">Previous</a>
-                <a href="lesson-1-2.html" class="btn btn-primary">Next: Agile Ceremonies <i
-                        class="fas fa-arrow-right"></i></a>
-            </div>
-        </main>
+                <h2 style="margin-top: 40px;">🗣️ Pronunciation Lab</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 24px 0;">
+                    <div
+                        style="background: var(--bg-dark); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);">
+                        <h4 style="color: var(--primary-light); margin-bottom: 8px;">Colleague</h4>
+                        <p style="font-family: 'JetBrains Mono', monospace; color: var(--accent);">[ KOL-eeg ]</p>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px;">The 'ue' at the end is
+                            silent. Focus on the long 'ee' sound.</p>
+                    </div>
+                    <div
+                        style="background: var(--bg-dark); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);">
+                        <h4 style="color: var(--primary-light); margin-bottom: 8px;">Schedule</h4>
+                        <p style="font-family: 'JetBrains Mono', monospace; color: var(--accent);">US: [ SKED-jool ] |
+                            UK: [ SHED-yool ]</p>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px;">Both are correct in
+                            MNCs. Pick one and be consistent.</p>
+                    </div>
+                </div>
+
+                <h2 style="margin-top: 40px;">💡 Daily Corporate Vocab</h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0;">
+                    <div
+                        style="background: rgba(37, 99, 235, 0.1); border: 1px solid var(--primary); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem;">
+                        <strong>Rapport:</strong> A harmonious relationship.
+                    </div>
+                    <div
+                        style="background: rgba(37, 99, 235, 0.1); border: 1px solid var(--primary); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem;">
+                        <strong>Context:</strong> The circumstances that form the setting for an event.
+                    </div>
+                    <div
+                        style="background: rgba(37, 99, 235, 0.1); border: 1px solid var(--primary); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem;">
+                        <strong>Nuance:</strong> A subtle difference in meaning.
+                    </div>
+                </div>
+
+                <div class="lesson-footer"
+                    style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color); display: flex; justify-content: flex-end;">
+                    <a href="lesson-1-2.html" class="btn btn-primary">Next: Stand-up Meetings <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </main>
+        </div>
     </div>
 
     <footer class="footer">
