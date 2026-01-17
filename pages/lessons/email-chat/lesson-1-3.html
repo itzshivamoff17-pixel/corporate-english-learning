@@ -111,47 +111,115 @@
         </aside>
 
         <main class="lesson-content">
-            <span class="section-badge">Module 1.3</span>
-            <h1>Async vs. Sync Etiquette</h1>
+            <!-- Module Breadcrumb -->
+            <div
+                style="background: var(--bg-card); padding: 16px 24px; border-radius: 12px; margin-bottom: 32px; border-left: 4px solid var(--primary); border: 1px solid var(--border-color);">
+                <div
+                    style="display: flex; align-items: center; gap: 12px; color: var(--text-muted); font-size: 0.9rem;">
+                    <i class="fas fa-paper-plane" style="color: var(--primary);"></i>
+                    <span>Email & Chat Communication</span>
+                    <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                    <span style="color: var(--primary-light); font-weight: 600;">Module 1.3: Async & Deep Work</span>
+                </div>
+            </div>
 
-            <p>In a global MNC, you'll be working across timezones. Mastering asynchronous communication (Email, Slack,
-                Jira) vs. synchronous communication (Calls, Real-time chat) is vital for productivity.</p>
+            <span class="section-badge">Productivity & Flow - Lesson 3</span>
+            <h1>The Art of Asynchronous Work</h1>
 
-            <h2>When to use What?</h2>
+            <p style="font-size: 1.15rem; line-height: 1.8;">"Deep Work" is the ability to focus without distraction on
+                a cognitively demanding task. Constant pings on Slack/Teams destroy this. Mastering 'Async' is about
+                protecting your focus and respecting others'.</p>
+
+            <h2>The "When to Use What" Pyramid</h2>
+            <p>Based on Basecamp's communication pyramid, you should push communication to lower-urgency channels
+                whenever possible.</p>
             <table class="comparison-table">
                 <thead>
                     <tr>
                         <th>Channel</th>
-                        <th>Best for...</th>
-                        <th>Expectation</th>
+                        <th>Cognitive Cost</th>
+                        <th>Use Case</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Email</td>
-                        <td>Official approvals, long-form logic, documentation.</td>
-                        <td>24-hour response</td>
+                        <td><strong>Meeting / Call</strong></td>
+                        <td style="color: var(--error);">High (Interrupts everyone)</td>
+                        <td>Emotional topics, firing, complex debates, brainstorming.</td>
                     </tr>
                     <tr>
-                        <td>Slack / Teams</td>
-                        <td>Quick updates, casual team syncs, urgent blockers.</td>
-                        <td>1-2 hour response</td>
+                        <td><strong>Slack / Teams</strong></td>
+                        <td style="color: var(--accent);">Medium (Context switching)</td>
+                        <td>Quick clarifications, urgent blockers, social bonding.</td>
                     </tr>
                     <tr>
-                        <td>Meeting / Call</td>
-                        <td>Complex debates, conflict resolution, brainstorming.</td>
-                        <td>Real-time</td>
+                        <td><strong>Email / Docs</strong></td>
+                        <td style="color: var(--success);">Low (Read at leasure)</td>
+                        <td>Proposals, status updates, specs, "FYI" information.</td>
                     </tr>
                 </tbody>
             </table>
 
-            <h2>The 'Hand-off' Message</h2>
-            <p>When you finish your shift and Hand-off work to a colleague in another timezone, clarity is everything.
-            </p>
+            <h2>Cal Newport's "Sender Filter"</h2>
+            <p>In <em>A World Without Email</em>, Cal Newport argues that we spend too much time "servicing the inbox."
+                To fix this, use the <strong>Sender Filter</strong>: Do the work <em>for</em> the recipient so they can
+                reply with one word or no words.</p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0;">
+                <div
+                    style="background: rgba(239, 68, 68, 0.05); border: 1px solid var(--error); padding: 24px; border-radius: 12px;">
+                    <h4 style="color: var(--error); margin-bottom: 12px;">❌ Open-Ended (Lazy)</h4>
+                    <p>"When are you free to meet?"</p>
+                    <p style="font-size: 0.9rem; margin-top: 12px; color: var(--text-muted);">Result: 5 emails
+                        back-and-forth.</p>
+                </div>
+                <div
+                    style="background: rgba(16, 185, 129, 0.05); border: 1px solid var(--success); padding: 24px; border-radius: 12px;">
+                    <h4 style="color: var(--success); margin-bottom: 12px;">✅ Closed (Proactive)</h4>
+                    <p>"Are you free on Tuesday at 2pm or Wednesday at 10am EST? If neither works, here is my Calendly
+                        link."</p>
+                    <p style="font-size: 0.9rem; margin-top: 12px; color: var(--text-muted);">Result: 1 reply. Done.</p>
+                </div>
+            </div>
+
+            <h2>The "Escalation Ladder"</h2>
+            <p>Knowing when to switch channels is a superpower. Don't fight a war over text.</p>
+            <div
+                style="background: var(--bg-card); padding: 24px; border-radius: 12px; border: 1px solid var(--border-color);">
+                <ul style="list-style: none; padding: 0; line-height: 2;">
+                    <li><strong>Level 1 (Chat):</strong> "Hey, I think there is a bug in the login auth."</li>
+                    <li><strong>Level 2 (Chat):</strong> "No, it's a feature, see the spec."</li>
+                    <li><strong>Level 3 (Chat):</strong> "But the spec says X and the code does Y."</li>
+                    <li><strong>STOP. ESCALATE.</strong></li>
+                    <li><strong>Level 4 (Call):</strong> "Hey, let's jump on a 5-min huddle to sort this out quickly."
+                    </li>
+                </ul>
+            </div>
+
+            <h2>Global "Hand-offs" (The Sun Never Sets)</h2>
+            <p>For distributed teams (e.g., India-US-Europe), the "Hand-off" is critical.</p>
             <div class="example-box"
                 style="background: var(--bg-dark); border-left: 4px solid var(--primary); padding: 24px; margin: 32px 0;">
-                <p><strong>Perfect Hand-off:</strong> "I've completed the [X] module. The code is pushed to branch [Y].
-                    I've left a few comments on the PR regarding the [Z] logic. Over to you!"</p>
+                <p><strong>Perfect End-of-Day Message:</strong></p>
+                <p style="margin-top: 12px; white-space: pre-wrap;">"Hi Team, signing off now.
+                    - <strong>Done:</strong> Auth module refactor (PR #102) - Ready for review.
+                    - <strong>Blocked:</strong> Waiting for API keys from DevOps.
+                    - <strong>Next:</strong> Will pick up the frontend integration tomorrow.
+                    cc: @Sarah (London) - The PR is ready for you."</p>
+            </div>
+
+            <h2>References & Further Reading</h2>
+            <div
+                style="background: var(--bg-card); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                <ol style="margin-left: 24px; line-height: 2; font-size: 0.95rem;">
+                    <li>Newport, C. (2021). <em>A World Without Email</em>. Portfolio.</li>
+                    <li>Newport, C. (2016). <em>Deep Work: Rules for Focused Success in a Distracted World</em>. Grand
+                        Central Publishing.</li>
+                    <li>Fried, J., & Hansson, D. H. (2018). <em>It Doesn't Have to Be Crazy at Work</em>.
+                        HarperBusiness.</li>
+                    <li>Mullenweg, M. (2020). "Distributed Work's Five Levels of Autonomy." <em>Matt Mullenweg
+                            Blog</em>.</li>
+                </ol>
             </div>
 
             <div class="lesson-footer"

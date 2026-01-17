@@ -106,40 +106,119 @@
         </aside>
 
         <main class="lesson-content">
-            <span class="section-badge">Module 1.2</span>
-            <h1>Tone & Pitch in Professional Text</h1>
+            <!-- Module Breadcrumb -->
+            <div
+                style="background: var(--bg-card); padding: 16px 24px; border-radius: 12px; margin-bottom: 32px; border-left: 4px solid var(--primary); border: 1px solid var(--border-color);">
+                <div
+                    style="display: flex; align-items: center; gap: 12px; color: var(--text-muted); font-size: 0.9rem;">
+                    <i class="fas fa-paper-plane" style="color: var(--primary);"></i>
+                    <span>Email & Chat Communication</span>
+                    <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                    <span style="color: var(--primary-light); font-weight: 600;">Module 1.2: Slack & Teams
+                        Etiquette</span>
+                </div>
+            </div>
 
-            <p>In text communication, you lose body language and vocal inflection. This is why "Direct" can often be
-                misinterpreted as "Aggressive". Master the art of professional softening.</p>
+            <span class="section-badge">Instant Messaging - Lesson 2</span>
+            <h1>Tone & Etiquette in Slack/Teams</h1>
 
-            <h2>Direct vs. Polished</h2>
+            <p style="font-size: 1.15rem; line-height: 1.8;">Instant messaging is the operating system of remote work.
+                But because text lacks tone, "Direct" is often misinterpreted as "Aggressive". Mastery of chat etiquette
+                is mastery of team cohesion.</p>
+
+            <h2>The "Async-First" Philosophy</h2>
+            <p>Companies like GitLab and Doist champion "Async-First" communication. The golden rule: <strong>Do not
+                    expect an immediate response.</strong></p>
+
+            <div
+                style="background: var(--bg-card); padding: 32px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                <h3 style="margin-bottom: 20px; color: var(--primary);">The "No Hello" Rule</h3>
+                <p>There is a famous site called <em>nohello.net</em>. Sending "Hi" and waiting breaks focus.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px;">
+                    <div
+                        style="background: rgba(239, 68, 68, 0.05); border: 1px solid var(--error); padding: 20px; border-radius: 12px;">
+                        <h4 style="color: var(--error); margin-bottom: 12px;">❌ The Interruption Loop</h4>
+                        <p style="font-family: monospace;">A: "Hi"<br>... (10 mins) ...<br>B: "Hey, what's up?"<br>...
+                            (5 mins) ...<br>A: "Can you check this PR?"</p>
+                    </div>
+                    <div
+                        style="background: rgba(16, 185, 129, 0.05); border: 1px solid var(--success); padding: 20px; border-radius: 12px;">
+                        <h4 style="color: var(--success); margin-bottom: 12px;">✅ The Async Bundle</h4>
+                        <p>A: "Hi [Name], I just pushed the PR for the auth module. No rush, but could you review it
+                            when you have a moment? Here is the link: [URL]"</p>
+                    </div>
+                </div>
+                <p style="margin-top: 20px; font-size: 0.95rem; color: var(--text-muted);"><em>Reference: GitLab.
+                        (2020). "The Remote Playbook: How to Communicate Asynchronously."</em></p>
+            </div>
+
+            <h2>Tone Softeners (Politeness Theory)</h2>
+            <p>Linguists call these "hedges." In professional chat, using slightly softer language prevents you from
+                sounding demanding.</p>
+
             <div class="tone-grid">
                 <div class="tone-box">
                     <h4 style="color: var(--error);">Too Direct</h4>
                     <p>"Fix this bug before EOD."</p>
+                    <p style="font-size: 0.8rem; margin-top: 8px; color: var(--text-muted);">(Sounds like an order)</p>
                 </div>
                 <div class="tone-box">
                     <h4 style="color: var(--success);">Polished</h4>
                     <p>"Could you please take a look at this bug? It's a priority for the EOD release."</p>
+                    <p style="font-size: 0.8rem; margin-top: 8px; color: var(--text-muted);">(Sounds like a request)</p>
+                </div>
+                <div class="tone-box">
+                    <h4 style="color: var(--error);">Too Direct</h4>
+                    <p>"That won't work."</p>
+                </div>
+                <div class="tone-box">
+                    <h4 style="color: var(--success);">Polished</h4>
+                    <p>"I'm not sure that approach aligns with our scalability goals. Have we considered...?"</p>
                 </div>
             </div>
 
-            <h2>Using 'Hedges' to Reduce Friction</h2>
-            <p>Hedges are words that make your requests sound less like a command and more like a collaboration.</p>
-            <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: var(--primary);"></i>
-                    <strong>"It seems..."</strong> (Instead of "It is")</li>
-                <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: var(--primary);"></i>
-                    <strong>"Perhaps we could..."</strong> (Instead of "We should")</li>
-                <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: var(--primary);"></i>
-                    <strong>"I was wondering if..."</strong> (Instead of "Can you")</li>
+            <h2>Thread Discipline</h2>
+            <p>In Slack strategies, "Thread Hygiene" is critical to prevent channel pollution.</p>
+            <div
+                style="background: var(--bg-dark); border-left: 4px solid var(--primary); padding: 24px; margin: 32px 0;">
+                <p><strong>Rule:</strong> If a conversation involves only 2-3 people or is about a specific topic,
+                    <strong>always thread it</strong>. Do not use the main channel for back-and-forth debugging.</p>
+                <p style="margin-top: 12px;"><strong>Phrase to enforce this:</strong> "Let's move this discussion to a
+                    thread to keep the main channel clear."</p>
+            </div>
+
+            <h2>Using Emoji Professionally</h2>
+            <p>Research by Buffer suggests that emojis in remote work aren't unprofessional; they are <strong>emotional
+                    cues</strong> that replace facial expressions.</p>
+            <ul
+                style="list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 20px;">
+                <li
+                    style="background: var(--bg-card); padding: 16px; border-radius: 8px; border: 1px solid var(--border-color);">
+                    <span style="font-size: 1.5rem;">👍 / ✅</span>
+                    <p style="margin-top: 8px; font-size: 0.9rem;">"I've read this and I agree/will do it." (Saves a
+                        "Okay" message)</p>
+                </li>
+                <li
+                    style="background: var(--bg-card); padding: 16px; border-radius: 8px; border: 1px solid var(--border-color);">
+                    <span style="font-size: 1.5rem;">👀</span>
+                    <p style="margin-top: 8px; font-size: 0.9rem;">"I am looking at this right now."</p>
+                </li>
+                <li
+                    style="background: var(--bg-card); padding: 16px; border-radius: 8px; border: 1px solid var(--border-color);">
+                    <span style="font-size: 1.5rem;">🙌 / 🚀</span>
+                    <p style="margin-top: 8px; font-size: 0.9rem;">"Great job!" (Essential for morale)</p>
+                </li>
             </ul>
 
-            <div class="example-box"
-                style="background: var(--bg-dark); border-left: 4px solid var(--primary); padding: 24px; margin: 32px 0;">
-                <h4>The 'Update' Pitch</h4>
-                <p>When giving a status update on a delay: "We've run into a slight complication with the [Module].
-                    We're currently [X] and expect to be back on track by [Time]."</p>
+            <h2>References & Further Reading</h2>
+            <div
+                style="background: var(--bg-card); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid var(--border-color);">
+                <ol style="margin-left: 24px; line-height: 2; font-size: 0.95rem;">
+                    <li>GitLab. (2020). <em>The Remote Playbook: How to Communicate Asynchronously</em>. GitLab Inc.
+                    </li>
+                    <li>Sistrom, K. (2019). "The Art of the Emojis: How We Use Them at Doist." <em>Doist Blog</em>.</li>
+                    <li>Brown, B. (2018). <em>Dare to Lead</em>. Random House. (On vulnerability and clarity).</li>
+                </ol>
             </div>
 
             <div class="lesson-footer"
