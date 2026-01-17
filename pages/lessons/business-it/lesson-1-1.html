@@ -116,54 +116,148 @@
         </aside>
 
         <main class="lesson-content">
-            <span class="section-badge">Module 1.1</span>
+            <!-- Module Breadcrumb -->
+            <div
+                style="background: var(--bg-dark); padding: 16px 24px; border-radius: 12px; margin-bottom: 32px; border-left: 4px solid var(--primary);">
+                <div
+                    style="display: flex; align-items: center; gap: 12px; color: var(--text-muted); font-size: 0.9rem;">
+                    <i class="fas fa-briefcase" style="color: var(--primary);"></i>
+                    <span>Business English for IT</span>
+                    <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                    <span style="color: var(--primary-light); font-weight: 600;">Module 1.1: The Elevator Pitch</span>
+                </div>
+            </div>
+
+            <span class="section-badge">MNC Workplace Foundation - Lesson 1</span>
             <h1>The 30-Second Elevator Pitch for Engineers</h1>
 
-            <p>An elevator pitch is a brief, persuasive speech that you use to spark interest in what you do. For an
-                engineer in an MNC, this isn't just about your job title; it's about the <strong>impact</strong> you
-                create.</p>
+            <p style="font-size: 1.15rem; line-height: 1.8;">An elevator pitch is a brief, persuasive speech that you
+                use to spark interest in what you do. For an engineer in an MNC, this isn't just about your job title;
+                it's about the <strong>impact</strong> you create and the <strong>value</strong> you bring to the
+                organization.</p>
 
-            <h2>Why is it Important?</h2>
-            <p>In a multinational corporation, you'll often meet senior leaders or cross-functional partners in casual
-                settings (Zoom breakout rooms, cafeteria, or corporate events). Being able to articulate your value
-                clearly in 30 seconds builds your professional brand.</p>
+            <h2>Why is it Important in MNCs?</h2>
+            <p>In a multinational corporation, you'll often meet senior leaders, cross-functional partners, or potential
+                collaborators in casual settings:</p>
+            <ul style="margin-left: 24px; line-height: 1.8;">
+                <li><strong>Zoom breakout rooms</strong> during all-hands meetings</li>
+                <li><strong>Virtual coffee chats</strong> with leadership</li>
+                <li><strong>Cafeteria encounters</strong> (if working on-site)</li>
+                <li><strong>Corporate events</strong> and team-building activities</li>
+                <li><strong>Internal networking sessions</strong> or "brown bag" lunches</li>
+            </ul>
+            <p>Being able to articulate your value clearly in 30 seconds builds your <strong>professional brand</strong>
+                and opens doors to new opportunities, projects, and mentorship.</p>
 
             <div class="example-box">
                 <h4>❌ The Generic Way (Weak)</h4>
-                <p>"I am a software engineer at Google. I work in the backend team and I use Java."</p>
-                <p><em>Issue: This is just a list of facts. It doesn't show value.</em></p>
+                <p style="font-size: 1.05rem;">"I am a software engineer at Google. I work in the backend team and I use
+                    Java."</p>
+                <p><em><strong>Issue:</strong> This is just a list of facts. It doesn't show value, impact, or what
+                        makes you unique. Anyone could say this.</em></p>
+            </div>
+
+            <div class="example-box" style="border-left-color: var(--success);">
+                <h4>✅ The ProSpeak Way (Strong)</h4>
+                <p style="font-size: 1.05rem;">"I'm a Senior Backend Engineer at Google, focusing on optimizing our
+                    payment gateway's legacy codebase. Recently, my team reduced transaction latency by 15%, which
+                    directly improved the checkout experience for millions of users globally."</p>
+                <p><em><strong>Why it works:</strong> It mentions <span style="color: var(--primary-light);">Role +
+                            Specific Focus + Measurable Impact + Scale</span>.</em></p>
+            </div>
+
+            <h2>The 4-Step Formula (W.W.W.W.)</h2>
+            <div style="background: var(--bg-dark); padding: 32px; border-radius: 12px; margin: 24px 0;">
+                <ul style="list-style: none; padding-left: 0;">
+                    <li
+                        style="margin-bottom: 20px; padding: 16px; background: rgba(37, 99, 235, 0.1); border-radius: 8px;">
+                        <i class="fas fa-user"
+                            style="color: var(--primary); margin-right: 12px; font-size: 1.2rem;"></i>
+                        <strong style="font-size: 1.1rem;">The WHO:</strong><br>
+                        <span style="margin-left: 36px; color: var(--text-secondary);">Your name and current
+                            title/role</span><br>
+                        <span style="margin-left: 36px; font-style: italic; font-size: 0.95rem;">Example: "I'm Priya, a
+                            Senior DevOps Engineer..."</span>
+                    </li>
+                    <li
+                        style="margin-bottom: 20px; padding: 16px; background: rgba(37, 99, 235, 0.1); border-radius: 8px;">
+                        <i class="fas fa-cogs"
+                            style="color: var(--primary); margin-right: 12px; font-size: 1.2rem;"></i>
+                        <strong style="font-size: 1.1rem;">The WHAT:</strong><br>
+                        <span style="margin-left: 36px; color: var(--text-secondary);">The specific problem you solve or
+                            system you own</span><br>
+                        <span style="margin-left: 36px; font-style: italic; font-size: 0.95rem;">Example: "...working on
+                            automating our CI/CD pipeline for microservices..."</span>
+                    </li>
+                    <li
+                        style="margin-bottom: 20px; padding: 16px; background: rgba(37, 99, 235, 0.1); border-radius: 8px;">
+                        <i class="fas fa-chart-line"
+                            style="color: var(--primary); margin-right: 12px; font-size: 1.2rem;"></i>
+                        <strong style="font-size: 1.1rem;">The WOW:</strong><br>
+                        <span style="margin-left: 36px; color: var(--text-secondary);">A recent achievement or
+                            measurable metric</span><br>
+                        <span style="margin-left: 36px; font-style: italic; font-size: 0.95rem;">Example: "...which
+                            reduced deployment time from 2 hours to 15 minutes..."</span>
+                    </li>
+                    <li style="padding: 16px; background: rgba(37, 99, 235, 0.1); border-radius: 8px;">
+                        <i class="fas fa-heart"
+                            style="color: var(--primary); margin-right: 12px; font-size: 1.2rem;"></i>
+                        <strong style="font-size: 1.1rem;">The WHY:</strong><br>
+                        <span style="margin-left: 36px; color: var(--text-secondary);">Why you're passionate about this
+                            area (optional but powerful)</span><br>
+                        <span style="margin-left: 36px; font-style: italic; font-size: 0.95rem;">Example: "...I love
+                            seeing how automation empowers developers to ship faster."</span>
+                    </li>
+                </ul>
+            </div>
+
+            <h2>Real-World Examples by Role</h2>
+
+            <div class="example-box">
+                <h4>🔹 Frontend Engineer</h4>
+                <p>"I'm Rahul, a Frontend Engineer at Microsoft, specializing in accessibility features for our Office
+                    suite. Last quarter, I led the implementation of screen reader support that now serves over 2
+                    million users with visual impairments. I'm passionate about making technology inclusive for
+                    everyone."</p>
             </div>
 
             <div class="example-box">
-                <h4>✅ The ProSpeak Way (Strong)</h4>
-                <p>"I'm a Senior Backend Engineer at Google, focusing on optimizing our payment gateway legacy code.
-                    Recently, my team reduced transaction latency by 15%, which directly improved the checkout
-                    experience for millions of users."</p>
-                <p><em>Why it works: It mentions Role + Specific Focus + Impact + Goal.</em></p>
+                <h4>🔹 Data Scientist</h4>
+                <p>"I'm Ananya, a Data Scientist at Amazon, focused on recommendation algorithms for Prime Video. My
+                    recent model improved click-through rates by 12%, which translates to millions in additional
+                    revenue. I love turning data into actionable insights that drive business decisions."</p>
             </div>
 
-            <h2>The 4-Step Formula</h2>
-            <ul style="list-style: none; padding-left: 0;">
-                <li style="margin-bottom: 12px;"><i class="fas fa-arrow-right"
-                        style="color: var(--primary); margin-right: 12px;"></i> <strong>The Who:</strong> Your name and
-                    current title.</li>
-                <li style="margin-bottom: 12px;"><i class="fas fa-arrow-right"
-                        style="color: var(--primary); margin-right: 12px;"></i> <strong>The What:</strong> The specific
-                    problem you solve or system you own.</li>
-                <li style="margin-bottom: 12px;"><i class="fas fa-arrow-right"
-                        style="color: var(--primary); margin-right: 12px;"></i> <strong>The Wow:</strong> A recent
-                    achievement or metric.</li>
-                <li style="margin-bottom: 12px;"><i class="fas fa-arrow-right"
-                        style="color: var(--primary); margin-right: 12px;"></i> <strong>The Why:</strong> Why you're
-                    passionate about this area.</li>
-            </ul>
+            <div class="example-box">
+                <h4>🔹 Cloud Architect</h4>
+                <p>"I'm Karthik, a Cloud Architect at Salesforce, designing multi-region disaster recovery solutions.
+                    Recently, I architected a failover system that reduced our RTO from 4 hours to 30 minutes, ensuring
+                    99.99% uptime for enterprise clients. Reliability engineering is my forte."</p>
+            </div>
+
+            <h2>Common Mistakes to Avoid</h2>
+            <div
+                style="background: rgba(239, 68, 68, 0.1); border: 1px solid #ef4444; padding: 24px; border-radius: 12px; margin: 24px 0;">
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li><strong>Being too technical:</strong> "I work on Kubernetes orchestration with Helm charts and
+                        Terraform IaC" → Most people won't understand this.</li>
+                    <li><strong>No metrics:</strong> "I improved performance" → How much? For whom?</li>
+                    <li><strong>Too long:</strong> Going beyond 30-45 seconds loses attention.</li>
+                    <li><strong>No passion:</strong> Sounding robotic or disinterested.</li>
+                    <li><strong>Jargon overload:</strong> Using too many acronyms (CI/CD, K8s, RTO, SLA) without
+                        context.</li>
+                </ul>
+            </div>
 
             <div class="exercise-box">
                 <h4>📝 Practice Exercise</h4>
-                <p>Draft your own pitch using the 4-step formula above. Try to keep it under 75 words.</p>
+                <p>Draft your own elevator pitch using the 4-step W.W.W.W. formula above. Try to keep it under 75 words
+                    (about 30-40 seconds when spoken).</p>
+                <p style="margin-top: 12px; font-size: 0.9rem; color: var(--text-muted);"><strong>Tip:</strong> Include
+                    at least one number or metric to make your impact tangible.</p>
                 <textarea
-                    style="width: 100%; height: 100px; padding: 12px; background: var(--bg-dark); border: 1px solid var(--border-color); color: white; border-radius: 8px; margin-top: 12px; font-family: inherit;"
-                    placeholder="Type your pitch here..."></textarea>
+                    style="width: 100%; height: 120px; padding: 12px; background: var(--bg-dark); border: 1px solid var(--border-color); color: white; border-radius: 8px; margin-top: 12px; font-family: inherit; font-size: 1rem;"
+                    placeholder="Example: I'm [Your Name], a [Role] at [Company], working on [Specific Problem]. Recently, I [Achievement with Metric], which [Impact]. I'm passionate about [Why]."></textarea>
             </div>
 
             <h2>📚 Phrase Breakdown & Meanings</h2>
